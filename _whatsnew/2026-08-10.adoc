@@ -1,0 +1,10 @@
+= NetApp Consoleローカル デプロイのご紹介
+:allow-uri-read: 
+
+
+
+
+[[introducing-netapp-console-local-deployment]]
+=== NetApp Consoleローカル デプロイのご紹介
+
+https://docs.netapp.com/us-en/console-local/netapp-console-local.html["NetApp Console ローカル展開について学ぶ"].

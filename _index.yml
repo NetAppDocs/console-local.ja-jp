@@ -1,0 +1,99 @@
+---
+indexpage:
+  title: NetApp Console ローカルデプロイメントドキュメント
+  summary: NetApp Console ローカル展開を使用する
+  keywords: storage management, data protection, operational efficiency, cost optimization,
+    business continuity, unified management, self-hosted, high availability, LLM integration,
+    role-based access control, storage provisioning
+  lead: NetApp Consoleのローカル展開を使用して、お客様のストレージ インフラを管理、監視、保護します。
+  tiles:
+  - title: NetApp Console のローカル展開について
+    links:
+    - title: NetApp Console のローカル展開について
+      url: "/concept-netapp-console-local.html"
+    - title: アイデンティティとアクセス管理について
+      url: "/concept-identity-and-access-management.html"
+    - title: NetApp Console ローカル展開によるストレージ管理について
+      url: "/concept-manage-storage.html"
+    - title: LLM統合（AIアシスト管理）について学ぶ
+      url: "/concept-llm-integration.html"
+    - title: NetApp Backup and Recovery について
+      url: "/concept-data-services.html"
+    - title: NetApp Console ローカル展開と NetApp Console の比較
+      url: "/console-differences.html"
+  - title: コンソールのローカル展開をデプロイし、ストレージシステムを追加します。
+    links:
+    - title: Console のローカル展開について学ぶ
+      url: "/concept-deploy-netapp-console-local.html"
+    - title: vCenter 環境に Console のローカル展開をインストールする
+      url: "/task-install-agent-on-prem-ova.html"
+    - title: ストレージシステムを NetApp Console ローカル展開に追加する
+      url: "/task-add-systems.html"
+    - title: NetApp Consoleのセットアップのクイックスタート
+      url: "/task-quick-start-console-setup.html"
+    - title: LLMを接続し、Console アシスタントを有効にする
+      url: "/task-llm-connect.html"
+    - title: 通知用のメールサーバーを接続する
+      url: "/task-console-configure-notifications-delivery.html"
+  - title: アクセスと組織の設定
+    links:
+    - title: IDとアクセス管理の概要
+      url: "/task-iam-fleet-mgmt-get-started.html"
+    - title: フォルダとフリートを作成する
+      url: "/task-iam-manage-folders-fleets.html"
+    - title: メンバーを追加して役割を割り当てる
+      url: "/task-iam-manage-members-permissions.html"
+    - title: Active Directoryとの統合
+      url: "/task-iam-active-directory-integrate.html"
+  - title: ストレージの提供と標準化
+    links:
+    - title: ストレージクラスとポリシーについて
+      url: "/concept-storage-classes.html"
+    - title: ストレージクラスを作成する
+      url: "/task-storage-class-manage.html"
+    - title: ストレージを手動でプロビジョニングする
+      url: "/task-provisioning-manual.html"
+    - title: ストレージを自動的にプロビジョニングします
+      url: "/task-provisioning-automated.html"
+  - title: ストレージの監視、調査、修復
+    links:
+    - title: NetApp Console でのストレージの健全性監視について学ぶ
+      url: "/concept-monitor-storage.html"
+    - title: ホームページの指標を表示する
+      url: "/task-storage-dashboard.html"
+    - title: NetApp Console ローカル展開でのダッシュボードの使用を開始する
+      url: "/task-dashboard-get-started.html"
+    - title: ワークロードアナライザーを使用してボリュームを調査する
+      url: "/concept-workload-analyzer.html"
+    - title: アラートの表示と管理
+      url: "/task-alerts-monitor.html"
+  - title: AIを活用した管理を行う
+    links:
+    - title: NetApp Console アシスタントを使用する
+      url: "/task-console-asst-use.html"
+    - title: サポートされているLLMプロバイダーとモデル
+      url: "/reference-llm-supported-models.html"
+  - title: Console のローカル展開を維持する
+    links:
+    - title: vCenter にインストールされた Console のローカルデプロイメントを維持する
+      url: "/task-console-local-vm-config.html"
+    - title: NetApp Console ローカル展開操作の監査
+      url: "/task-audit-console-activity.html"
+  - title: APIのドキュメント
+    links:
+    - title: Agentic Platform
+      url: "/agentic/get-configs.html"
+    - title: 資産
+      url: "/asset/get-organizations-aggregates.html"
+    - title: アイデンティティとアクセス管理
+      url: "/tenancyv4/get-fleets.html"
+    - title: ストレージ管理
+      url: "/storage-management/get-v1-organizations-capacitypolicies.html"
+  - title: ブログとコミュニティ
+    links:
+    - title: NetApp Console ローカル展開
+      url: https://www.netapp.com/console
+    - title: NetApp Data Services
+      url: https://www.netapp.com/data-services/
+    - title: NetAppコミュニティ
+      url: https://community.netapp.com/

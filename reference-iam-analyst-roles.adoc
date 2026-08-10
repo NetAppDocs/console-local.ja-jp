@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-analyst-roles.html 
+keywords: operations support analyst, analyst roles, read-only access, monitoring access, alert access, audit access, identity and access management, access roles, rbac, netapp console local 
+summary: ユーザーに運用サポートアナリストの役割を割り当てることで、アラートや監視機能へのアクセス権限を付与できます。この役割を持つユーザーは、サポートケースを開設することもできます。 
+---
+= NetApp Console ローカル展開における運用サポートアナリストのアクセスロール
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console のローカル展開では、ユーザーに運用サポートアナリストのロールを割り当てることで、アラートおよび監視へのアクセス権限を付与できます。
+
+
+
+[[operational-support-analyst]]
+== 運用支援アナリスト
+
+[cols="1,2"]
+|===
+| Task | 実行可能 
+
+
+| ストレージシステムを表示する | はい 
+
+
+| 監査ページと通知を表示する | はい 
+
+
+| アラートの表示、ダウンロード、および設定 | はい 
+|===

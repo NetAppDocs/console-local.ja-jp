@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: concept-manage-storage-workflow.html 
+keywords: storage management workflow, storage classes, provisioning, storage class policies, ONTAP, fleet, drift detection, compliance monitoring, storage governance, operational efficiency, netapp console local 
+summary: NetApp Console ローカルデプロイメントにおけるストレージの管理（ストレージクラス、ポリシー、プロビジョニング方法など）について説明します。 
+---
+= NetApp Console ローカル展開におけるストレージ管理ワークフローの概要
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console ローカル展開では、netApp Console （ローカル）が一貫性のある再利用可能な標準規格を使用して、大規模な ONTAP ストレージの管理を支援します。ボリュームや LUN ごとに個別の決定を行う代わりに、承認された動作を一度定義すれば、手動でプロビジョニングする場合でも、自動配置を使用する場合でも、AI 支援による計画および承認ワークフローを使用する場合でも、フリート全体に適用できます。
+
+このページは、フリート、ストレージクラスポリシー、およびストレージクラスを使用して ONTAP ストレージを管理するストレージ管理者の出発点です。エンドツーエンドのワークフローを整理し、詳細な手順へのリンクを提供します。
+
+これらの概念に慣れていない場合は、[NetApp Console ローカルデプロイメントを使用したストレージ管理の詳細](concept-manage-storage.html)から始めてください。
+
+
+
+[[prerequisites-and-dependencies]]
+== 前提条件と依存関係
+
+組織管理者：ストレージシステムが検出され、適切なフリートに割り当てられていることを確認してください。ストレージ管理者は、システムがそのフリート内で利用可能になり、RBAC によってアクセスが許可されるまで、フリートに標準を適用したりプロビジョニングを行ったりすることはできません。
+
+RBACアクセスが必要です。標準を定義し、ストレージをプロビジョニングするフリートへのアクセス権があることを確認してください。
+
+
+
+[[typical-workflow]]
+== 典型的なワークフロー
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"] フリートとアクセスを確認する
+[role="quick-margin-list"]
+* 利用可能なフリートを確認し、ストレージを管理するフリートへのアクセス権があることを確認してください。
+* ストレージ標準を作成または割り当てる前に、権限と範囲を確認してください。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]ストレージクラスポリシーを定義する
+[role="quick-margin-list"]
+* 自社の基準を反映したストレージクラスポリシーを定義します。
+* 要件（性能、保護、配置）を再利用可能なポリシーにまとめます。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"]ストレージクラスを作成する
+[role="quick-margin-list"]
+* ポリシーを組み合わせてワークロードテンプレートを作成し、ストレージクラスを作成します。
+* 一貫性のあるテンプレートを使用することで、ワークロードが自社の基準に沿ってプロビジョニングされるようにします。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"]ストレージクラスをフリートに関連付ける
+[role="quick-margin-list"]
+* 該当するストレージクラスを、適用対象のフリートに関連付けます。
+* 適切なクラスを適切なフリートに割り当てることで、プロビジョニング時に正しいオプションが表示されるようにします。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] ボリュームまたはLUNをプロビジョニングする
+[role="quick-margin-list"]
+* 運用モデルに合った方法を使用して、ボリュームまたはLUNをプロビジョニングしてください。
+* チームがストレージを要求、承認、提供する方法に合ったワークフローを選択してください。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"]ワークロードを監視し、ドリフトを修復する
+[role="quick-margin-list"]
+* ワークロードを監視し、定義されたポリシーからの逸脱を検出します。
+* ポリシーに準拠していない設定を修正し、ポリシーとの整合性を回復してください。
+

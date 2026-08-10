@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task-add-systems.html 
+keywords: add storage systems, ONTAP, cluster, discover storage, fleet, storage discovery, centralized monitoring, storage management, netapp console local 
+summary: ストレージ システムを NetApp Console ローカル展開に追加します。 
+---
+= ストレージシステムを NetApp Console ローカル展開に追加する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ストレージ システムを NetApp Console ローカル展開に追加することで、ストレージ インフラストラクチャの監視、インベントリ管理、および管理が可能になります。ストレージ システムが追加されると、Console ローカル展開によってシステムが検出され、監視および管理タスクに使用できる情報の収集が開始されます。
+
+開始する前に、ストレージ システムを追加するために必要な権限があること、およびストレージ システムが Console のローカル展開からアクセス可能であることを確認してください。
+
+.手順
+. 「ストレージ」>「管理」を選択します。
+. 「スコープ」ドロップダウンリストから、ストレージ システムを追加するフリートを選択します。
+. 「システムを追加」を選択します。
+. 接続情報や認証情報など、必要なストレージシステムの詳細を入力してください。
+. 入力した情報を確認し、*追加*を選択します。
++
+ストレージシステムが選択されたフリートに追加されます。Console のローカル展開により、システムの検出と監視が開始されます。環境やネットワーク接続状況によっては、システムが完全に管理対象として認識されるまでに数分かかる場合があります。
+
+
+
+
+NOTE: また、*[管理]* > *[IDとアクセス]* ページから *[システムの追加]* を選択し、必要なシステム情報を入力することで、ストレージ システムを追加することもできます。

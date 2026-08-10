@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: concept-identity-and-access-management.html 
+keywords: iam overview, overview, how iam works, iam example, organization, folders, fleets, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, authentication, directory users, AD, Active Directory, directory services 
+summary: NetApp Console のローカル展開における ID およびアクセス管理（IAM）を使用して、場所、部門、フリートなど、ビジネス階層に応じてリソースへのアクセスを構造化および制御します。 
+---
+= NetApp Console ローカル展開のIDとアクセス管理について
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Consoleのローカル展開におけるIDとアクセス管理（IAM）では、サインインできるユーザー、IDの検証方法、ユーザーがアクセスできるリソース、およびユーザーが実行できるアクションを制御します。NetApp Consoleのローカル展開において、IAMには、ロールベースのアクセス制御（RBAC）、多要素認証（MFA）、ディレクトリベースの認証のほか、委任管理をサポートする階層モデルおよび監査モデルが含まれます。
+
+このページでは、NetApp Console のローカル展開における IAM モデルの概要を説明します。詳細な階層計画の例については、link:concept-folders-fleets-overview.html["NetApp Console ローカル展開におけるフォルダーとフリートについて"]。
+
+
+NOTE: NetApp Console で IAM を管理するには、_スーパー管理者_、_組織管理者_、または _フォルダーまたはフリート管理者_ のロールが必要です。
+
+
+
+[[what-iam-means-in-netapp-console-local-deployment]]
+== IAMがNetApp Consoleのローカル展開において意味すること
+
+NetApp Console ローカル展開 IAM は、ID 検証、アクセス制御、委任、および監査可能性を統合します：
+
+* 認証は、ユーザーがローカルの認証情報を使用するか、ディレクトリ構成を通じてサインインするかを決定します。
+* _認可_は、事前に定義されたロールと、それらを割り当てるスコープに基づいて、メンバーがサインイン後に実行できる操作を決定します。
+* 階層とスコープによって、メンバーがアクセスできるフォルダー、フリート、およびリソースが決まります。
+* _メンバーと認証情報の管理_では、ユーザーやサービスアカウントを追加する方法、およびMFAとサービスアカウントのシークレットを管理する方法を決定します。
+* _監査およびコンプライアンス追跡_は、IAM関連のアクティビティを記録するため、誰がいつアクセス権限を変更したかを確認できます。
+
+
+
+
+[[how-authentication-works]]
+== 認証の仕組み
+
+NetApp Console のローカル展開は、ローカル ID と外部 ID 統合の両方をサポートしています。
+
+NetApp Consoleのローカル展開をActive Directoryと統合することで、ユーザーは既存の企業の資格情報を使用してサインインできるようになります。これにより、Consoleのローカル展開で個別のパスワードを使用する必要がなくなり、管理者はアクセス権を割り当てる際にディレクトリユーザーを検索できるようになります。
+
+ローカルユーザーの場合、MFA は認証情報が漏洩した場合の不正アクセスリスクを軽減するために、追加の認証手順を追加します。
+
+認証と安全なサインインオプションの詳細については、link:concept-secure-access.html["NetApp Consoleのローカル デプロイにおけるセキュア アクセスについて説明します"]。
+
+
+
+[[how-authorization-works]]
+== 認可の仕組み
+
+ユーザーがサインインした後、NetApp Console のローカル展開では、RBAC を使用して、そのユーザーが何を表示および実行できるかを決定します。
+
+認証はActive DirectoryまたはLDAPとの連携によって処理されます。NetApp Consoleのローカル展開における認可は別個のものであり、管理者は組織、フォルダ、またはフリートレベルで事前定義されたロールを割り当てて、各メンバーがアクセスできる内容を制御します。
+
+同じロールであっても、割り当てるスコープによって有効なアクセス権限は異なります。このモデルでは、中央管理者には広範なアクセス権限を付与しつつ、地域管理者やチームレベルの管理者にはそれぞれが管理するフリートへのアクセス権限を制限できます。
+
+組織レベルまたはフォルダレベルで割り当てたロールは、子スコープに継承されます。この継承モデルは、NetApp Console がフォルダとフリート間でアクセス権を委任する方法の重要な部分です。
+
+NetApp は、最小権限の原則に基づいて NetApp Console のローカル展開ロールを設計しており、各ロールにはそのタスクに必要な権限のみが含まれます。
+
+link:concept-iam-rbac.html#role-inheritance["NetApp Console ローカル展開におけるロールベースのアクセス制御とロール継承について学ぶ"].
+
+
+
+[[how-the-iam-hierarchy-works]]
+== IAM階層の仕組み
+
+NetApp Console のローカル展開では、階層構造を使用してリソースをグループ化し、アクセス範囲を限定します。最上位に組織があり、その下にフォルダ、次にフリート、そしてそれらのフリートに関連付けられたリソース（サブフォルダを含む場合もあります）が続きます。
+
+この階層構造こそが、権限委譲を可能にするものです。例えば、組織管理者は組織全体にわたるアクセスを管理できますが、フォルダ管理者やフリート管理者は、自身が所有する階層内のリソースとメンバーのみを管理できます。
+
+NetApp Console IAMは、階層構造を定義する組織コンポーネント、その階層構造内に割り当てられるリソース、そして誰が何にアクセスできるかを制御するメンバーとロールという、3種類のコンポーネントに基づいて構築されています。
+
+役割はこの階層を通じて継承されるため、フォルダとフリートの設計は、各アクセス割り当ての適用範囲に直接影響します。
+
+link:task-iam-manage-folders-fleets.html["組織にフリートを追加する方法について説明します。"^].
+
+
+
+[[member-security-and-credentials]]
+== メンバーのセキュリティと認証情報
+
+NetApp Console のローカル展開における IAM には、アカウント作成後のメンバーアクセスを保護するための運用制御機能も含まれています。
+
+ローカルユーザーの場合、管理者はパスワードのリセットを指示したり、MFAを削除または一時的に無効化したり、ローカルユーザーのMFAの動作を確認したりすることで、ユーザーのアクセス回復を支援できます。サービスアカウントの場合、管理者はシークレットが紛失またはローテーションされた場合に認証情報を再作成できます。
+
+これらの制御はIAMの一部です。これは、アクセス権限が最初にどのように割り当てられるかだけでなく、時間の経過とともにIDがどのように安全に維持されるかを決定するためです。
+
+link:task-manage-member-security.html["メンバーのセキュリティを管理する方法を説明します"].
+
+
+
+[[audit-iam-activity]]
+== IAMアクティビティの監査
+
+NetApp Console のローカル展開における IAM には、アクセス関連のアクティビティを確認およびエクスポートする機能が含まれています。
+
+監査ページからは、メンバーの追加、フリートの作成、リソースの関連付けなど、組織の管理に関連する操作を確認できます。また、監査記録をテナントサービスでフィルタリングしてIAM関連の変更に絞り込んだり、監査ログを外部システムにエクスポートしたりすることもできます。
+
+監査可能性は、IAMの重要な原則です。なぜなら、誰がアクセス権限を変更したか、変更が行われた日時、そして変更が成功したかどうかを検証できるからです。
+
+link:task-audit-console-activity.html["NetApp Console のローカル展開アクティビティを監査する方法を学ぶ"].
+
+
+
+[[next-steps-with-iam-in-netapp-console]]
+== NetApp ConsoleでのIAMの次のステップ
+
+* link:task-iam-fleet-mgmt-get-started.html["NetApp Consoleでのアイデンティティとアクセス管理を開始する"]
+* link:concept-secure-access.html["NetApp Consoleのローカル デプロイにおけるセキュア アクセスについて説明します"]
+* link:concept-iam-rbac.html["NetApp Console ローカル展開における RBAC について"]
+* link:task-audit-console-activity.html["コンソールのローカル展開アクティビティを監視または監査する"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["NetApp Console IAM の API について"^]
+

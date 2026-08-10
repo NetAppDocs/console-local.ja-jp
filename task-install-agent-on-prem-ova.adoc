@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: task-install-agent-on-prem-ova.html 
+keywords: install agent, on-premises agent installation, vCenter, ESXi, VMware, OVA, deploy Console local deployment, agent deployment, netapp console local 
+summary: VMWareをご使用のお客様は、OVAを使用してVCenterにConsoleエージェントをインストールできます。OVAのダウンロードまたはURLは、NetApp Consoleのローカルデプロイから入手できます。 
+---
+= vCenterでOVAを使用してNetApp Consoleのローカルデプロイをインストールします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+OVAを使用して、vCenterにNetApp Consoleのローカルデプロイメントをインストールします。OVAのダウンロードまたはURLは、NetApp Support Siteから入手できます。
+
+
+
+[[prepare-to-install-netapp-console-local-deployment]]
+== NetApp Consoleのローカル デプロイのインストール準備
+
+インストール前に、VM ホストが要件を満たしていること、および NetApp Console のローカル展開がインターネットおよび対象ネットワークにアクセスできることを確認してください。NetApp Backup and Recovery などの NetApp データサービスを使用するには、NetApp Console のローカル展開がお客様に代わって操作を実行できるよう、クラウド プロバイダの認証情報を作成してください。
+
+
+
+[[review-netapp-console-local-deployment-host-requirements]]
+=== NetApp Console ローカル展開ホスト要件の確認
+
+NetApp Console ローカル展開をインストールする前に、ホストマシンがインストール要件を満たしていることを確認してください。
+
+* CPU：16コアまたは16 vCPU
+* RAM：64 GB
+* ディスク容量：596 GB（シックプロビジョニングを推奨）
+* vSphere 7.0u3以降、仮想ハードウェアバージョン19以降
+
+
+
+NOTE: NetApp Console のローカル展開は、ESXi ホスト上に直接インストールするのではなく、vCenter 環境にインストールしてください。
+
+
+
+[[set-up-network-access-for-the-netapp-console-local-deployment]]
+[[network-access-agent]]
+=== NetApp Console ローカル展開のネットワーク アクセスを設定する
+
+NetApp Consoleのローカル展開では、サービス間通信に固定アドレス空間が使用されます。内部ネットワークには、IPアドレス範囲10.42.0.0/16と10.43.0.0/16が使用されます。Console のローカル展開を展開する前に、これらのIPアドレス範囲が、Console のローカル展開で使用可能なVLAN上の他のVM、DHCPスコープ、DNSレコード、またはロードバランサーのVIPプールに割り当てられていないことを確認してください。
+
+エージェントのインターフェースのIPアドレスを変更する方法については、ナレッジベースの記事「Agent IP conflict with existing network」を参照してください。
+
+
+
+[[install-netapp-console-local-deployment-in-your-vcenter-environment]]
+== VCenter環境にNetApp Consoleローカルデプロイメントをインストールする
+
+NetApp は、NetApp Console のローカル デプロイメントを vCenter 環境にインストールすることをサポートしています。OVA ファイルには、VMware 環境にデプロイできる事前設定済みの VM イメージが含まれています。
+
+
+
+[[download-the-ova-or-copy-the-url]]
+=== OVAをダウンロードするか、URLをコピーします。
+
+OVAをダウンロードします。
+
+. NetApp Support Site から Console ローカル展開ソフトウェアをダウンロードしてください。
+
+
+
+
+[[deploy-netapp-console-local-deployment-in-your-vcenter]]
+=== VCenter に NetApp Console のローカル展開を行います。
+
+コンソールのローカル デプロイメントを展開するには、VCenter 環境にログインしてください。
+
+.手順
+. 環境によっては、自己署名証明書を信頼済み証明書にアップロードする必要があります。インストール後、この証明書を置き換えることができます。
+. コンテンツライブラリまたはローカルシステムからOVAを展開します。
++
+|===
+
+
+| ローカルシステムから | コンテンツライブラリより 
+
+
+| a. 右クリックして「OVF テンプレートの展開…」を選択します。 b. URL から OVA ファイルを選択するか、ファイルの場所を参照して選択し、「次へ」を選択します。 | a. コンテンツライブラリに移動し、コンソール OVA を選択します。 b. 「アクション」 > 「このテンプレートから新しい VM を作成」を選択します。 
+|===
+. Console をデプロイするには、OVF テンプレートのデプロイ ウィザードを完了してください。
+. VMの名前とフォルダを選択し、*次へ*を選択します。
+. コンピューティング リソースを選択し、*次へ*を選択します。
+. テンプレートの詳細を確認し、*次へ*を選択します。
+. ライセンス契約に同意し、*次へ*を選択します。
+. 使用するプロキシ設定の種類を選択してください：明示的プロキシ、透過的プロキシ、またはプロキシなし。
+. VMをデプロイするデータストアを選択し、*Next*を選択します。ホストの要件を満たしていることを確認してください。
+. VMを接続するネットワークを選択し、*次へ*を選択します。ネットワークがIPv4であり、必要なエンドポイントへのアウトバウンドインターネットアクセスがあることを確認します。
+. 「テンプレートのカスタマイズ」ウィンドウで、以下の項目を入力してください：
++
+** *プロキシ サーバ情報*
++
+*** 明示的なプロキシを選択した場合は、プロキシ サーバのホスト名またはIPアドレスとポート番号、およびユーザー名とパスワードを入力してください。
+*** 透過型プロキシを選択した場合は、該当する証明書をアップロードしてください。
+
+
+** *仮想マシンの構成*
++
+*** *設定チェックをスキップ*：このチェックボックスはデフォルトではオフになっています。つまり、NetApp Console のローカル展開では、ネットワーク アクセスを検証するための構成チェックが実行されます。
++
+**** NetApp では、このボックスのチェックを外したままにしておくことをお勧めします。そうすることで、インストール時に NetApp Console ローカル展開の構成チェックが実行されます。構成チェックは、NetApp Console のローカル展開が必要なエンドポイントへのネットワーク アクセスを持っているかどうかを検証します。接続の問題によりデプロイが失敗した場合は、NetApp Console ローカル展開ホストから検証レポートとログにアクセスできます。場合によっては、NetApp Console のローカル展開がネットワーク アクセスを持っていることが確実であれば、チェックをスキップすることもできます。
+
+
+*** *メンテナンスパスワード*： `maint`ユーザーのパスワードを設定します。このユーザーは NetApp Console ローカルデプロイメントメンテナンスコンソールへのアクセスを許可されています。
+*** *NTP サーバ*：時刻同期に使用する NTP サーバを 1 つ以上指定します。
+*** *ホスト名*：この仮想マシンのホスト名を設定します。検索ドメインを含めないでください。たとえば、FQDN が console10.searchdomain.company.com の場合は、console10 と入力してください。
+*** *プライマリDNS*：名前解決に使用するプライマリ DNS サーバを指定します。
+*** *セカンダリ DNS*：名前解決に使用するセカンダリ DNS サーバを指定します。
+*** 検索ドメイン：ホスト名を解決する際に使用する検索ドメイン名を指定します。例えば、FQDN が console10.searchdomain.company.com の場合、searchdomain.company.com と入力します。
+*** *IPv4アドレス*：ホスト名にマッピングされるIPアドレス。
+*** *IPv4サブネットマスク*：IPv4アドレスのサブネットマスク。
+*** *IPv4ゲートウェイアドレス*：IPv4アドレスのゲートウェイアドレス。
+
+
+
+
+. 「次へ」を選択します。
+. 「完了の準備」ウィンドウで詳細を確認し、「完了」を選択します。
++
+vSphere タスクバーには、NetApp Console のローカル展開が配備される際の進行状況が表示されます。
+
+. VMの電源をオンにします。
+

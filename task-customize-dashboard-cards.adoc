@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: task-customize-dashboard-cards.html 
+keywords: add card, dashboard card, card template, widget, preview, netapp console local 
+summary: スコープ、テンプレート、リソース、および時間枠を設定することで、NetApp Console のローカル展開におけるダッシュボードカードをカスタマイズします。 
+---
+= NetApp Console ローカル展開でカードをカスタマイズする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console のローカル展開では、SLA リスク、容量負荷、繰り返し発生するアラートノイズなど、オペレーターが最も重要なシグナルに集中できるよう、ダッシュボードカードをカスタマイズできます。このトピックを参考に、チームが行う必要のある業務上の意思決定に合わせてダッシュボードの表示を設定してください。
+
+
+
+[[before-you-begin]]
+== 開始する前に
+
+* カードを配置したいダッシュボードを作成または開きます。
+* 利用可能なテンプレートと指標をlink:reference-dashboard-card-templates.html["NetApp Console ローカル展開におけるカスタムダッシュボードカードとメトリクスについて"]で確認します。
+
+
+
+
+[[add-cards-while-refining-an-existing-dashboard]]
+== 既存のダッシュボードを改良しながらカードを追加する
+
+既存のダッシュボードを改良する際に、特定の運用上の疑問に答えるカードをすばやく追加する必要がある場合は、このオプションを使用してください。
+
+.手順
+. カードを追加したいダッシュボードを開きます。
+. 「カードを追加」を選択します。
+. カードの *リソースタイプ* （フリート、システム、ボリュームなど）を選択し、利用可能なリソースのリストからリソースを選択します。
+. 「次へ」を選択して、指標とカードの種類の選択に進みます。
+. 表示する指標を選択してください。利用可能なメトリックは、*メトリックタイプ*：*パフォーマンス*、*キャパシティ*、*ヘルス*、または*アラート*でフィルタリングするか、名前で特定のメトリックを検索できます。利用可能な指標は、選択したリソースの種類によって異なります。
++
+link:reference-dashboard-card-templates.html#metrics-list["利用可能な指標について説明します。"]
+
+. ダッシュボードに含めるカードを選択し、*次へ*を選択します。
++
+一度に選択できるカードは1枚のみです。カードのプレビューには、選択したメトリックとリソースタイプのリアルタイムデータが表示されます。
+
+. カードに名前を付けてください。ダッシュボード内では、名前は一意である必要があります。
+. カードのプレビューを確認し、カード名と説明を入力してから、*追加*を選択してください。
+. 追加のカードについても、これらの手順を繰り返してください。
+. ダッシュボードを保存します。
+
+
+
+
+[[related-information]]
+== 関連情報
+
+* link:task-storage-dashboard.html["NetApp Console ローカル展開でホームページのメトリクスを表示する"]
+* link:concept-custom-dashboards.html["NetApp Console ローカル展開におけるカスタムダッシュボードについて"]
+* link:task-dashboard-create.html["カスタムダッシュボードを作成する"]
+* link:task-dashboard-manage.html["カスタムダッシュボードを管理する"]
+* link:reference-dashboard-card-templates.html["NetApp Console ローカル展開におけるカスタムダッシュボードカードとメトリクスについて"]
+

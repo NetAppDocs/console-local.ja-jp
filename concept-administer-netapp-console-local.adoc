@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: concept-administer-netapp-console-local.html 
+keywords: administer Console local deployment, audit, audit log, compliance, SIEM, webhook, VM maintenance, access management, demonstrate compliance, operational visibility, netapp console local 
+summary: NetApp Console のローカル展開の管理と監視の方法（監査アクティビティ、サブスクリプション、メンテナンス、トラブルシューティング、メンバーアクセスを含む）について説明します。 
+---
+= NetApp Console ローカル展開における管理と監視について学ぶ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console のローカルデプロイメントをデプロイした後、管理ツールと監視ツールを使用してアクティビティを確認し、VMを維持管理し、メンバーアクセスを管理します。
+
+
+
+[[audit-activity]]
+== 監査活動
+
+ユーザーと API のアクティビティを確認し、NetApp Console 操作のステータスを追跡し、監査ログをダウンロードし、より長期間の保存や追加分析が必要な場合にログを外部ツールにエクスポートします。
+
+* link:task-audit-console-activity.html["NetApp Consoleのローカル デプロイ アクティビティの監査"]
+* link:task-console-configure-notifications-delivery.html["NetApp Console ローカル展開で通知配信チャネルを設定する"]
+
+
+
+
+[[licenses-and-subscriptions]]
+== Licenses and subscriptions
+
+ライセンスおよびサブスクリプション情報を使用して、コンソール環境におけるサービス利用資格とサブスクリプション状況を確認してください。
+
+link:https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html["ライセンスとサブスクリプションについて"^].
+
+
+
+[[maintain-and-troubleshoot-the-console-local-deployment-vm]]
+== コンソールのローカルデプロイメントVMの保守とトラブルシューティング
+
+コンソールのローカル展開をホストする仮想マシン（VM）を維持管理し、ネットワークおよびシステム設定を確認し、診断ツールにアクセスし、サービスまたはエージェントが期待どおりに動作しない場合に問題のトラブルシューティングを行います。
+
+link:task-console-local-vm-config.html["コンソールのローカル展開用のvCenterまたはESXiホストを管理する"].
+
+
+
+[[manage-users-and-access]]
+== ユーザーとアクセスを管理する
+
+組織全体のメンバーアクセス権限を確認し、フリートレベルでアクセス権限を調整し、MFA復旧やサービスアカウント認証情報などのセキュリティ設定を管理します。
+
+* link:task-iam-manage-roles.html["NetApp Console でメンバーアクセスを管理する"]
+* link:task-iam-users-fleets-assign.html["NetApp Console ローカル展開でのフリートアクセス割り当ての表示または変更"]
+* link:task-manage-member-security.html["NetApp Console ローカル展開でメンバーのセキュリティを管理する"]
+

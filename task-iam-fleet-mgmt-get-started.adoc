@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: task-iam-fleet-mgmt-get-started.html 
+keywords: iam, quick start, get started, get started with iam, identity and access management 
+summary: NetApp Console のローカル展開において、フォルダとフリート階層を作成し、メンバーを追加し、リソースを追加し、それらのリソースを適切なフリートに配置することで、IDとアクセス管理を設定します。 
+---
+= NetApp Console ローカル展開でのIDとアクセス管理の開始
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console のローカル展開では、フォルダとフリートの階層を設定し、メンバーと初期権限を追加し、適切なチームがアクセスして管理できるように、リソースを適切なフリートに追加して配置します。
+
+.必要なアクセスロール
+スーパー管理者、組織管理者、フォルダ管理者、またはフリート管理者。link:reference-iam-predefined-roles.html["アクセスロールについて"]。
+
+初期設定を完了するには、*Organization admin* または *Super admin* のロールが必要です。セットアップ後は、組織の変更に応じて、リソース、メンバーアクセス、およびフリートアクセスを管理します。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]リソースの追加または検出
+[role="quick-margin-para"]
+Console のローカル展開にシステムを追加します。初期設定時には、通常、デフォルトのフリートが選択されている状態でシステムが追加されます。
+
+[role="quick-margin-para"]
+リソースの作成方法や検出方法について説明します。
+
+[role="quick-margin-list"]
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/index.html["オンプレミス ONTAP クラスター"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]フォルダとフリート階層を作成する
+[role="quick-margin-para"]
+自社の組織構造に合わせて、追加のフリートとフォルダを作成します。
+
+[role="quick-margin-para"]
+link:task-iam-manage-folders-fleets.html["フォルダとフリートを使ってリソースを整理する方法を説明します。"].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"]リソースを適切なフリートに関連付ける
+[role="quick-margin-para"]
+コンソールのローカルデプロイメントでシステムを追加または検出すると、そのリソースは現在選択されているフリートに自動的に関連付けられます。システムを適切なチームが利用できるようにするには、組織階層内の適切なフリートにシステムを関連付けます。
+
+[role="quick-margin-list"]
+* link:task-iam-manage-resources.html["フォルダとフリート内のリソースを管理する方法について説明します。"].
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"]メンバーを追加し、開始時の権限を割り当てる
+[role="quick-margin-para"]
+メンバーを追加し、管理対象に基づいて、組織、フォルダ、またはフリートレベルで役割を割り当てます。
+
+[role="quick-margin-para"]
+link:task-iam-manage-members-permissions.html["メンバーとその権限を管理する方法を説明します"].
+
+
+
+[[after-initial-setup]]
+== 初期設定後
+
+初期設定が完了したら、組織の変更に合わせてアクセス権限とリソースの配置を管理します。
+
+* link:task-iam-manage-resources.html["フォルダーとフリートでリソースを管理する"]
+* link:task-iam-manage-roles.html["フリートやフォルダ全体にわたるメンバーアクセス管理（メンバー中心）"]
+* link:task-iam-users-fleets-assign.html["特定のフリートまたはフォルダへのアクセス権限を管理する（フリート中心）"]
+* link:task-iam-manage-folders-fleets.html#delete-a-folder-or-fleet["不要になったフォルダとフリートを削除する"]
+
+
+.関連情報
+* link:concept-identity-and-access-management.html["NetApp Console のアイデンティティとアクセス管理について"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["IDとアクセス管理のAPIについて"^]
+

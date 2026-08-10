@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, new features, release notes, netapp console local' 
+summary: 最新リリースの NetApp Console ローカル展開における新機能と強化点について説明します。 
+---
+= NetApp Console ローカル展開の最新情報
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console ローカル展開の最新リリースにおける新機能と強化点について説明します。
+
+
+
+[[introducing-netapp-console-local-deployment]]
+=== NetApp Consoleローカル デプロイのご紹介
+
+https://docs.netapp.com/us-en/console-local/netapp-console-local.html["NetApp Console ローカル展開について学ぶ"].

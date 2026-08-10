@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+. AWSコンソールにログインし、IAMサービスに移動します。
+. ポリシーを作成する：
++
+.. 「Policies」＞「Create policy」を選択します。
+.. *JSON* を選択し、link:reference-permissions-aws.html["コンソールエージェントのIAMポリシー"] の内容をコピーして貼り付けます。
+.. 残りの手順を完了して、ポリシーを作成してください。
+
+
+
+
+. IAMロールを作成します：
++
+.. 「Roles」＞「Create role」を選択します。
+.. 「AWS service > EC2」を選択してください。
+.. 先ほど作成したポリシーを添付して、権限を追加します。
+.. 役割を作成するための残りの手順を完了してください。
+
+
+
+
+. ポリシーをIAMユーザーに割り当てます。
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWS ドキュメント：IAM ロールの作成"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWSドキュメント：IAMポリシーの追加と削除"^]
+
+
+. ユーザーがアクセスキーを持っていることを確認してください。このアクセスキーは、コンソールエージェントをインストールした後に NetApp Console に追加できます。
+

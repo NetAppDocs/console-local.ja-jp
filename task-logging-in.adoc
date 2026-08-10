@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: task-logging-in.html 
+keywords: logging in, log in, sign in, signing in, user account, MFA, multi-factor authentication, AD, Active Directory, directory services, local user, Console local deployment access 
+summary: NetApp Console ローカル展開にサインアップした後、Webベースのコンソールからログインして、データおよびストレージインフラストラクチャの管理を開始できます。 
+---
+= NetApp Console ローカル展開にログインする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+組織管理者からコンソールローカル展開の組織ユーザーアカウントへの招待を受けた後、NetApp Console ローカル展開にサインインできます。ログインするには、ログインに関連付けられているメールアドレスを使用します。
+
+ログインしてもリソースが表示されない場合は、組織の管理者に問い合わせてください。link:task-user-settings.html#contact-admin["組織の管理者に問い合わせてください"].
+
+.手順
+. Webブラウザを開き、Console のローカル展開がインストールされている IP アドレスにアクセスしてください。
+. 「ログイン」ページで、ログインに使用しているメールアドレスを入力してください。
+. ログインに関連付けられた認証方法に応じて、資格情報を入力するように求められます。
++
+** メールアドレスとパスワードを使用した NetApp Console アカウント
+
+
++
+[NOTE]
+====
+** MFAが有効になっている場合：パスワードを入力した後、TOTPコード（認証アプリから取得）を入力するか、リカバリコードを使用するように求められます。
+** 復旧コードを使用してサインインする場合は、復旧コードの入力画面でUIに表示される順序でコードを使用してください。
+
+
+====
++
+** メールアドレスとパスワードを使用したActive Directoryアカウント
+
+
+

@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task-storage-class-fleet-associate.html 
+keywords: associate, storage class, fleet, assign, netapp console 
+summary: ストレージクラスを NetApp Console のローカルデプロイメントのフリートに関連付けて、一貫したストレージポリシーを適用します。 
+---
+= ストレージクラスを NetApp Console ローカル展開のフリートに関連付ける
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ストレージクラスを NetApp Console のローカル展開でフリートに関連付けることで、環境固有の標準を適用し、オペレーターが使用できるオプションを制御し、割り当てられたクラスに対するコンプライアンスチェックを簡素化します。
+
+.必要なアクセスロール
+スーパー管理者、組織管理者、フォルダまたはフリート管理者、またはストレージ管理者。link:reference-iam-predefined-roles.html["アクセスロールについて"]。
+
+
+
+[[associate-a-storage-class-with-a-fleet]]
+== 保管クラスをフリートに関連付ける
+
+ストレージクラスをフリートに関連付けることで、そのフリート内でのプロビジョニングや継続的なコンプライアンス監視に利用できるようになります。
+
+.手順
+. 管理するフリートを開きます。
+. ストレージクラスのフリート構成エリアを見つけます。
+. フリートに関連付けるストレージクラスを1つ以上選択してください。
+. 「保存」を選択します。
+
+
+.検証
+. フリート内でプロビジョニングワークフローを開始し、ストレージクラスが選択可能であることを確認します。
+

@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-iam-rename-organization.html 
+keywords: rename organization, change organization name, name change, rename, change name, iam, ID, integration, fleet, organization, API, identity and access management 
+summary: 必要に応じて、NetApp Console のローカル展開組織の名前を変更できます。 
+---
+= NetApp Console のローカル展開組織とフリート ID を管理する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console のローカル展開では、NetApp Console の組織には名前と ID があります。組織を識別するために、組織名を決めることができます。特定の連携においては、組織 ID を取得する必要がある場合もあります。
+
+.必要なアクセスロール
+スーパー管理者または組織管理者。link:reference-iam-predefined-roles.html["アクセスロールについて"]。
+
+
+
+[[rename-your-organization]]
+== 組織名を変更する
+
+組織名を変更できます。
+
+.手順
+. 「管理」＞「IDとアクセス」を選択してください。
+. *Organization* を選択します。
+. 「組織」ページから、テーブルの最初の行に移動し、image:icon-action.png["3つの点が横に並んだアイコン"]を選択して、「組織の編集」を選択します。
++
+image:screenshot-iam-edit-organization.png["概要ページのスクリーンショット。アクションアイコンと「組織の編集」オプションが表示されています。"]
+
+. 新しい組織名を入力し、*Apply* を選択してください。
+
+
+
+
+[[get-the-organization-id]]
+== 組織IDを取得する
+
+組織IDは、コンソールとの特定の連携に使用されます。
+
+組織IDは「組織」ページから確認でき、必要に応じてクリップボードにコピーできます。
+
+.手順
+. *Administration（管理）* ＞ *Identity and access（IDとアクセス）* ＞ *Organization（組織）* を選択します。
+. 「組織」ページで、概要バーにある組織IDを探し、クリップボードにコピーしてください。後で使用するために保存することも、必要な場所に直接コピーすることもできます。
+
+
+
+
+[[obtain-the-id-for-a-fleet]]
+[[fleet-id]]
+== フリートのIDを取得する
+
+APIを使用する場合は、フリートのIDを取得する必要があります。
+
+.手順
+. 「組織」ページから、表内のフリートに移動して image:icon-action.png["3つの点が横に並んだアイコン"] を選択します。
++
+フリート ID が表示されます。
+
+. IDをコピーするには、コピーボタンを選択してください。
++
+image:screenshot-iam-project-id.png["フォルダーとフリートのテーブルのスクリーンショット。フリートのアクション メニューを選択した後にフリート ID が表示されています。"]
+
+
+
+.関連情報
+* link:concept-identity-and-access-management.html["アイデンティティとアクセス管理について"]
+* link:task-iam-fleet-mgmt-get-started.html["NetApp Consoleでのアイデンティティとアクセス管理を開始する"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["IDとアクセス管理のAPIについて"^]
+

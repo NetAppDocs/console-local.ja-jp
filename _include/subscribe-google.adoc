@@ -1,0 +1,65 @@
+= 
+:allow-uri-read: 
+
+
+.手順
+. *[管理]* > *[認証情報]* を選択します。
+. 「Organization credentials」を選択します。
+. コンソールエージェントに関連付けられている認証情報のセットのアクションメニューを選択し、次に「サブスクリプションの構成」を選択します。+新規スクリーンショット必要（TS）image:screenshot_gcp_add_subscription.png["既存の認証情報セットに対するアクションメニューのスクリーンショット。"]
+. 選択した認証情報を使用して既存のサブスクリプションを設定するには、ドロップダウンリストから Google Cloud プロジェクトとサブスクリプションを選択し、「設定」を選択します。
++
+image:screenshot_gcp_associate.gif["Google Cloud 認証情報用に選択された Google Cloud プロジェクトおよびサブスクリプションのスクリーンショット。"]
+
+. まだサブスクリプションをお持ちでない場合は、*「サブスクリプションを追加」 > 「続行」* を選択し、Google Cloud Marketplace の手順に従ってください。
++
+
+NOTE: 以下の手順を完了する前に、Google Cloud アカウントで請求管理者権限と NetApp Console のログインの両方があることを確認してください。
+
++
+.. リダイレクトされた後 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["NetApp Intelligent Services の Google Cloud Marketplace ページ"^]、上部のナビゲーションメニューで正しいプロジェクトが選択されていることを確認してください。
++
+image:screenshot_gcp_cvo_marketplace.png["Google Cloud の Cloud Volumes ONTAP マーケットプレイスページのスクリーンショット。"]
+
+.. 「Subscribe」を選択します。
+.. 適切な請求アカウントを選択し、利用規約に同意してください。
+.. 「Subscribe」を選択します。
++
+このステップでは、お客様の転送リクエストをNetAppに送信します。
+
+.. ポップアップダイアログボックスで、*NetApp, Inc.への登録*を選択します。
++
+この手順は、Google Cloud サブスクリプションを NetApp Console の組織またはアカウントにリンクするために完了する必要があります。このページから別のページにリダイレクトされ、NetApp Console にサインインするまで、サブスクリプションのリンク処理は完了しません。
+
++
+image:screenshot_gcp_marketplace_register.png["登録ポップアップのスクリーンショット。"]
+
+.. *サブスクリプション割り当て*ページの手順を完了します。
++
+
+NOTE: 組織内の誰かが既に請求アカウントからマーケットプレイスのサブスクリプションを取得している場合は、代わりに https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp Console内のCloud Volumes ONTAPページ"^]にリダイレクトされます。予期しない場合は、NetAppの営業チームにお問い合わせください。Google では、Google 請求アカウントごとに 1 つのサブスクリプションのみが有効です。
+
++
+*** このサブスクリプションを関連付けるコンソール組織またはアカウントを選択してください。
+*** *既存のサブスクリプションを置き換える*フィールドで、1つの組織またはアカウントの既存のサブスクリプションをこの新しいサブスクリプションに自動的に置き換えるかどうかを選択します。
++
+コンソールは、組織またはアカウント内のすべての認証情報に対する既存のサブスクリプションを、この新しいサブスクリプションに置き換えます。認証情報が過去にサブスクリプションに関連付けられたことがない場合、この新しいサブスクリプションはその認証情報に関連付けられません。
+
++
+その他の組織やアカウントについては、これらの手順を繰り返して、サブスクリプションを手動で関連付ける必要があります。
+
+*** 「保存」を選択します。
++
+以下の動画では、Google Cloud Marketplace からサブスクライブする手順を説明しています。
+
++
+.Google Cloud Marketplace から購読する
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
+
+
+.. このプロセスが完了したら、NetApp Console の認証情報ページに戻り、この新しいサブスクリプションを選択してください。
++
+image:screenshot_gcp_associate.gif["サブスクリプション割り当てページのスクリーンショット。"]
+
+
+
+

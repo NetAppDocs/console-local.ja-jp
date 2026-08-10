@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: concept-monitor-storage.html 
+keywords: monitor, health, performance, alerts, workload analyzer, remediation, netapp console local, console local 
+summary: NetApp Console のローカル展開では、フリート全体の健全性ダッシュボード、詳細なボリューム分析、設定可能なアラート、ガイド付きまたは自動の修復機能が提供されるため、ワークロードに影響が出る前にストレージの問題を特定して解決できます。 
+---
+= NetApp Console ローカル展開におけるストレージ監視
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console のローカル展開機能を使用すると、ダッシュボード、アラート、詳細な分析、および修復機能によって、複数のストレージ群を監視できます。これにより、ワークロードに影響が出る前に問題を特定して解決できます。
+
+
+
+[[monitor-fleet-wide-health-with-dashboards]]
+== ダッシュボードを使用してフリート全体の健全性を監視する
+
+まずはダッシュボードを使って、ストレージの状態とパフォーマンスを素早く把握します。ホームページでは一目でわかる指標を確認し、ダッシュボードテーブルを開いて定義済みダッシュボードやカスタムダッシュボードを表示し、さらに詳細な情報が必要な場合はアラート、調査、および修復のセクションに移動します。
+
+* link:task-storage-dashboard.html["NetApp Console ローカル展開でホームページのメトリクスを表示する"]
+* link:task-dashboard-manage.html["NetApp Console ローカル展開でダッシュボードを最新の状態に保つ"]
+* link:concept-custom-dashboards.html["NetApp Console ローカル展開におけるカスタムダッシュボードについて"]
+
+
+
+
+[[investigate-performance-issues]]
+== パフォーマンスの問題を調査する
+
+ワークロードアナライザーを使用して、個々のボリュームのパフォーマンス問題を調査します。レイテンシ、スループット、IOPS、および構成変更を相関させることで、根本原因を特定できます。
+
+* link:concept-workload-analyzer.html["NetApp Console ローカル展開ワークロードアナライザーについて"]
+* link:task-analyzer-volume-latency-investigate.html["NetApp Console ローカル展開でボリュームの高レイテンシを調査する"]
+* link:task-analyzer-volume-throughput-investigate.html["NetApp Console ローカル展開におけるボリュームの高スループット需要を調査する"]
+* link:reference-workload-analyzer-metrics.html["NetApp Console ローカル展開における Workload Analyzer のメトリックについて"]
+
+
+
+
+[[configure-alerts-and-notifications]]
+== アラートと通知を設定する
+
+注意が必要なストレージの状態について、適切な担当者が通知を受け取れるように、アラートポリシーと通知チャネルを設定してください。例えば、容量に関する警告はストレージチームに、保護に関するアラートはそれに対応できるバックアップ管理者にルーティングします。
+
+link:task-alert-rules-manage.html["NetApp Console ローカル展開での通知とアラートポリシーの設定"].link:task-alerts-monitor.html["NetApp Console ローカル展開でストレージアラートを表示する"].
+
+
+
+[[remediate-issues]]
+== 問題を解決する
+
+問題が検出されたら、NetApp Console のローカル展開から直接修復します：
+
+* *自動修復* — NetApp Console のローカル展開では、事前定義されたルールに基づいて修正措置が自動的に適用されます。
+* *ガイド付き修復* — 各操作を完全に制御しながら、段階的な推奨事項に従って問題を解決します。
+

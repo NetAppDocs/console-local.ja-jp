@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: concept-secure-access.html 
+keywords: security, access control, MFA, multi-factor authentication, AD, Active Directory, LDAP, LDAPS, directory services, authentication, zero trust, secure access governance, reduce attack surface, netapp console local 
+summary: NetApp Console ローカル展開で利用可能なセキュリティオプション（Active Directory 統合および多要素認証を含む）について説明します。 
+---
+= NetApp Console ローカル展開への安全なアクセスについて
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console ローカル展開では、ストレージ管理環境を保護し、アクセスできるユーザーを制御するために、複数のセキュリティ層が提供されます。
+
+
+
+[[active-directory-integration]]
+== Active Directoryとの統合
+
+NetApp Console のローカル展開を Active Directory に接続することで、ユーザーは既存の社内認証情報を使用してサインインできるようになります。これにより、Console のローカル展開において個別のパスワードを設定する必要がなくなり、組織に追加したユーザーに対してディレクトリベースのサインインがサポートされます。
+
+link:task-iam-active-directory-integrate.html["Active DirectoryをNetApp Consoleローカル展開と統合する"].
+
+
+
+[[multi-factor-authentication]]
+== 多要素認証
+
+ユーザーは、認証情報が漏洩した場合でも不正アクセスを防止するための追加の検証レイヤーとして、多要素認証（MFA）を有効にすることができます。
+
+link:task-user-settings.html["NetApp Console ローカル展開で MFA を有効にする"].
+
+
+
+[[identity-and-access-management]]
+== アイデンティティとアクセス管理
+
+ユーザーを認証した後、NetApp Console ローカル展開内でユーザーが実行できる操作を制御および監視します。
+
+ロールベースのアクセス管理を使用して、各メンバーが閲覧および管理できる内容を定義します。メンバーを特定のフリートに割り当てることで、各自の責任範囲に関連するストレージリソースのみにアクセスできるようにします。
+
+* link:concept-identity-and-access-management.html["NetApp Console ローカル展開のIDとアクセス管理について"]
+* link:concept-iam-rbac.html["NetApp Console ローカル展開のロールベースアクセス制御について"]
+* link:task-iam-manage-members-permissions.html["メンバーを追加してロールを割り当てる（NetApp Console ローカル展開）"]
+* link:task-iam-users-fleets-assign.html["NetApp Console ローカル展開でフリートアクセス割り当てを管理する"]
+
+
+
+
+[[audit-logging]]
+== 監査ロギング
+
+すべてのユーザーアクティビティ（API およびサービス アカウント ユーザーを含む）を NetApp Console ローカル展開でコンプライアンスおよびセキュリティ調査のために追跡します。
+
+link:task-audit-console-activity.html["NetApp Console ローカル展開の監査ログを表示する"].

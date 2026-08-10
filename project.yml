@@ -1,0 +1,205 @@
+---
+settings:
+  name: NetApp Console local deployment
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  release_notes_autogen:
+    release_notes_repo: console-local-relnotes
+  langs: ja-jp,us-en,de-de,es-es,fr-fr,it-it,pt-br,ko-kr,zh-cn,zh-tw
+sidebar:
+  entries:
+  - title: NetApp Console ローカル展開
+    entries:
+    - title: リリース ノート
+      entries:
+      - title: 新機能
+        url: "/whats-new.html"
+      - title: 既知の制限事項
+        url: "/reference-local-known-limitations.html"
+      - title: NetApp Console ローカル展開と NetApp Console の比較
+        url: "/console-differences.html"
+    - title: はじめに
+      entries:
+      - title: NetApp Console について
+        url: "/concept-netapp-console-local.html"
+      - title: アイデンティティとアクセス管理について
+        url: "/concept-identity-and-access-management.html"
+      - title: フリート管理について学ぶ
+        url: "/concept-manage-storage.html"
+      - title: ストレージクラスとポリシーについて
+        url: "/concept-storage-classes.html"
+      - title: LLM統合（AIアシスト管理）について学ぶ
+        url: "/concept-llm-integration.html"
+      - title: NetApp Backup and Recovery について
+        url: "/concept-data-services.html"
+    - title: インストールとセットアップ
+      entries:
+      - title: NetApp Consoleのセットアップのクイックスタート
+        url: "/task-quick-start-console-setup.html"
+      - title: NetApp Consoleのインストール
+        entries:
+        - title: NetApp Consoleのインストール
+          url: "/task-install-agent-on-prem-ova.html"
+      - title: コンソールの整理方法を計画する
+        entries:
+        - title: IDとアクセス管理の概要
+          url: "/task-iam-fleet-mgmt-get-started.html"
+        - title: フォルダーとフリートについて
+          url: "/concept-folders-fleets-overview.html"
+        - title: ロールベースアクセス制御（RBAC）について
+          url: "/concept-iam-rbac.html"
+      - title: Console の組織を設定する
+        entries:
+        - title: フォルダとフリートを作成する
+          url: "/task-iam-manage-folders-fleets.html"
+        - title: ストレージシステムを NetApp Console に追加する
+          url: "/task-add-systems.html"
+        - title: リソースをフォルダーとフリートに関連付ける
+          url: "/task-iam-manage-resources.html"
+        - title: メンバーを追加し、初期ロールを割り当てる
+          url: "/task-iam-manage-members-permissions.html"
+        - title: アクセスロール
+          entries:
+          - title: NetApp Console アクセスロール
+            url: "/reference-iam-predefined-roles.html"
+          - title: プラットフォームロール
+            url: "/reference-iam-platform-roles.html"
+          - title: オペレーションサポートアナリストの役割
+            url: "/reference-iam-analyst-roles.html"
+          - title: ストレージロール
+            url: "/reference-iam-storage-roles.html"
+          - title: バックアップおよびリカバリの役割
+            url: "/reference-iam-backup-rec-roles.html"
+      - title: コンソール統合とサービスの設定
+        entries:
+        - title: NetApp ConsoleをActive Directoryと統合します
+          url: "/task-iam-active-directory-integrate.html"
+        - title: LLMを接続してNetApp Consoleアシスタントを有効にする
+          url: "/task-llm-connect.html"
+        - title: LLM統合のトラブルシューティング
+          url: "/task-llm-troubleshoot-integration.html"
+        - title: 通知配信の設定
+          url: "/task-console-configure-notifications-delivery.html"
+    - title: NetApp Console を使用する
+      entries:
+      - title: NetApp Console にログインする
+        url: "/task-logging-in.html"
+      - title: フリートに関連付けられたシステムを表示する
+        url: "/task-iam-switch-fleets.html"
+      - title: NetApp Console のユーザー設定を管理する
+        url: "/task-user-settings.html"
+      - title: NetApp Console アシスタントを使用する
+        url: "/task-console-asst-use.html"
+    - title: NetApp Console でストレージを管理する
+      entries:
+      - title: ストレージ管理について学ぶ
+        url: "/concept-manage-storage.html"
+      - title: ストレージの動作を標準化する
+        entries:
+        - title: ストレージクラスについて
+          url: "/concept-storage-classes.html"
+        - title: ストレージクラスポリシーについて
+          url: "/concept-storage-class-policies.html"
+        - title: 定義済みのストレージクラスポリシーを確認する
+          url: "/reference-storage-class-policies.html"
+        - title: ストレージクラスを作成する
+          url: "/task-storage-class-manage.html"
+      - title: ストレージのプロビジョニング
+        url: "/task-provisioning-manual.html"
+    - title: ストレージの状態を監視する
+      entries:
+      - title: NetApp Console でのストレージの健全性監視について学ぶ
+        url: "/concept-monitor-storage.html"
+      - title: ダッシュボードで監視する
+        entries:
+        - title: ホームページの指標を表示する
+          url: "/task-storage-dashboard.html"
+        - title: カスタムダッシュボードを使用する
+          entries:
+          - title: カスタムダッシュボードについて
+            url: "/concept-custom-dashboards.html"
+          - title: ダッシュボードの使用を開始する
+            url: "/task-dashboard-get-started.html"
+          - title: カスタムダッシュボードを作成する
+            url: "/task-dashboard-create.html"
+          - title: ダッシュボードカードをカスタマイズする
+            url: "/task-customize-dashboard-cards.html"
+          - title: カスタムダッシュボードカードとメトリクスリファレンス
+            url: "/reference-dashboard-card-templates.html"
+        - title: カスタムダッシュボードを管理する
+          entries:
+          - title: カスタムダッシュボードを管理する
+            url: "/task-dashboard-manage.html"
+      - title: インベントリを使用してフリートを監視する
+        url: "/concept-monitor-fleets-inventory.html"
+      - title: アラートを修正する
+        entries:
+        - title: アラートについて
+          url: "/concept-console-alerts.html"
+        - title: アラートを表示する
+          url: "/task-alerts-monitor.html"
+        - title: アラートの通知ルールを設定する
+          url: "/task-alert-rules-manage.html"
+        - title: ストレージクラスのずれを修正する
+          url: "/task-storage-class-drift-remediate.html"
+        - title: 警告の是正措置
+          url: "/reference-alert-remediation.html"
+      - title: パフォーマンスの問題を調査する
+        entries:
+        - title: ワークロードアナライザーについて
+          url: "/concept-workload-analyzer.html"
+        - title: ボリュームの高遅延を調査する
+          url: "/task-analyzer-volume-latency-investigate.html"
+        - title: ボリュームの高スループット要求を調査する
+          url: "/task-analyzer-volume-throughput-investigate.html"
+        - title: ボリュームの容量増加を調査する
+          url: "/task-analyzer-volume-capacity-investigate.html"
+        - title: ワークロードアナライザーのメトリクスリファレンス
+          url: "/reference-workload-analyzer-metrics.html"
+    - title: NetApp Console ローカル展開の管理と監視
+      entries:
+      - title: NetApp Console ローカル展開の管理について
+        url: "/concept-administer-netapp-console-local.html"
+      - title: NetApp Console ローカル展開操作の監査
+        url: "/task-audit-console-activity.html"
+      - title: Licenses and subscriptions
+        url: https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html
+      - title: NetApp Consoleのメンテナンス
+        entries:
+        - title: NetApp Console VMのメンテナンス
+          url: "/task-console-local-vm-config.html"
+      - title: ユーザーとアクセスを管理する
+        entries:
+        - title: メンバーアクセス管理（メンバー中心）
+          url: "/task-iam-manage-roles.html"
+        - title: フリートアクセス割り当ての管理（フリート中心）
+          url: "/task-iam-users-fleets-assign.html"
+        - title: メンバーのセキュリティを管理する
+          url: "/task-manage-member-security.html"
+    - title: 参照先
+      entries:
+      - title: NetApp Console ローカルデプロイメント API
+        entries:
+        - title: 組織IDとフリートID
+          url: "/task-iam-rename-organization.html"
+        - title: アイデンティティとアクセス管理APIリファレンス
+          url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
+      - title: サポートされているLLMプロバイダーとモデル
+        url: "/reference-llm-supported-models.html"
+      - title: ONTAPアラートリファレンス
+        url: "/reference-ontap-alerts.html"
+      - title: クラスターセキュリティコンプライアンスカテゴリ
+        url: "/reference-cluster-compliance-categories.html"
+      - title: ストレージVMのセキュリティコンプライアンスカテゴリ
+        url: "/reference-svm-compliance-categories.html"
+    - title: ナレッジとサポート
+      entries:
+      - title: サポートに登録
+        url: "/task-support-registration.html"
+      - title: ヘルプを表示
+        url: "/task-get-help.html"
+  - title: 法律上の表示
+    url: "/legal-notices.html"

@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: concept-deploy-netapp-console-local.html 
+keywords: deploy, install, vCenter, Linux, high availability, deployment options, netapp console local 
+summary: NetApp Console のローカル展開オプション（vCenter および Linux インストールを含む）について説明します。 
+---
+= NetApp Consoleのローカル デプロイのデプロイ オプション
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console のローカル展開を vCenter 環境にインストールします。
+
+
+
+[[install-in-your-vcenter-environment]]
+=== vCenter 環境へのインストール
+
+事前設定済みのOVAイメージを使用して、お客様のVMware vCenter環境にNetApp Consoleローカル展開を仮想アプライアンスとしてデプロイします。
+
+link:task-install-agent-on-prem-ova.html["NetApp Console のローカル展開を vCenter 環境にインストールする"].
+
+
+
+[[next-steps]]
+== 次の手順
+
+デプロイ後、以下のタスクを完了して開始してください：
+
+* link:task-add-systems.html["ストレージシステムを NetApp Console ローカル展開に追加する"]
+* link:task-iam-manage-members-permissions.html["メンバーを追加してロールを割り当てる（NetApp Console ローカル展開）"]
+

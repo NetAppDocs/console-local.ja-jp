@@ -1,0 +1,125 @@
+---
+sidebar: sidebar 
+permalink: concept-netapp-console-local.html 
+keywords: netapp console local, overview, self-hosted, data sovereignty, storage management, ONTAP, fleet management, RBAC, policy enforcement, storage governance 
+summary: NetApp Console ローカルデプロイメントについて説明します。これは、お客様独自の環境にデプロイできるセルフホスト型のストレージ管理プラットフォームです。 
+---
+= NetApp Console のローカル展開について
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console のローカル展開では、お客様独自のインフラストラクチャで NetApp Console の自律コントロールプレーンをホストして実行できます。
+
+統合ストレージ管理、ポリシー適用、フリート規模の自動化、AI支援による運用を実現します。データ、メタデータ、管理トラフィックは、お客様の環境外には一切送信されません。
+
+
+
+[[deploy-and-operate-console-in-your-own-infrastructure]]
+== 独自のインフラストラクチャに Console をデプロイして運用する
+
+NetApp Console ローカルデプロイメントは、お客様自身のインフラストラクチャ内で実行されるため、お客様のチームがデプロイメント、接続性、および日常的な運用を管理できます。Console エージェントをデプロイし、Console 仮想マシンを維持管理し、監視および管理トラフィックに必要なネットワークパスを管理します。これにより、企業管理者は運用境界を完全に制御しながら、管理データを環境内に保持できます。
+
+* link:task-install-agent-on-prem-ova.html["vCenterでOVAを使用してNetApp Consoleのローカルデプロイをインストールします"].
+* link:task-console-local-vm-config.html["NetApp Consoleのローカルデプロイ用のvCenterまたはESXiホストのメンテナンス"].
+* link:reference-ports-on-prem.html["オンプレミス Console エージェントのポートについては、NetApp Console ローカル展開を参照してください"].
+
+
+
+
+[[automate-storage-operations-with-apis-and-service-accounts]]
+== APIとサービスアカウントを使用してストレージ操作を自動化する
+
+NetApp Console のローカル展開は API ベースの統合をサポートしているため、組織は反復可能なストレージ操作を自動化できます。サービスアカウントを使用すると、アプリケーションは割り当てられたロールで認証および操作を行うことができます。インタラクティブユーザーに適用されるものと同じロールベースのアクセス制御および監査制御が、これらの操作を管理します。これにより、アクセス範囲を限定して説明責任を維持しながら、エンタープライズの自動化を支援します。
+
+* link:task-iam-manage-members-permissions.html["メンバーを NetApp Console ローカル展開組織に追加する"].
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["NetApp Console IAM の API について"^]
+
+
+
+
+[[control-access-with-rbac-and-active-directory-integration]]
+== RBACとActive Directoryの統合によるアクセス制御
+
+NetApp Console のローカル展開は、ユーザーが管理するフリートやリソース内でユーザーが参照・実行できる内容を制限する、ゼロトラストのロールベースアクセス制御（RBAC）を提供します。Active Directory と統合することで、ユーザーは既存の企業認証情報でサインインできるようになり、ローカルユーザーは多要素認証（MFA）を追加してさらなる検証レイヤーを設けることができます。アクセスガバナンスは、組織の幅広いアイデンティティおよびアクセス管理の実践と整合性を保ちます。
+
+* link:concept-identity-and-access-management.html["NetApp Console ローカル展開におけるアイデンティティとアクセス管理について"].
+* link:concept-secure-access.html["NetApp Console ローカル展開への安全なアクセスについて"].
+
+
+
+
+[[organize-fleets-and-delegate-storage-administration]]
+== フリートを整理してストレージ管理を委任する
+
+NetApp Console のローカル展開では、リソースをフォルダとフリートに整理することで、管理の拡張性を高めます。フリートを環境、事業部門、または地域にマッピングし、組織、フォルダ、またはフリートのスコープで管理を委任することで、所有権を明確に保つことができます。この構造により、大規模なストレージチームは、ポリシーの一貫性やガバナンスを損なうことなく、作業を分散させることができます。
+
+* link:concept-folders-fleets-overview.html["NetApp Console ローカル展開におけるフォルダーとフリートについて"].
+* link:concept-storage-fleets.html["NetApp Console ローカル展開のストレージフリートについて"].
+
+
+
+
+[[track-and-export-administrative-activity-for-compliance]]
+== コンプライアンスのために管理活動を追跡およびエクスポートする
+
+すべての管理操作は監査レコードを生成します。セキュリティおよびコンプライアンスチームは、これらのレコードを利用して、インシデントの調査、統制の有効性の証明、および監査要件への対応を行うことができます。集中監視、長期保存、および分析のために、Webhookを介して syslog サーバーに監査ログをエクスポートします。NetApp Console のローカルデプロイメントはお客様自身の環境で実行されるため、ログデータがお客様のインフラストラクチャの外部に送信されることはありません。
+
+* link:task-audit-console-activity.html["NetApp Consoleのローカル デプロイ アクティビティの監査"].
+
+
+
+
+[[provision-storage-consistently-with-storage-class-policies]]
+== ストレージクラスポリシーに従ってストレージを一貫してプロビジョニングする
+
+NetApp Console のローカル展開では、ストレージクラス（パフォーマンス、容量、階層化ポリシーを再利用可能な定義にまとめたテンプレート）を通じて、一貫したストレージ動作が適用されます。管理者はストレージ基準を一度定義します。管理者と自動化されたワークフローは、承認されたクラスを使用して、環境全体におけるすべてのプロビジョニング活動を実行します。これにより、構成のずれを防ぎ、経験の浅い管理者がプロビジョニングの決定に費やす時間を短縮し、すべてのワークロードが組織の基準を即座に満たすことが保証されます。プロビジョニング後、Console のローカル展開は、各ワークロードのコンプライアンスを継続的に監視します。
+
+* link:concept-manage-storage.html["NetApp Console ローカル展開によるストレージ管理について"].
+
+
+
+
+[[monitor-storage-class-compliance-and-remediate-drift-automatically]]
+== ストレージクラスのコンプライアンスを監視し、ドリフトを自動的に修復します
+
+NetApp Console のローカルデプロイメントは、プロビジョニングに使用されたストレージクラスに対して、すべてのワークロードを監視します。ワークロードが、クラスタ構成の直接的な変更やパフォーマンスの低下によって変動する場合、NetApp Console のローカルデプロイメントは違反を即座に検出します。管理者は、ガイド付きの修復手順に従うか、自動修復を設定することで、手動による介入なしに一般的なドリフト状態を解決できます。この継続的な実施により、監査リスクが軽減され、定期監査の間も環境がコンプライアンス状態を維持できます。
+
+
+
+[[monitor-storage-health-and-receive-alerts-across-fleets]]
+== ストレージの状態を監視し、複数のフリートにわたるアラートを受信する
+
+NetApp Console のローカルデプロイメントでは、管理するすべてのクラスターの状態とパフォーマンスを単一の場所で監視できます。フリート全体のダッシュボードには、注意が必要なクラスターとボリュームが表示されます。カスタムダッシュボードを使用すると、管理者は自身の責任範囲に合った監視ビューを作成できます。ワークロードアナライザーは、レイテンシ、スループット、リソース使用率、構成変更を時系列で相関分析し、問題がワークロードに影響を与える前に根本原因を特定するのに役立ちます。
+
+状況が変化した際に適切なチームにアラートが届くよう、メールとWebhookの配信チャネルを設定してください。組織管理者が宛先を設定し、ストレージ管理者がアラートルールにそれらを適用することで、応答パスが運用モデルに一致するようにします。これにより、企業チームは容量、パフォーマンス、および保護に関するイベントに迅速に対応できるようになります。
+
+* link:concept-monitor-storage.html["NetApp Console ローカル展開におけるストレージの健全性監視について"].
+* link:task-console-configure-notifications-delivery.html["NetApp Console ローカル展開で通知配信チャネルを設定する"].
+* link:task-alert-rules-manage.html["NetApp Console ローカル展開でアラートの通知ルールを設定する"].
+
+
+
+
+[[provision-storage-and-investigate-alerts-with-natural-language]]
+== 自然言語でストレージをプロビジョニングし、アラートを調査する
+
+NetApp Console ローカル展開では、独自の大規模言語モデル（LLM）に接続して、AI支援によるストレージ管理を提供できます。ワークロードを平易な言葉で説明することで、プロビジョニングプランを取得したり、Console にアクティブなアラートの調査を依頼したり、ストレージ環境に関する状況に応じた回答を得たりすることができます。すべての AI アクションは、ストレージクラスのガードレールおよびお客様のアカウントに適用されるロールベースのアクセス制御の範囲内に留まり、機密性の高い操作を実行する前に確認が必要です。Console ローカル展開では、管理者が設定した LLM エンドポイントにのみリクエストが送信されます。
+
+* link:concept-llm-integration.html["NetApp Console ローカル展開における LLM 統合について"].
+
+
+
+
+[[back-up-and-restore-storage-with-netapp-backup-and-recovery]]
+== NetApp Backup and Recoveryを使用したストレージのバックアップとリストア
+
+プロビジョニングとモニタリングにとどまらず、NetApp Console のローカル展開により NetApp Backup and Recovery へのアクセスが可能になり、同じインターフェースからデータを保護できます。データのバックアップとリストアを実行することで、保護とリカバリの要件を満たすことができます。ストレージと並行してデータ保護を管理することで、ガバナンスの一貫性が保たれ、チームが業務を遂行するために必要なツールの数を削減できます。
+
+* link:concept-data-services.html["NetApp Console ローカル展開のデータサービスについて"].
+

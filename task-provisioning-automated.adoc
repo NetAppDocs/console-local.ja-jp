@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: task-provisioning-automated.html 
+keywords: automated provisioning, automation, policy-driven, storage class, netapp console 
+summary: ストレージクラスとポリシーを使用して、NetApp Console ローカル展開で自動ストレージ プロビジョニングを設定します。 
+---
+= NetApp Console ローカル展開でストレージを自動的にプロビジョニングする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console ローカル展開では、自動プロビジョニングを使用して、ストレージクラス規格とフリート容量に基づいてストレージを割り当てます。自動プロビジョニングは、一貫した結果を求め、手作業による意思決定を減らしたい場合に最適です。
+
+.必要なアクセスロール
+スーパー管理者、組織管理者、フォルダまたはフリート管理者、またはストレージ管理者。link:reference-iam-predefined-roles.html["アクセスロールについて"]。
+
+自動プロビジョニングでは通常、容量とパフォーマンスの余裕に基づいて、フリート内の利用可能なシステムの中から最適な配置を選択し、ストレージ クラスに合わせた設定でワークロードをプロビジョニングします。
+
+
+
+[[before-you-begin]]
+== 開始する前に
+
+* ターゲットフリートで少なくとも1つの ONTAP クラスターが検出されていることを確認してください。
+* クラスに基づいた結果を得たい場合は、ストレージクラスが存在し、フリートに関連付けられていることを確認してください。
+

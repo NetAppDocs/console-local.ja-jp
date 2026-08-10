@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-predefined-roles.html 
+keywords: predefined roles, iam roles, Organization admin, Folder or fleet admin, Super admin, storage roles, analyst roles, backup and recovery roles, role categories, rbac, identity and access management, access roles, netapp console local 
+summary: NetApp Console ローカル展開のアイデンティティとアクセス管理には、組織のメンバーに割り当てることができる定義済みのロールが含まれています。 
+---
+= NetApp Console ローカル展開アクセスロール
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Consoleのローカル展開におけるIDとアクセス管理（IAM）では、リソース階層のさまざまなレベルにわたって組織のメンバーに割り当てることができる事前定義されたロールが提供されます。これらのロールを割り当てる前に、各ロールに含まれる権限を理解しておく必要があります。ロールは、プラットフォーム、アプリケーション、データ サービスのカテゴリに分類されます。
+
+
+
+[[platform-roles]]
+== プラットフォームロール
+
+プラットフォームロールは、NetApp Console のローカル展開管理権限（ロールの割り当てやユーザー管理を含む）を付与します。Console のローカル展開には、複数のプラットフォームロールがあります。
+
+[cols="1,2"]
+|===
+| プラットフォームの役割 | 責任 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["組織管理者"] | 組織内のすべてのフリートとフォルダへの無制限のアクセス、任意のフリートまたはフォルダへのメンバーの追加、明示的なロールが関連付けられていない任意のタスクの実行、および任意のデータサービスの使用をユーザーに許可します。このロールを持つユーザーは、適切な認証情報があれば、フォルダとフリートの作成、ロールの割り当て、ユーザーの追加、システムの管理などによって組織を管理できます。 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["フォルダまたはフリート管理者"] | 割り当てられたフリートとフォルダーへの無制限のアクセスをユーザーに許可します。管理するフォルダーやフリートにメンバーを追加できるほか、割り当てられたフォルダーやフリート内のリソースに対して、あらゆるタスクを実行したり、あらゆるデータサービスやアプリケーションを使用したりすることができます。 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["フェデレーション管理者"] | ユーザーが Console を使用してディレクトリサービスフェデレーションを作成および管理できるようにすることで、ユーザーは既存のディレクトリ認証情報を使用して認証を行うことができます。 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["フェデレーションビューアー"] | コンソールを使用して、既存のディレクトリサービス連携を表示できるようにします。フェデレーションを作成または管理できません。 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["スーパー管理者"] | ユーザーにすべての管理者権限を付与します。この役割は、Console関連の責任を複数のユーザーに分散させる必要がない小規模な組織向けに設計されています。 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["スーパービューアー"] | ユーザーにすべての閲覧者ロールを付与します。このロールは、Console の責任を複数のユーザーに分散させる必要がない小規模な組織向けに設計されています。 
+|===
+
+
+[[application-roles]]
+== アプリケーションの役割
+
+以下は、アプリケーションカテゴリにおける役割の一覧です。各役割は、指定された範囲内で特定の権限を付与します。必要なアプリケーションまたはプラットフォームロールを持たないユーザーは、該当するアプリケーションにアクセスできません。
+
+[cols="1,2"]
+|===
+| アプリケーションロール | 責任 
+
+
+| link:reference-iam-analyst-roles.html["オペレーションサポートアナリスト"] | 監査ページなどのアラートおよび監視ツールへのアクセスを提供します。 
+
+
+| link:reference-iam-storage-roles.html["Storage Admin"] | ストレージの健全性およびガバナンス機能の管理、ストレージリソースの検出、既存システムの変更および削除を行います。 
+
+
+| link:reference-iam-storage-roles.html["ストレージビューア"] | ストレージの状態とガバナンス機能を表示するほか、以前に検出されたストレージリソースも表示します。既存のストレージシステムを検出、変更、または削除することはできません。 
+
+
+| link:reference-iam-storage-roles.html["システムヘルススペシャリスト"] | ストレージ、健全性、ガバナンス機能の管理。ストレージ管理者のすべての権限を持ちますが、既存のシステムを変更または削除することはできません。 
+|===
+
+
+[[data-service-roles]]
+== データサービスロール
+
+以下は、データサービスカテゴリにおける役割の一覧です。各役割は、指定された範囲内で特定の権限を付与します。必要なデータサービスロールまたはプラットフォームロールを持たないユーザーは、データサービスにアクセスできません。
+
+[cols="1,2"]
+|===
+| データサービスの役割 | 責任 
+
+
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリのスーパー管理者"] | NetApp Backup and Recoveryで任意のアクションを実行します。 
+
+
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリの管理者"] | ローカルスナップショットへのバックアップ、セカンダリストレージへのレプリケーション、およびオブジェクトストレージへのバックアップを実行します。 
+
+
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリ復元管理者"] | バックアップとリカバリでワークロードを復元します。 
+
+
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリクローン管理者"] | バックアップとリカバリでアプリケーションとデータをクローニングします。 
+
+
+| link:reference-iam-backup-rec-roles.html["バックアップおよびリカバリビューアー"] | バックアップと復元に関する情報を表示します。 
+
+
+| 分類ビューア | ユーザーがNetApp Data Classificationスキャン結果を表示できるようにします。このロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つリソースのレポートを生成できます。これらのユーザーは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。Data Classificationには管理者ロールがありません。 
+
+
+| SnapCenter 管理者 | アプリケーション向けNetApp Backup and Recoveryを使用して、オンプレミスのONTAPクラスターからスナップショットをバックアップする機能を提供します。このロールを持つメンバーは、次のアクションを実行できます。 * 「Backup and Recovery」＞「Applications」のすべてのアクションを実行する * 権限を持つフリートおよびフォルダー内のすべてのシステムを管理する * すべてのNetApp Consoleサービスを使用する SnapCenterにはビューア ロールはありません。 
+|===
+
+
+[[related-links]]
+== 関連リンク
+
+* link:concept-identity-and-access-management.html["NetApp Console の ID とアクセス管理について説明します"]
+* link:task-iam-fleet-mgmt-get-started.html["NetApp Consoleでのアイデンティティとアクセス管理を開始する"]
+* link:task-iam-manage-members-permissions.html["NetApp Console 組織でメンバーを追加してロールを割り当てる"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["NetApp Console IAM の API について"^]
+

@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+サービスアカウントをコンソールエージェントVMに関連付けます。
+
+.手順
+. Google Cloud ポータルにアクセスし、サービス アカウントをコンソール エージェント VMインスタンスに割り当てます。
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud ドキュメント：インスタンスのサービス アカウントとアクセス スコープを変更する"^]
+
+. 他のプロジェクトのリソースを管理する場合は、Console エージェントロールを持つサービスアカウントをそのプロジェクトに追加してアクセス権を付与してください。この手順はプロジェクトごとに繰り返す必要があります。
+

@@ -1,0 +1,144 @@
+= 
+:allow-uri-read: 
+
+
+.開始する前に
+以下のものが必要です。
+
+* コンソールエージェントをインストールするには、root権限が必要です。
+* Console エージェントからインターネットにアクセスするためにプロキシが必要な場合の、プロキシ サーバに関する詳細情報。
++
+インストール後にプロキシ サーバを設定するオプションがありますが、そのためにはコンソール エージェントを再起動する必要があります。
+
+* CA署名証明書（プロキシ サーバがHTTPSを使用する場合、またはプロキシが傍受プロキシである場合）。
+
+
+
+NOTE: コンソールエージェントを手動でインストールする場合、透過型プロキシ サーバの証明書を設定することはできません。透過型プロキシ サーバの証明書を設定する必要がある場合は、インストール後にメンテナンスコンソールを使用する必要があります。詳細については、link:reference-agent-maint-console.html["エージェントメンテナンスコンソール"]を参照してください。
+
+.タスク概要
+NetApp Support Siteで入手できるインストーラーは、以前のバージョンである可能性があります。インストール後、新しいバージョンが利用可能な場合、コンソールエージェントは自動的に更新されます。
+
+.手順
+. ホストに _http_proxy_ または _https_proxy_ システム変数が設定されている場合は、削除してください：
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+これらのシステム変数を削除しないと、インストールは失敗します。
+
+. Consoleエージェントソフトウェアを https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetAppサポート サイト"^]からダウンロードし、Linuxホストにコピーします。
++
+ネットワーク内またはクラウドで使用することを想定した「オンライン」エージェントインストーラーをダウンロードしてください。
+
+. スクリプトを実行するための権限を割り当てます。
++
+[source, cli]
+----
+chmod +x NetApp-Console-Agent-<version>
+----
++
+<version>は、ダウンロードした Console エージェントのバージョンです。
+
+. インストールスクリプトを実行します。
++
+[source, cli]
+----
+ ./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+ネットワークがインターネットアクセスにプロキシを必要とする場合は、プロキシ情報を追加する必要があります。透過型プロキシまたは明示型プロキシのいずれかを追加できます。--proxy および --cacert パラメータはオプションであり、追加を促すメッセージは表示されません。プロキシ サーバをご利用の場合は、表示されているパラメータを入力する必要があります。
+
++
+CA署名付き証明書を使用した明示的なプロキシ サーバの設定例を以下に示します：
+
++
+[source, cli]
+----
+ ./NetApp-Console-Agent-v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+--proxy は、コンソールエージェントが次のいずれかの形式を使用して HTTP または HTTPS プロキシ サーバを使用するように設定します：
+
++
+** \http://address:port
+** http://user-name:password@address:port
+** \http://domain-name%92user-name:password@address:port
+** \https://address:port
+** \https://user-name:password@address:port
+** \https://domain-name%92user-name:password@address:port
++
+次の点に注意してください。
+
++
+*** ユーザーはローカルユーザーまたはドメインユーザーのいずれかです。
+*** ドメインユーザーの場合は、上記のようにバックスラッシュ（\）のASCIIコードを使用する必要があります。
+*** コンソールエージェントは、@文字を含むユーザー名またはパスワードをサポートしていません。
+*** パスワードに次の特殊文字が含まれている場合は、その特殊文字の前にバックスラッシュを付けてエスケープする必要があります：& または !
++
+次に例を示します。
+
++
+\http://bxpproxyuser:netapp1\!@address:3128
+
++
+--cacert は、Console エージェントとプロキシ サーバ間の HTTPS アクセスに使用する CA 署名証明書を指定します。このパラメータは、HTTPS プロキシ サーバ、傍受プロキシ サーバ、および透過型プロキシ サーバに必要です。
+
+
+
++
+透過プロキシ サーバの設定例を以下に示します。透過プロキシを設定する場合、プロキシ サーバを定義する必要はありません。CA署名付き証明書をコンソールエージェントホストに追加するだけです：
+
+
+
++
+[source, cli]
+----
+ ./NetApp-Console-Agent-v4.0.0 --cacert /tmp/cacert/certificate.cer
+----
+. Podmanを使用している場合は、aardvark-dnsのポートを調整する必要があります。
++
+.. コンソールエージェント仮想マシンにSSH接続します。
+.. podman _/usr/share/containers/containers.conf_ ファイルを開き、Aardvark DNSサービス用に選択したポートを変更します。たとえば、54 に変更します。
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+...
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+...
+Esc:wq
+----
+.. コンソールエージェント仮想マシンを再起動してください。
+
+
+
+
+. インストールが完了するまでお待ちください。
++
+インストールの最後に、プロキシ サーバを指定した場合、コンソールエージェントサービス (occm) が 2 回再起動します。
+
+. コンソールエージェント仮想マシンに接続されているホストからWebブラウザーを開き、次のURLを入力してください：
++
+https://_ipaddress_[]
+
+. ログイン後、Console エージェントを設定します。
++
+.. コンソールエージェントに関連付ける組織を指定してください。
+.. システムの名前を入力してください。
+.. 「セキュリティで保護された環境で実行していますか？」の下の制限モードは無効のままにしてください。
++
+これらの手順では標準モードでのコンソールの使用方法を説明しているため、制限モードは無効にしておく必要があります。制限モードは、安全な環境が整っていて、このアカウントをバックエンドサービスから切断したい場合にのみ有効にしてください。もしそうなら、link:task-quick-start-restricted-mode.html["制限モードで NetApp Console を使い始めるには、以下の手順に従ってください"]。
+
+.. 「Let's start」を選択してください。
+
+
+

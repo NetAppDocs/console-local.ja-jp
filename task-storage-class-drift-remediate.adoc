@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task-storage-class-drift-remediate.html 
+keywords: storage class drift, drift remediation, compliance, fix-it, guided remediation, automated remediation, drift detection, storage governance, storage standards, netapp console local 
+summary: NetApp Console ローカル展開におけるストレージクラスのドリフトを検出、分析、および修復します。 
+---
+= NetApp Console ローカル展開におけるストレージクラスのドリフトの修正
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console のローカル展開で、ドリフト関連のアラートを検出し、ドリフトの検出結果を分析し、ストレージクラスの意図と一致しなくなったワークロードを修復します。
+
+.必須の役割
+Storage Admin
+
+
+NOTE: 権限が付与されているフリート内のワークロードのみを表示および修復できます。
+
+
+
+[[remediate-drift]]
+== ドリフトを修正する
+
+ワークロードがストレージクラスの意図と一致しなくなった場合、NetApp Console のローカル展開でアラートが発生します。アラートを使用してドリフトを分析し、推奨される修復措置を適用してください。
+
+アラートから直接、いくつかの対策を適用できます。その他の問題については、ワークロード構成を更新するか、別のストレージクラスを割り当ててコンプライアンスを回復してください。修復ワークフローでは、変更を適用する前に想定される影響が表示されます。
+
+.手順
+. 「Storage」>「Storage classes」を選択してください。
++
+ストレージクラスの変動の概要は、「ストレージクラス別の変動」エリアに表示されます。完全なリストは表に表示されます。
+
+. 「Drifts」列で、該当するストレージクラスの「View」を選択します。
++
+「アラート > 概要」ページを開くと、フィルターが適用された状態になります。
+
+. アラートを選択すると、アラートの詳細ページが開きます。
+. 「分析」を選択します。
+. *Workload analyzer* で結果を確認してください。
++
+設定のずれが判明した場合は、意図した設定と実際の設定を比較して、何が変更されたかを判断してください。
+
+. 「Fix it」など、推奨される修復措置を選択してください。
+. 提案された変更内容を確認し、是正措置を適用してください。
+. 「Storage」＞「Storage classes」に戻り、ワークロードがずれた状態として表示されなくなったことを確認してください。
++
+コンプライアンス評価には、最近の設定変更を反映させるのに数分かかる場合があります。ワークロードが依然として「ずれ」と表示される場合は、アラートの詳細ページに戻り、*分析*を選択して残りの検出結果を確認してください。
+
+
+
+
+
+[[related-information]]
+== 関連情報
+
+* link:concept-storage-classes.html#storage-class-drift-and-compliance["NetApp Console ローカル展開におけるストレージクラスのドリフトとコンプライアンスについて"]
+* link:concept-console-alerts.html["ストレージアラートについて"]
+* link:task-alerts-monitor.html["アラートを表示する"]
+

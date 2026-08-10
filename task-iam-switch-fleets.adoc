@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: task-iam-switch-fleets.html 
+keywords: switch fleets, fleets, navigate between fleets, fleet navigation, iam, identity and access management, netapp console local 
+summary: 組織内に複数のフリートがあり、それらのフリートにアクセスできる場合は、いつでもフリートを切り替えることができます。 
+---
+= NetApp Console ローカル展開でフリートを切り替える
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console のローカル展開において、複数のフリートにアクセスできる場合は、いつでも切り替えることができます。
+
+
+NOTE: 「IDとアクセス」ページを表示している間は、別のフリートに切り替えることはできません。
+
+.手順
+. コンソールのローカル展開の上部ヘッダーで、*スコープ*を選択します。
+. 組織内のフリートを参照し、使用するフリートを選択してから、*切り替え*を選択してください。
++
+image:screenshot-iam-switch-projects-select.png["新しいフリートを選択できる「スコープ」メニューのスクリーンショット。"]
+
+

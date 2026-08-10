@@ -1,0 +1,124 @@
+= 
+:allow-uri-read: 
+
+
+手動インストール中にアクセスされたエンドポイント:: コンソールエージェントをLinuxホストに手動でインストールする場合、インストールプロセス中にコンソールエージェントのインストーラーは以下のURLへのアクセスを必要とします：
+
+
+[cols="2*"]
+|===
+| エンドポイント | 目的 
+
+
+| \https://mysupport.netapp.com |  
+
+
+| \https://signin.b2c.netapp.com | （このエンドポイントはhttps://mysupport.netapp.comのCNAME URLです） 
+
+
+| \https://cloudmanager.cloud.netapp.com/tenancy |  
+
+
+| \https://stream.cloudmanager.cloud.netapp.com |  
+
+
+| \https://production-artifacts.cloudmanager.cloud.netapp.com |  
+
+
+ a| 
+* オプション1（推奨）：
++
+** \https://bluexpinfraprod.eastus2.data.azurecr.io
+** \https://bluexpinfraprod.azurecr.io
+
+
+* オプション2：
++
+** \https://*.blob.core.windows.net
+** \https://cloudmanagerinfraprod.azurecr.io
+
+
+
+ a| 
+イメージを取得するには、インストーラーはこれら2つのエンドポイントセットのいずれかにアクセスできる必要があります。^1^ オプション 1 に記載されているエンドポイントは、より安全であるため推奨されます。オプション1に記載されているエンドポイントは許可し、オプション2に記載されているエンドポイントは許可しないようにファイアウォールを設定することをお勧めします。これらのエンドポイントについて、以下の点にご注意ください。
+
+* オプション1に記載されているエンドポイントは、Console エージェントの3.9.47リリース以降でサポートされています。Console エージェントの以前のリリースとの下位互換性はありません。
+* コンソールエージェントは、まずオプション2に記載されているエンドポイントに接続します。これらのエンドポイントにアクセスできない場合、コンソールエージェントはオプション1に記載されているエンドポイントに自動的に接続します。
+* オプション 1 のエンドポイントは、Console エージェントを NetApp Backup and Recovery または NetApp Ransomware Resilience と併用する場合はサポートされません。この場合、オプション 1 に記載されているエンドポイントを禁止し、オプション 2 に記載されているエンドポイントを許可することができます。
+
+
+|===
+手動インストール中にアクセスされたエンドポイント:: コンソールエージェントを独自のLinuxホストに手動でインストールする場合、インストールプロセス中にコンソールエージェントのインストーラーがいくつかのURLへのアクセスを必要とします。
+
+
+[cols="2*"]
+|===
+| エンドポイント | 目的 
+
+
+| \https://mysupport.netapp.com |  
+
+
+| \https://signin.b2c.netapp.com | このエンドポイントは https://mysupport.netapp.com の CNAME URL です 
+
+
+| \https://cloudmanager.cloud.netapp.com/tenancy |  
+
+
+| \https://stream.cloudmanager.cloud.netapp.com |  
+
+
+| \https://production-artifacts.cloudmanager.cloud.netapp.com |  
+
+
+2+| *AWS Government region* コンソールエージェントを AWS Government region にインストールする場合、インストーラーはこれらのエンドポイントにもアクセスできる必要があります。 
+
+
+ a| 
+\https://*.blob.core.windows.net
+ a| 
+
+
+
+ a| 
+\https://cloudmanagerinfraprod.azurecr.io
+ a| 
+
+
+
+2+| *Azure Government リージョン* Azure Government リージョンにコンソールエージェントをインストールする場合、インストーラーはこれらのエンドポイントにもアクセスする必要があります： 
+
+
+ a| 
+\https://*.blob.core.windows.net
+ a| 
+
+
+
+ a| 
+\https://occmclientinfragov.azurecr.us
+ a| 
+
+
+
+2+| *商用リージョンまたはソブリンリージョン* 商用リージョンまたはソブリンリージョンにコンソールエージェントをインストールする場合、次の2つのエンドポイントセットから選択できます： 
+
+
+ a| 
+**オプション1（推奨）：** * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io
+
+**オプション2：** * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io
+ a| 
+オプション1に記載されているエンドポイントは、より安全であるため推奨されます。オプション1に記載されているエンドポイントは許可し、オプション2に記載されているエンドポイントは許可しないようにファイアウォールを設定することをお勧めします。これらのエンドポイントについて、以下の点にご注意ください：
+
+* オプション1に記載されているエンドポイントは、Console エージェントの3.9.47リリース以降でサポートされています。Console エージェントの以前のリリースとの下位互換性はありません。
+* コンソールエージェントは、まずオプション2に記載されているエンドポイントに接続します。これらのエンドポイントにアクセスできない場合、コンソールエージェントはオプション1に記載されているエンドポイントに自動的に接続します。
+* オプション 1 のエンドポイントは、Console エージェントを NetApp Backup and Recovery または NetApp Ransomware Resilience と併用する場合はサポートされません。この場合、オプション 1 に記載されているエンドポイントを禁止し、オプション 2 に記載されているエンドポイントを許可することができます。
+
+
+|===
++
+
+オプション1に記載されているエンドポイントは、より安全であるため推奨されます。オプション1に記載されているエンドポイントは許可し、オプション2に記載されているエンドポイントは許可しないようにファイアウォールを設定することをお勧めします。これらのエンドポイントについて、次の点に注意してください。** オプション1に記載されているエンドポイントは、Console エージェントの 3.9.47 リリース以降でサポートされています。Console エージェントの以前のリリースとの下位互換性はありません。** Console エージェントは、まずオプション2に記載されているエンドポイントに接続します。これらのエンドポイントにアクセスできない場合、Console エージェントはオプション1に記載されているエンドポイントに自動的に接続します。** Console エージェントを NetApp Backup and Recovery または NetpApp Ransomware Resilience と併用する場合、オプション1のエンドポイントはサポートされません。この場合、オプション1に記載されているエンドポイントを禁止し、オプション2に記載されているエンドポイントを許可することができます。
+
+ホストはインストール中にオペレーティングシステムのパッケージを更新しようとする場合があります。ホストは、これらのOSパッケージを入手するために、さまざまなミラーリングサイトに接続できます。

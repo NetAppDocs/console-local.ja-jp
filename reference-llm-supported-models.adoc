@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: reference-llm-supported-models.html 
+keywords: LLM, supported models, OpenAI, OpenAI-compatible, model selection, netapp console 
+summary: NetApp Console のローカル展開で使用できる LLM プロバイダーの種類とモデルを確認してください。 
+---
+= サポートされているLLMプロバイダーとモデル（NetApp Console ローカル展開）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console のローカル展開では、OpenAI、OpenAI 互換、および Anthropic LLM プロバイダータイプがサポートされています。選択できるモデルは、設定するプロバイダータイプとエンドポイントによって異なります。
+
+
+NOTE: LLMをコンソールアシスタントに接続してAI機能を有効にする方法に関するこのドキュメントは、技術プレビューとして提供されています。このプレビュー版では、NetApp は一般提供開始前に、提供内容、コンテンツ、およびスケジュールを変更する権利を留保します。
+
+パフォーマンス、コスト、ガバナンスに関する要件に合ったモデルを選択してください。
+
+
+
+[[see-how-provider-type-affects-model-availability]]
+== プロバイダーの種類がモデルの可用性にどのように影響するかを確認してください
+
+選択したプロバイダーの種類によって、Console のローカルデプロイメントモデルリストに表示されるモデルが決まります。
+
+* *OpenAI* — OpenAIと直接統合するためのモデルを提供します。
+* *OpenAI互換* — 組織の互換エンドポイントが公開するモデルを提供します。
+* *Anthropic* — 直接的な Anthropic 統合のためのモデルを提供します。
+
+
+表示されるモデルは、エンドポイントの設定、プロキシまたはゲートウェイの動作、および組織のポリシーによって異なる場合があります。プロバイダーの種類は、接続先のエンドポイントと、そのエンドポイントが公開するモデルによって異なり、トランスポートプロトコルによって異なるわけではありません。
+
+
+
+[[supported-openai-models]]
+== サポートされているOpenAIモデル
+
+* GPT-5.4
+* GPT-5.5
+
+
+
+
+[[supported-anthropic-models]]
+== サポートされている Anthropic モデル
+
+* Claude Sonnet 4.6
+* Claude Opus 4.6、4.7 & 4.8
+
+
+
+
+[[related-information]]
+== 関連情報
+
+* link:task-llm-connect.html["LLMを接続してNetApp Consoleアシスタントを有効にする"].
+* link:concept-llm-integration.html["NetApp Console ローカル展開における LLM 統合について"].
+

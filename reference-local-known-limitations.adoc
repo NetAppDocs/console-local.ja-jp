@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: reference-local-known-limitations.html 
+keywords: console local deployment, known limitations, unsupported platforms, unsupported devices, unsupported functions, IP range 
+summary: NetApp Console ローカル展開における既知の制限事項のリファレンス。 
+---
+= NetApp Console ローカル展開における既知の制限事項
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+今回のリリースでサポートされていない、または今回のリリースでは正常に機能しないプラットフォーム、デバイス、機能が記載されています。これらの制限事項をよく確認してください。
+
+これらの制限は、NetApp Consoleと管理のセットアップに固有のものです：エージェント、サービスとしてのソフトウェア（SaaS）プラットフォームなど。
+
+
+
+[[console-vm-limitations]]
+== コンソールVMの制限
+
+
+
+[[possible-conflict-with-ip-addresses-in-the-10-42-0-016-and-10-43-0-016-ranges]]
+=== 10.42.0.0/16および10.43.0.0/16の範囲のIPアドレスとの競合の可能性
+
+NetApp Consoleのローカル展開では、サービス間通信に固定アドレス空間が使用されます。内部ネットワークには、IPアドレス範囲10.42.0.0/16と10.43.0.0/16が使用されます。Console のローカル展開を展開する前に、これらのIPアドレス範囲が、Console のローカル展開で使用可能なVLAN上の他のVM、DHCPスコープ、DNSレコード、またはロードバランサーのVIPプールに割り当てられていないことを確認してください。
+
+エージェントのインターフェースのIPアドレスを変更する方法については、ナレッジベースの記事「Agent IP conflict with existing network」を参照してください。
+
+
+
+[[shared-linux-hosts-are-not-supported]]
+=== 共有Linuxホストはサポートされていません
+
+このエージェントは、他のアプリケーションと共有されている仮想マシンではサポートされていません。その仮想マシンはエージェントソフトウェア専用にする必要があります。
+
+
+
+[[third-party-agents-and-extensions]]
+=== サードパーティのエージェントと拡張機能
+
+サードパーティ製のエージェントやVM拡張機能は、エージェントVMではサポートされていません。

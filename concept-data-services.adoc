@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: concept-data-services.html 
+keywords: data services, data protection, data mobility, backup, replication, netapp console 
+summary: NetApp Console ローカル展開における NetApp Backup and Recovery の使用方法について説明します。データの保護と管理に役立ててください。 
+---
+= NetApp Console ローカル展開における NetApp Backup and Recovery について
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery は、ボリューム、データベース、仮想マシン、Kubernetes ワークロードなど、すべての ONTAP ワークロードに対して効率的で安全かつ対費用効果の高いデータ保護を提供するデータサービスです。
+
+ワークロードとは、システム内のリソースを論理的にグループ化したものであり、保護、ガバナンス、検出、および復旧のために単一の単位として管理されます。Backup and Recoveryにおいて、ワークロードとは保護対象となる単位のことです。その意味はデータソースによって異なります：Kubernetesの場合、ワークロードはアプリケーションであり、VM環境の場合は仮想マシンであり、データベース環境の場合はデータベースです。
+
+バックアップとリカバリのサポートは、すべての ONTAP システムにすでに組み込まれているため、追加のハードウェアやメディアゲートウェイは不要です。これにより、バックアップ作業がシンプルになり、コスト効率も向上します。NetApp Console を使用すると、複数のリソースマネージャや専門の担当者を必要とせずに、3-2-1 バックアップのすべてのバリエーションを含む、あらゆるバックアップ戦略の実装を簡素化できます。
+
+
+NOTE: NetApp Backup and Recovery は NetApp Console ローカル展開のプレビューモードです。本サービスはまだ一般提供されておらず、機能は変更される可能性があります。
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetApp Backup and Recovery の詳細をご確認ください。"^].

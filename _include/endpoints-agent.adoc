@@ -1,0 +1,82 @@
+= 
+:allow-uri-read: 
+
+
+コンソールエージェントからアクセスされたエンドポイント:: コンソールエージェントは、日常業務のためにパブリッククラウド環境内のリソースとプロセスを管理するために、以下のエンドポイントに接続するためのアウトバウンドインターネットアクセスが必要です。
++
+--
+以下にリストされているエンドポイントはすべて CNAME エントリです。
+
+--
+
+
+| AWSサービス（amazonaws.com）：
+
+* CloudFormation
+* Elastic Compute Cloud (EC2)
+* アイデンティティおよびアクセス管理（IAM）
+* キー管理サービス（KMS）
+* セキュリティトークンサービス（STS）
+* Simple Storage Service（S3）
+
+
+| AWSリソースを管理するため。エンドポイントは、AWSリージョンによって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細については、AWSのドキュメントを参照してください。"^]
+
+| \https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
+
+Azure パブリックリージョン内のリソースを管理するため。
+
+| \https://management.azure.microsoft.scloud \https://login.microsoftonline.microsoft.scloud \https://blob.core.microsoft.scloud \https://core.microsoft.scloud
+
+Azure IL6 リージョン内のリソースを管理するため。
+
+| \https://management.usgovcloudapi.net \https://login.microsoftonline.us \https://blob.core.usgovcloudapi.net \https://core.usgovcloudapi.net
+
+Azure Governmentリージョン内のリソースを管理するため。
+
+| \https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
+
+| Azure中国リージョンのリソースを管理するため。
+
+| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+
+Google Cloud のリソースを管理するため。
+
+| \https://mysupport.netapp.com | ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するため。| \https://signin.b2c.netapp.com | NetApp Support Site（NSS）の資格情報を更新するか、新しいNSS資格情報をNetApp Consoleに追加するため。| \https://support.netapp.com | ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。
+
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetApp Console 内で機能とサービスを提供するため。
+
+a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| コンソールエージェントのアップグレード用のイメージを取得するため。
+
+* 新しいエージェントをデプロイすると、検証チェックによって現在のエンドポイントへの接続性がテストされます。link:reference-networking-saas-console-previous.html["以前のエンドポイント"]を使用する場合は、検証チェックが失敗します。このエラーを回避するには、検証チェックをスキップしてください。
++
+以前のエンドポイントは引き続きサポートされていますが、NetApp はファイアウォールルールをできるだけ早く最新のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を確認してください"]。
+
+* ファイアウォールのエンドポイントを最新のものに更新しても、既存のエージェントは引き続き動作します。
+
+
+^1^ NetAppでは、オプション1のエンドポイントはより安全であるため、ファイアウォールで許可し、オプション2のエンドポイントは許可しないことを推奨します。これらのエンドポイントについて、以下の点にご注意ください。
+
++ * コンソールエージェントの 3.9.47 リリース以降、システムはオプション 1 に記載されているエンドポイントをサポートします。以前のリリースのコンソールエージェントは、下位互換性をサポートしていません。* コンソールエージェントは、まずオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、自動的にオプション 1 のエンドポイントに接続します。* コンソールエージェントを NetApp Backup and Recovery またはランサムウェア耐性と併用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 のエンドポイントを禁止してください。
+
+| Console エージェントが AWS Government リージョンにある場合： \https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+
+| コンソールエージェントが AWS Government リージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得します。
+
+| Console エージェントが Azure Government リージョンにある場合：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
+
+| コンソールエージェントが Azure Government リージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得します。
+
+a| コンソールエージェントが商用リージョンまたはソブリンリージョンにある場合、2 つのエンドポイントセットから選択できます：
+
+* オプション1（推奨）^1^
++
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+
+* オプション2
++
+\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+
+
+
+| コンソールエージェントが商用リージョンまたはソブリンリージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得します。
