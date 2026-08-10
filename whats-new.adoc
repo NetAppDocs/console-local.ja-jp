@@ -21,4 +21,4 @@ NetApp Console ローカル展開の最新リリースにおける新機能と�
 [[introducing-netapp-console-local-deployment]]
 === NetApp Consoleローカル デプロイのご紹介
 
-https://docs.netapp.com/us-en/console-local/netapp-console-local.html["NetApp Console ローカル展開について学ぶ"].
+https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["NetApp Console ローカル展開について学ぶ"]。

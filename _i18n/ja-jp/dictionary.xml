@@ -616,7 +616,6 @@
   <block id="1727dc0bbb7fbac9af669b5ee698c1ac" category="paragraph">お客様がコンソールエージェントVMを停止してから起動する必要がある場合は、クラウド プロバイダのコンソールから行うか、オンプレミス管理の標準手順に従って行ってください。</block>
   <block id="2402a0b8d9aa0c3e1beaccf0071277cc" category="doc">NetApp Consoleローカル デプロイのご紹介</block>
   <block id="258ea65dfbe28db96b93f873d22fbf91" category="inline-link">NetApp Console ローカル展開について学ぶ</block>
-  <block id="ce81420610b8020a6acb739f0390a18d" category="paragraph"><block ref="2fadf269e2027f86d038dabc5375655c" category="inline-link-rx"></block>.</block>
   <block id="01d7fad8bf6934be5b2c4a94892a6089" category="summary">NetApp Console のローカル展開の管理と監視の方法（監査アクティビティ、サブスクリプション、メンテナンス、トラブルシューティング、メンバーアクセスを含む）について説明します。</block>
   <block id="c6c906d845365b31f1a3d974e79792f1" category="doc">NetApp Console ローカル展開における管理と監視について学ぶ</block>
   <block id="670ed77781e2c20b187adbc14ae28dad" category="paragraph">NetApp Console のローカルデプロイメントをデプロイした後、管理ツールと監視ツールを使用してアクティビティを確認し、VMを維持管理し、メンバーアクセスを管理します。</block>
@@ -1358,7 +1357,6 @@
   <block id="2d7f2870497453a86a12da6f94cb0a9f" category="paragraph"><block ref="f7c67828ff7f607ca1bc8919fb69ebbf" category="inline-link-macro-rx"></block>.<block ref="e01d44fc54d486a034f841e933fc70ed" category="inline-link-macro-rx"></block>.<block ref="4c3b986ebd4373d4b40bb3283f715233" category="inline-link-macro-rx"></block>.<block ref="9e153fbb74c19e5f630133420be99e05" category="inline-link-macro-rx"></block>.</block>
   <block id="ac63bb5663971c98e9ad66f59e257a30" category="summary">NetApp Console は、Console エージェントを使用してクラウドとオンプレミスのストレージシステムを管理する SaaS アプリケーションです。NetApp Console ローカル展開は、ポリシーの適用、ドリフトの修正、および完全なデータ主権を備えたエンタープライズ規模の ONTAP フリート管理のための、セルフホスト型エージェントレス仮想マシンです。</block>
   <block id="267558ffb45143b1115e7dd8dede4d71" category="doc">NetApp Console ローカル展開と NetApp Console の比較</block>
-  <block id="b62b0cb68edb564847cb923dcc89b9ec" category="paragraph">未解決のディレクティブ（&lt;stdin&gt;）- include::https://raw.githubusercontent.com/NetAppDocs/console-all-family/main/intro-family.adoc[lines=15..-1]</block>
   <block id="78ce23a07fc5f5c4c30ea7cb2384f4ec" category="summary">NetApp Console のローカル展開に関するよくある質問（展開、ストレージクラス、フリート、RBAC、監視、AI支援管理、データ保護を含む）。</block>
   <block id="cecce547077372cc84d04ba0fa938934" category="doc">NetApp Console ローカル展開に関するよくある質問</block>
   <block id="835a92e241911a3a63a77e05ba970d63" category="paragraph">このFAQでは、NetApp Console のローカル展開に関するよくある質問にお答えします。本書は、Console のローカル展開をデプロイ、セットアップ、管理する際に役立つ概念、前提条件、およびシステム動作に焦点を当てています。</block>
@@ -3696,4 +3694,67 @@
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="sidebar">サポートに登録</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="sidebar">ヘルプを表示</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="sidebar">法律上の表示</block>
+  <block id="d84803ce394c9284844fcf1a08967ee4" category="paragraph"><block ref="a11bdddbf642d1f60f3b9997ef8c00d9" category="inline-link-rx"></block>。</block>
+  <block id="0aa0a64aaeee0597df416c44affddd02" category="paragraph">NetAppは、統合ストレージ管理プラットフォームを実行するための2つの方法を提供しています：NetApp ConsoleとNetApp Consoleローカル展開。両者は共通の基盤を共有していますが、アーキテクチャ、接続性、機能範囲、および運用モデルにおいて異なります。NetApp Consoleは、お客様の環境にデプロイされたConsoleエージェントを使用してストレージシステムを管理します。NetApp Consoleローカル展開は、エージェントレスの仮想マシンです。NetApp Consoleローカル展開は、ONTAPクラスターと直接通信し、NetApp Consoleでは利用できないエンタープライズフリート管理機能を提供します。</block>
+  <block id="8e3ec462216d5097444b77ca00f80473" category="admonition">クラウドとオンプレミス環境を管理し、プラットフォームインフラストラクチャを NetApp に任せたい場合は、NetApp Console を選択してください。大規模なオンプレミス ONTAP 環境を管理し、完全なデータ主権とポリシーベースのストレージ管理が必要な場合は、NetApp Console ローカル展開を選択してください。</block>
+  <block id="d7500dc8af696cd476663bebb9d0fcb4" category="paragraph">NetAppは、NetApp ConsoleをSaaSアプリケーションとしてホストおよびメンテナンスします。登録後すぐにストレージの管理を開始できます。ストレージシステムを管理するには、クラウドまたはオンプレミス環境に軽量のコンソールエージェントをデプロイします。エージェントはNetApp Consoleプラットフォームにアウトバウンド接続し、NetAppがプラットフォームの認証、アップグレード、および可用性を自動的に処理します。</block>
+  <block id="773ad4889739d9b22df6b5f152501006" category="paragraph">NetApp Console は、制限モード（独自のパブリッククラウドにインストールされ、アウトバウンド接続が制限されている）とプライベートモード（オンプレミスまたはクラウドにインストールされ、エアギャップ環境を含む NetApp Console プラットフォームへの接続がない）もサポートしています。</block>
+  <block id="09e422c729719f602773531e14c7fdcb" category="inline-link">NetApp Console の導入モードについて</block>
+  <block id="32ef743eec8d1960468ee10a3c5852f2" category="paragraph"><block ref="6c90d7f16c5f8e8c87a61f8328eb6845" category="inline-link-rx"></block>。</block>
+  <block id="6bc8e262d6c87c1cc67ba2e2ef69c080" category="paragraph">NetApp Consoleは、Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3、Google Cloud Storage、Eシリーズ、StorageGRID、オンプレミスONTAPクラスターなどのクラウドストレージを含む、幅広いストレージシステムをサポートしています。NetApp Backup and Recovery、NetApp Disaster Recovery、NetApp Ransomware Resilience、NetApp Copy and Sync、NetApp Data Classificationなど、NetAppデータサービスのフルスイートへのアクセスを提供します。NetApp Consoleは、Digital Advisor、ライフサイクルプランニング、サステナビリティダッシュボードなどのサポート契約機能も提供しています。</block>
+  <block id="abd3ebf1d0176fca066a577a665824f3" category="paragraph">NetApp Consoleは、ハイブリッドクラウド環境を管理し、最大限の機能、運用維持の手間軽減、そして柔軟なライセンス体系を求める組織に最適です。</block>
+  <block id="78c9351d6bfa969cec1e259c5314fb98" category="inline-link">NetApp Console^について説明します。</block>
+  <block id="a005dfa7e9da2ab070c9b2a2cc506605" category="paragraph"><block ref="a005dfa7e9da2ab070c9b2a2cc506605" category="inline-link-rx"></block></block>
+  <block id="fcc4637d90c046c4a4ef32a9afdaa6fc" category="paragraph">NetApp Console のローカル展開では、NetApp Console のコントロールプレーンをお客様自身のオンプレミスインフラストラクチャ内で完全に実行でき、管理トラフィックが環境外に流出することはありません。仮想アプライアンスイメージを使用してコンソールを仮想マシンとしてデプロイし、vCenter環境内の他の仮想マシンと同様に管理します。コンソールエージェントは不要です。仮想マシンは、お客様の ONTAP クラスターと直接通信します。</block>
+  <block id="5fb781e175de9970e2718bb94cc3d721" category="paragraph">NetApp Console のプライベートモードはエアギャップおよびオンプレミスデプロイメントもサポートしていますが、Console ローカルデプロイメントは、エンタープライズ規模の ONTAP フリート管理に特化して設計されています。これは、どの NetApp Console デプロイメントモードでも利用できない機能を追加するものです：</block>
+  <block id="0d7759ae1f20023b009816231b4ec556" category="list-text">ストレージクラスポリシー</block>
+  <block id="704be31d8e2a42e0c7ff6b6f16b73c3e" category="list-text">パフォーマンス、容量、階層化の要件をまとめた再利用可能なテンプレートとして、ストレージ標準を一度定義します。すべてのプロビジョニングは承認済みのクラスを使用し、Console のローカル展開はワークロードのコンプライアンスを継続的に監視し、ドリフトを特定します。</block>
+  <block id="6d84cd31d161fe86d10b8600c9e49fd4" category="list-text">フリート管理</block>
+  <block id="7385a9be1dc0677e5961772473ab82cd" category="list-text">ビジネス構造を反映したフォルダとフリートにクラスターを整理し、組織、フォルダ、またはフリートのスコープで管理を委任します。</block>
+  <block id="26f4e34d0f8df693380313a828150255" category="list-text">ワークロードアナライザー</block>
+  <block id="48fa264a7a3c3c0d64a82ae09d190200" category="list-text">レイテンシ、スループット、1秒あたりの入出力操作数、および構成変更を時系列で相関させることで、ワークロードに影響が出る前にパフォーマンスの問題を特定します。</block>
+  <block id="f54523e7e9970026552c0beada420de7" category="list-text">大規模言語モデル統合</block>
+  <block id="dbebae0d47896a2bb083de1589f27131" category="list-text">独自の大規模言語モデルに接続することで、自然言語を使用してストレージをプロビジョニングしたり、アラートを調査したり、ストレージ環境に関する状況に応じた回答を取得したりできます。</block>
+  <block id="8375d985c183af61065e987103e69be9" category="list-text">ガイド付きおよび自動化された修復</block>
+  <block id="2d9389b28f495b8afdcdf8f214f11df3" category="list-text">ワークロードがストレージクラスから逸脱したり、アラートが発生したりした場合、Console のローカル展開では修正推奨事項が提供されます。ガイド付き手順またはワンクリック自動修復機能を使用して、手動操作なしでコンプライアンスを回復できます。</block>
+  <block id="73c797fde7608d30c65279e6ca248835" category="list-text">メールとウェブフックによるアラート配信</block>
+  <block id="69c0257b1ba8a3ba7687d4f7a9883d7f" category="list-text">保管状況が変化した際に、適切なチームにアラートが届くように、メールとWebhookの通知チャネルを設定してください。Webhookは、既存の監視ツールやインシデント管理ツールと連携します。</block>
+  <block id="00c24ecc0e9a6f1c6a5202f40e8c96c1" category="paragraph">コンソールのローカル展開は、オンプレミス ONTAP クラスターと NetApp Backup and Recovery をサポートしています。Active Directory と連携してフェデレーション認証を実現し、ローカルユーザー向けの多要素認証もサポートしています。</block>
+  <block id="be6ca74d1ea996c7c4fe59d3f22d39a4" category="paragraph">コンソールローカル展開は、ポリシーベースのプロビジョニング、自動コンプライアンスチェック、および完全なデータ主権を必要とする大規模なオンプレミス ONTAP 環境を持つ組織に最適です。</block>
+  <block id="70b86d6aa7fb00fd1d760b33b8607159" category="inline-link-macro">NetApp Console のローカルデプロイメントについて説明します^。</block>
+  <block id="dea2002a8471bfaae7f8b931f449e095" category="paragraph"><block ref="dea2002a8471bfaae7f8b931f449e095" category="inline-link-macro-rx"></block></block>
+  <block id="0161e3d40bdbea6ca6998c8c60165b33" category="section-title">機能比較</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">機能</block>
+  <block id="23dad8eedc041cc12dbd56726f7f5a94" category="cell">はい（Console エージェントが必要です）</block>
+  <block id="f92b8f818d9b311ddfe493bf8fd9d4d1" category="cell">はい（コンソール仮想マシンからの直接通信）</block>
+  <block id="5a33f8c167d1b84a718d0a9ab656e684" category="cell">クラウドストレージシステム（Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3、およびその他）</block>
+  <block id="5caa8b77e08ebd3908f7b342222cc4f7" category="cell">EシリーズとStorageGRID</block>
+  <block id="cc6088539286339733631d73fb51774b" category="cell">NetApp Backup and Recovery</block>
+  <block id="19cbafc0246850c97323cac4fb786794" category="cell">NetApp Disaster Recovery</block>
+  <block id="9a0927d2ec4654dfab564a09f0cadbf9" category="cell">NetApp ランサムウェア耐性</block>
+  <block id="4b3238b2edd994dbf80a66b2fce8841e" category="cell">NetApp Copy and Sync</block>
+  <block id="91d5470ff0de1d64ddb0c8c3bef0b246" category="cell">NetApp データ分類</block>
+  <block id="b003a63279cc18b6fb1177d6fe5ae8b8" category="cell">Digital Advisor、Lifecycle Planning、Sustainability</block>
+  <block id="f2f74222833c136454ac1c309093ce22" category="cell">ストレージクラスポリシーとコンプライアンス監視</block>
+  <block id="99a7a1aa741fd89b57934cd02731f4af" category="cell">フリート管理（フォルダとフリート）</block>
+  <block id="d7ae72f8784c3d332b0fa036311ef934" category="cell">AI支援オペレーションのための大規模言語モデルの統合</block>
+  <block id="c72a03504491ce72b87c21f210031a3e" category="section-title">コンソールの設定とセキュリティ</block>
+  <block id="a0e3089d312c100208595d685b4104d2" category="cell">展開モデル</block>
+  <block id="9e2f8f0cf1d9ef87b70b0927b7aa6315" category="cell">NetAppがホストするSoftware as a Service（さまざまなデプロイモードを利用可能）</block>
+  <block id="e94cfdb1bcf6790d1866d9d05ab27a2c" category="cell">自社インフラストラクチャ内でホストされる仮想マシン</block>
+  <block id="ab73a743c1f5fee13984f7219394896a" category="cell">コンソールエージェントが必要です</block>
+  <block id="85ed230bbcc941c129c9222b688edfe4" category="cell">ソフトウェアのアップグレード</block>
+  <block id="18989411927d889b19d609bcc0020172" category="cell">NetAppによる自動管理</block>
+  <block id="e1ba155a9f2e8c3be94020eef32a0301" category="cell">手動</block>
+  <block id="bd521aa973861d923b4649240bf09964" category="cell">ユーザーインターフェースへのアクセス</block>
+  <block id="860d51de2751d60b75aa2bf4908d091f" category="cell">NetApp Consoleアプリケーション（インターネットまたは仮想マシンからのアクセス）</block>
+  <block id="04628071892bff31fcda3d0180ce0e14" category="cell">コンソール仮想マシン（ローカル、インターネット不要）</block>
+  <block id="a492925ae64557e89b32f29da418b5eb" category="cell">データ主権</block>
+  <block id="8128bb2b2b16d567cc51992879a88b83" category="cell">管理トラフィックはNetApp Consoleプラットフォームに送られます</block>
+  <block id="9a85d1c8f123f061c5e7f2ebb079e094" category="cell">データや管理トラフィックがお客様の環境から外部に出ることはありません。</block>
+  <block id="eed7d7eea79968152bcb0157d198eeea" category="cell">アイデンティティフェデレーション</block>
+  <block id="53a3be21a870370dce986e82b79657cb" category="cell">多要素認証（ローカルユーザ）</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="cell">ライセンス</block>
+  <block id="5d888c34f4251b9bdd3ba8412b69ff87" category="cell">マーケットプレイスのサブスクリプションとライセンス持ち込み</block>
+  <block id="c7eca4d9dd171fc4b4a21c3425a47aa6" category="cell">ライセンス持ち込み（BYOL）</block>
 </blocks>
