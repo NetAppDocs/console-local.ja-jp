@@ -3686,7 +3686,6 @@
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">参照先</block>
   <block id="7ba642558e7e1d23e0a4b6d723fe8cb1" category="sidebar">NetApp Console ローカルデプロイメント API</block>
   <block id="454d0fa294eacaf6687d76609e9d2de5" category="sidebar">組織IDとフリートID</block>
-  <block id="48a692835317bf23f0c6c5786de2ed91" category="sidebar">アイデンティティとアクセス管理APIリファレンス</block>
   <block id="cddab4871d91f1348299c2439e79e2c8" category="sidebar">ONTAPアラートリファレンス</block>
   <block id="4bb64a663d2c295916c54bfd11eb3986" category="sidebar">クラスターセキュリティコンプライアンスカテゴリ</block>
   <block id="6833b9c301b8c18695d73d7766de5136" category="sidebar">ストレージVMのセキュリティコンプライアンスカテゴリ</block>
@@ -3695,12 +3694,10 @@
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="sidebar">ヘルプを表示</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="sidebar">法律上の表示</block>
   <block id="d84803ce394c9284844fcf1a08967ee4" category="paragraph"><block ref="a11bdddbf642d1f60f3b9997ef8c00d9" category="inline-link-rx"></block>。</block>
-  <block id="0aa0a64aaeee0597df416c44affddd02" category="paragraph">NetAppは、統合ストレージ管理プラットフォームを実行するための2つの方法を提供しています：NetApp ConsoleとNetApp Consoleローカル展開。両者は共通の基盤を共有していますが、アーキテクチャ、接続性、機能範囲、および運用モデルにおいて異なります。NetApp Consoleは、お客様の環境にデプロイされたConsoleエージェントを使用してストレージシステムを管理します。NetApp Consoleローカル展開は、エージェントレスの仮想マシンです。NetApp Consoleローカル展開は、ONTAPクラスターと直接通信し、NetApp Consoleでは利用できないエンタープライズフリート管理機能を提供します。</block>
   <block id="8e3ec462216d5097444b77ca00f80473" category="admonition">クラウドとオンプレミス環境を管理し、プラットフォームインフラストラクチャを NetApp に任せたい場合は、NetApp Console を選択してください。大規模なオンプレミス ONTAP 環境を管理し、完全なデータ主権とポリシーベースのストレージ管理が必要な場合は、NetApp Console ローカル展開を選択してください。</block>
   <block id="d7500dc8af696cd476663bebb9d0fcb4" category="paragraph">NetAppは、NetApp ConsoleをSaaSアプリケーションとしてホストおよびメンテナンスします。登録後すぐにストレージの管理を開始できます。ストレージシステムを管理するには、クラウドまたはオンプレミス環境に軽量のコンソールエージェントをデプロイします。エージェントはNetApp Consoleプラットフォームにアウトバウンド接続し、NetAppがプラットフォームの認証、アップグレード、および可用性を自動的に処理します。</block>
   <block id="773ad4889739d9b22df6b5f152501006" category="paragraph">NetApp Console は、制限モード（独自のパブリッククラウドにインストールされ、アウトバウンド接続が制限されている）とプライベートモード（オンプレミスまたはクラウドにインストールされ、エアギャップ環境を含む NetApp Console プラットフォームへの接続がない）もサポートしています。</block>
   <block id="09e422c729719f602773531e14c7fdcb" category="inline-link">NetApp Console の導入モードについて</block>
-  <block id="32ef743eec8d1960468ee10a3c5852f2" category="paragraph"><block ref="6c90d7f16c5f8e8c87a61f8328eb6845" category="inline-link-rx"></block>。</block>
   <block id="6bc8e262d6c87c1cc67ba2e2ef69c080" category="paragraph">NetApp Consoleは、Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3、Google Cloud Storage、Eシリーズ、StorageGRID、オンプレミスONTAPクラスターなどのクラウドストレージを含む、幅広いストレージシステムをサポートしています。NetApp Backup and Recovery、NetApp Disaster Recovery、NetApp Ransomware Resilience、NetApp Copy and Sync、NetApp Data Classificationなど、NetAppデータサービスのフルスイートへのアクセスを提供します。NetApp Consoleは、Digital Advisor、ライフサイクルプランニング、サステナビリティダッシュボードなどのサポート契約機能も提供しています。</block>
   <block id="abd3ebf1d0176fca066a577a665824f3" category="paragraph">NetApp Consoleは、ハイブリッドクラウド環境を管理し、最大限の機能、運用維持の手間軽減、そして柔軟なライセンス体系を求める組織に最適です。</block>
   <block id="78c9351d6bfa969cec1e259c5314fb98" category="inline-link">NetApp Console^について説明します。</block>
@@ -3722,7 +3719,6 @@
   <block id="00c24ecc0e9a6f1c6a5202f40e8c96c1" category="paragraph">コンソールのローカル展開は、オンプレミス ONTAP クラスターと NetApp Backup and Recovery をサポートしています。Active Directory と連携してフェデレーション認証を実現し、ローカルユーザー向けの多要素認証もサポートしています。</block>
   <block id="be6ca74d1ea996c7c4fe59d3f22d39a4" category="paragraph">コンソールローカル展開は、ポリシーベースのプロビジョニング、自動コンプライアンスチェック、および完全なデータ主権を必要とする大規模なオンプレミス ONTAP 環境を持つ組織に最適です。</block>
   <block id="70b86d6aa7fb00fd1d760b33b8607159" category="inline-link-macro">NetApp Console のローカルデプロイメントについて説明します^。</block>
-  <block id="dea2002a8471bfaae7f8b931f449e095" category="paragraph"><block ref="dea2002a8471bfaae7f8b931f449e095" category="inline-link-macro-rx"></block></block>
   <block id="0161e3d40bdbea6ca6998c8c60165b33" category="section-title">機能比較</block>
   <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">機能</block>
   <block id="23dad8eedc041cc12dbd56726f7f5a94" category="cell">はい（Console エージェントが必要です）</block>
@@ -3757,4 +3753,7 @@
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="cell">ライセンス</block>
   <block id="5d888c34f4251b9bdd3ba8412b69ff87" category="cell">マーケットプレイスのサブスクリプションとライセンス持ち込み</block>
   <block id="c7eca4d9dd171fc4b4a21c3425a47aa6" category="cell">ライセンス持ち込み（BYOL）</block>
+  <block id="5ceffe99385ecce35b5a538a16ca57cb" category="paragraph"><block ref="dc7c11e9da585b9fa1e35ca44da95ccc" category="inline-link-rx"></block>。</block>
+  <block id="f64bf1d04df251b82d06554b478f9ae4" category="paragraph"><block ref="f64bf1d04df251b82d06554b478f9ae4" category="inline-link-macro-rx"></block></block>
+  <block id="955bb7127a670884e7aac906d810238a" category="sidebar">コンソールローカルデプロイメントAPIリファレンス</block>
 </blocks>

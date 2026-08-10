@@ -13,8 +13,6 @@ summary: NetApp Console は、Console エージェントを使用してクラウ
 :imagesdir: ./media/
 
 
-NetAppは、統合ストレージ管理プラットフォームを実行するための2つの方法を提供しています：NetApp ConsoleとNetApp Consoleローカル展開。両者は共通の基盤を共有していますが、アーキテクチャ、接続性、機能範囲、および運用モデルにおいて異なります。NetApp Consoleは、お客様の環境にデプロイされたConsoleエージェントを使用してストレージシステムを管理します。NetApp Consoleローカル展開は、エージェントレスの仮想マシンです。NetApp Consoleローカル展開は、ONTAPクラスターと直接通信し、NetApp Consoleでは利用できないエンタープライズフリート管理機能を提供します。
-
 
 NOTE: クラウドとオンプレミス環境を管理し、プラットフォームインフラストラクチャを NetApp に任せたい場合は、NetApp Console を選択してください。大規模なオンプレミス ONTAP 環境を管理し、完全なデータ主権とポリシーベースのストレージ管理が必要な場合は、NetApp Console ローカル展開を選択してください。
 
@@ -27,7 +25,7 @@ NetAppは、NetApp ConsoleをSaaSアプリケーションとしてホストお�
 
 NetApp Console は、制限モード（独自のパブリッククラウドにインストールされ、アウトバウンド接続が制限されている）とプライベートモード（オンプレミスまたはクラウドにインストールされ、エアギャップ環境を含む NetApp Console プラットフォームへの接続がない）もサポートしています。
 
-https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console の導入モードについて"^]。
+https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console の導入モードについて"]。
 
 NetApp Consoleは、Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3、Google Cloud Storage、Eシリーズ、StorageGRID、オンプレミスONTAPクラスターなどのクラウドストレージを含む、幅広いストレージシステムをサポートしています。NetApp Backup and Recovery、NetApp Disaster Recovery、NetApp Ransomware Resilience、NetApp Copy and Sync、NetApp Data Classificationなど、NetAppデータサービスのフルスイートへのアクセスを提供します。NetApp Consoleは、Digital Advisor、ライフサイクルプランニング、サステナビリティダッシュボードなどのサポート契約機能も提供しています。
 
@@ -56,7 +54,7 @@ NetApp Console のプライベートモードはエアギャップおよびオ�
 
 コンソールローカル展開は、ポリシーベースのプロビジョニング、自動コンプライアンスチェック、および完全なデータ主権を必要とする大規模なオンプレミス ONTAP 環境を持つ組織に最適です。
 
-link:https://docs.netapp.com/us-en/concept-netapp-console-local.html["NetApp Console のローカルデプロイメントについて説明します^。"]
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["NetApp Console のローカルデプロイメントについて説明します^。"]
 
 
 

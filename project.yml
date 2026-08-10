@@ -185,8 +185,8 @@ sidebar:
         entries:
         - title: 組織IDとフリートID
           url: "/task-iam-rename-organization.html"
-        - title: アイデンティティとアクセス管理APIリファレンス
-          url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
+        - title: コンソールローカルデプロイメントAPIリファレンス
+          url: https://docs.netapp.com/us-en/console-local-automation/index.html
       - title: サポートされているLLMプロバイダーとモデル
         url: "/reference-llm-supported-models.html"
       - title: ONTAPアラートリファレンス
