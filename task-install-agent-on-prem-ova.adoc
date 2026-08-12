@@ -63,7 +63,7 @@ NetApp は、NetApp Console のローカル デプロイメントを vCenter 環
 
 OVAをダウンロードします。
 
-. NetApp Support Site から Console ローカル展開ソフトウェアをダウンロードしてください。
+. Console ローカル展開ソフトウェアをlink:https://mysupport.netapp.com/site/products/all/details/ncl/downloads-tab["NetAppサポート サイト"^]からダウンロードしてください。
 
 
 

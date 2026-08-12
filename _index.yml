@@ -93,7 +93,7 @@ indexpage:
     links:
     - title: NetApp Console ローカル展開
       url: https://www.netapp.com/console
-    - title: NetApp Data Services
-      url: https://www.netapp.com/data-services/
     - title: NetAppコミュニティ
       url: https://community.netapp.com/
+    - title: NetAppトラストセンター
+      url: https://trust.netapp.com/

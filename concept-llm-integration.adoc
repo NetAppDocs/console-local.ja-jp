@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept-llm-integration.html 
-keywords: LLM, AI, artificial intelligence, AI-assisted management, large language model, proxy, openai-compatible, netapp console 
-summary: NetApp Console のローカル展開が、プロバイダー、プロキシ、セキュリティに関する決定を含め、OpenAI および OpenAI 互換モデルとどのように統合されるかについて説明します。 
+keywords: LLM, AI, artificial intelligence, AI-assisted management, large language model,  openai-compatible, netapp console 
+summary: NetApp Console のローカル展開が、プロバイダーやセキュリティに関する決定事項を含む OpenAI および OpenAI 互換モデルとどのように統合されるかについて説明します。 
 ---
 = NetApp Console ローカル展開における LLM 統合について
 :hardbreaks:
@@ -67,7 +67,7 @@ NetApp Console のローカル展開では、以下の LLM プロバイダータ
 
 * *OpenAI*：OpenAIモデルへの直接アクセス。
 * エンタープライズゲートウェイやプロキシサービスなどの互換性のあるエンドポイントに対応した *OpenAI-compatible* 。
-* Anthropic の Claude モデル用。
+* *Anthropic*はAnthropicのClaudeモデル用です。
 
 
 モデルの可用性は、設定するエンドポイントによって異なります。Console のローカルデプロイメントで、リストからモデルを選択してください。
