@@ -16,7 +16,7 @@ summary: NetApp Console ローカル展開のストレージアラートが、�
 [role="lead"]
 NetApp Console のローカル展開により、オンプレミス ONTAP クラスターおよび NetApp Backup and Recovery 操作における健全性の問題を特定するアラートが生成されます。
 
-コンソールのローカル展開は、ONTAPクラスターとバックアップおよびリカバリ操作からのアラートを単一のビューに統合します。アラートページには、ダッシュボード、アラート一覧、およびシステムビューが含まれており、組織全体のアラートを確認したり、特定のフリートやシステムに絞り込んでアラートを表示したりできます。各アラートは、影響を受けるシステム、その重大度、および影響範囲を示します。
+コンソールのローカル展開は、ONTAPクラスターとバックアップおよびリカバリ操作からのアラートを単一のビューに統合します。アラートページには、ダッシュボード、アラート一覧、および組織内のすべてのシステムにわたるアラートを表示するビューが含まれています。各アラートは、影響を受けるシステム、その深刻度、および影響範囲を示します。
 
 コンソールのローカル展開でアラートを使用して、次のことを行います。
 
@@ -34,8 +34,8 @@ NetApp Console のローカル展開により、オンプレミス ONTAP クラ�
 
 各アラートには、重大度と影響範囲が含まれています。
 
-* *重大度*は緊急度を示し、高い順から低い順に、Critical、Major、Minor、Warning、Info となります。
-* *影響範囲*は、容量、接続性、データ保護、パフォーマンス、セキュリティといった影響を受ける領域を示します。
+* *深刻度*は緊急度を示し、最も高いものから低いものの順に、Critical、Warning、Informational となります。
+* *影響範囲*は、影響を受けるドメイン（可用性、容量、構成、パフォーマンス、保護、セキュリティ）を示します。
 
 
 
@@ -43,7 +43,7 @@ NetApp Console のローカル展開により、オンプレミス ONTAP クラ�
 [[alert-sources-and-scope]]
 == アラートの発生源と範囲
 
-* *ONTAPアラート*は、NetApp Consoleのローカル展開によって検出されたオンプレミスクラスター上のONTAP イベント管理システム（EMS）から発信されます。link:https://docs.netapp.com/us-en/ontap-ems/acp-auto-events.html["ONTAP EMSと利用可能なアラートの詳細をご確認ください。"^]
+* *ONTAPアラート*は、Console ローカル展開によって検出されたオンプレミスクラスター上のONTAPイベント管理システム（EMS）、およびONTAPから収集された監視メトリクスから発信されます。link:https://docs.netapp.com/us-en/ontap-ems/acp-auto-events.html["ONTAP EMSと利用可能なアラートの詳細をご確認ください。"^]
 * *NetApp Backup and Recovery alerts*は、Backup and Recoveryの操作から発生します。link:https://docs.netapp.com/us-en/data-services-backup-recovery/reference-audit-actions.html["NetApp Backup and Recovery のアラートの詳細をご確認ください。"^]
 * 閲覧できるフリートは、お客様の権限によって決まります。表示範囲を組織全体、特定のフリート、または個々のシステムに限定します。「システムの状態」タブにはシステムごとの状態が表示され、「アラート」タブには選択した範囲の現在のアラート一覧が表示されます。
 * CSVエクスポートには、現在のスコープ、検索テキスト、およびフィルターが反映されます。
@@ -51,14 +51,14 @@ NetApp Console のローカル展開により、オンプレミス ONTAP クラ�
 
 
 
-[[alert-notification-rules]]
-== アラート通知ルール
+[[notification-rules]]
+== 通知ルール
 
 どの警告が通知を生成するか、そして誰が通知を受け取るかを決定する通知ルールを作成します。通知ルールには、以下の特徴があります：
 
 * サービス（ONTAP 管理や Backup and Recovery など）、重大度、影響範囲、および対象システムに関するアラートと照合します。
 * メール配信の場合、指定されたアクセス権限を持つユーザーに通知を送信します。Webhook配信の場合、アラートデータは設定されたエンドポイントに送信されます。そのデータへのアクセスは、NetApp Consoleのローカル展開ではなく、受信側のアプリケーションによって制御されます。
-* これは特定のシステムに適用されるものであり、フリート全体には適用されません。
+* これは組織内のすべてのシステムに適用されます。
 * 計画メンテナンス期間中は、予期されるアラートを抑制するために、この機能をミュートすることができます。
 
 
@@ -68,6 +68,6 @@ NetApp Console のローカル展開により、オンプレミス ONTAP クラ�
 
 .関連情報
 * link:task-alerts-monitor.html["アラートを監視し、調査する"]
-* link:task-alert-rules-manage.html["アラート通知ルールの作成と管理"]
+* link:task-alert-rules-manage.html["通知ルールの作成と管理"]
 * link:reference-ontap-alerts.html["NetApp Console ローカル展開における ONTAP アラートについて"]
 

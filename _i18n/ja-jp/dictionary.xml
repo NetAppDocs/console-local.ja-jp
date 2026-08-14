@@ -644,7 +644,6 @@
   <block id="651199ccd6df9afe47c1a01cb2014b9a" category="summary">NetApp Console ローカル展開のストレージアラートが、組織およびフリート全体のオンプレミス ONTAP クラスターの健全性を監視するためにどのように役立つかについて説明します。</block>
   <block id="46dd71654e83b60d5a2b63a64c91c06b" category="doc">NetApp Console ローカル展開のアラートについて</block>
   <block id="96753cfc199c67944d48d5550d8a331e" category="paragraph">NetApp Console のローカル展開により、オンプレミス ONTAP クラスターおよび NetApp Backup and Recovery 操作における健全性の問題を特定するアラートが生成されます。</block>
-  <block id="0f666f93d79761d7ae4fe8424d7a778b" category="paragraph">コンソールのローカル展開は、ONTAPクラスターとバックアップおよびリカバリ操作からのアラートを単一のビューに統合します。アラートページには、ダッシュボード、アラート一覧、およびシステムビューが含まれており、組織全体のアラートを確認したり、特定のフリートやシステムに絞り込んでアラートを表示したりできます。各アラートは、影響を受けるシステム、その重大度、および影響範囲を示します。</block>
   <block id="0855169a6f83f70eb10d05419bbd0b1b" category="paragraph">コンソールのローカル展開でアラートを使用して、次のことを行います。</block>
   <block id="df580541dc1d5961973ae67dcad8ac67" category="list-text">容量、接続性、データ保護、パフォーマンス、およびセキュリティの問題を検出します。</block>
   <block id="a412e02ff5572e68270492382a758d4c" category="list-text">アラートの優先順位を、重要度と影響範囲に基づいて決定します。</block>
@@ -653,27 +652,20 @@
   <block id="9b9ee1193cec05dc2a41ed3e6ece1ea0" category="list-text">アラートリストをCSVファイルにエクスポートして、オフラインで分析します。</block>
   <block id="5992368e63ad83386054845741a8a33e" category="section-title">アラートの重大度と影響範囲</block>
   <block id="af16cc6229a519a3b6fda7956cf3bbb6" category="paragraph">各アラートには、重大度と影響範囲が含まれています。</block>
-  <block id="a9c60291ee333f9f8b30a1d56049f2e3" category="list-text">*重大度*は緊急度を示し、高い順から低い順に、Critical、Major、Minor、Warning、Info となります。</block>
-  <block id="8746c2cdf631ab24a14a3cef70775b09" category="list-text">*影響範囲*は、容量、接続性、データ保護、パフォーマンス、セキュリティといった影響を受ける領域を示します。</block>
   <block id="b464c96719ac8e689bf809558b1fbfb1" category="section-title">アラートの発生源と範囲</block>
-  <block id="6c6025ea2f97b33e2c486828e0d64c65" category="list-text">*ONTAPアラート*は、NetApp Consoleのローカル展開によって検出されたオンプレミスクラスター上のONTAP イベント管理システム（EMS）から発信されます。<block ref="9e05df594689e3a41c64bf5428dd8f1b" category="inline-link-macro-rx"></block></block>
   <block id="84a123db43de03103a06de7c20323cfc" category="inline-link-macro">NetApp Backup and Recovery のアラートの詳細をご確認ください。</block>
   <block id="ea0f0b01214b1b6564dedd1ccc0ef789" category="list-text">*NetApp Backup and Recovery alerts*は、Backup and Recoveryの操作から発生します。<block ref="ce19bb3d3f0370071bd0a63bda9b1cb0" category="inline-link-macro-rx"></block></block>
   <block id="8f7cb705f10a2a8a43e44be4e26bce29" category="list-text">閲覧できるフリートは、お客様の権限によって決まります。表示範囲を組織全体、特定のフリート、または個々のシステムに限定します。「システムの状態」タブにはシステムごとの状態が表示され、「アラート」タブには選択した範囲の現在のアラート一覧が表示されます。</block>
   <block id="e4512e69eb5052bb89ae3cb05beb2048" category="list-text">CSVエクスポートには、現在のスコープ、検索テキスト、およびフィルターが反映されます。</block>
-  <block id="357c988d7b614f4a678bdeab216e8c0d" category="section-title">アラート通知ルール</block>
   <block id="0cd5a479aeee5c75de6058d04d42884c" category="paragraph">どの警告が通知を生成するか、そして誰が通知を受け取るかを決定する通知ルールを作成します。通知ルールには、以下の特徴があります：</block>
   <block id="bd219bf7059c2b33f0ec554be065e6f1" category="list-text">サービス（ONTAP 管理や Backup and Recovery など）、重大度、影響範囲、および対象システムに関するアラートと照合します。</block>
   <block id="b2f7eced90ff21e599ef62d0fb532997" category="list-text">メール配信の場合、指定されたアクセス権限を持つユーザーに通知を送信します。Webhook配信の場合、アラートデータは設定されたエンドポイントに送信されます。そのデータへのアクセスは、NetApp Consoleのローカル展開ではなく、受信側のアプリケーションによって制御されます。</block>
-  <block id="5969773a182e2f8badfffe0e0dba85f4" category="list-text">これは特定のシステムに適用されるものであり、フリート全体には適用されません。</block>
   <block id="e4b0a25eea6bb99ae00f0d8840506e6a" category="list-text">計画メンテナンス期間中は、予期されるアラートを抑制するために、この機能をミュートすることができます。</block>
   <block id="4cf933aaee95403e05d1324cc29e0b21" category="paragraph">コンソールのローカル展開には、インストール直後に有効になるデフォルトの通知ルールが含まれています。デフォルトのルールでは、すべてのサービスとシステムを監視してクリティカル重大度のアラートを検出し、コンソール通知センターにのみ通知を送信します。メールやWebhookによる配信は、設定するまで構成されません。このルールを表示および調整したり、環境に合わせてカスタムルールを作成したりできます。</block>
   <block id="31a344bb0e11e5a55503d8881257edf1" category="paragraph">情報レベルのアラートはアラートページに表示されますが、情報レベルの重大度を含むルールを明示的に作成しない限り、通知によって配信されません。</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="list-title">関連情報</block>
   <block id="82a2d6c3a1797413a862c7f45ba90fc6" category="inline-link-macro">アラートを監視し、調査する</block>
   <block id="c4b4941c3014489a62b6f0fd2b9cbe09" category="list-text"><block ref="c4b4941c3014489a62b6f0fd2b9cbe09" category="inline-link-macro-rx"></block></block>
-  <block id="bf4a2ffc2bbdd132b48f1c5434b4d680" category="inline-link-macro">アラート通知ルールの作成と管理</block>
-  <block id="d0dcba044d6a8dc4a29573e265cf2310" category="list-text"><block ref="d0dcba044d6a8dc4a29573e265cf2310" category="inline-link-macro-rx"></block></block>
   <block id="ae385747b29e51a9811e8ce7976b7c6b" category="inline-link-macro">NetApp Console ローカル展開における ONTAP アラートについて</block>
   <block id="e77eeb959a8d6ff16124b745150a7b75" category="list-text"><block ref="e77eeb959a8d6ff16124b745150a7b75" category="inline-link-macro-rx"></block></block>
   <block id="98a9a9e956c44874c27b78d15a00bb40" category="summary">定義済みのホームページダッシュボードとカスタムダッシュボードが NetApp Console ローカル展開でどのように連携するかについて説明します。</block>
@@ -2333,49 +2325,30 @@
   <block id="53ccb7bd8c0be53a952139ebd4454132" category="paragraph-title">必要なアクセスロール</block>
   <block id="ab92140b4fca6a428c4d9dd6177333dc" category="paragraph">スーパー管理者、組織管理者、ストレージ管理者、運用サポートアナリスト、または NetApp Backup and Recovery の管理者ロールのいずれか。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
   <block id="181c0a0c09dfe0f8ba7b3346903c6def" category="paragraph">通知ルールを使用することで、適切なアラートを環境に合ったチャネルを通じて適切な担当者にルーティングし、お客様に関係のないアラートによるノイズを削減できます。通知ルールはアラートページを補完するものです。アラートワークフローでアラートを調査または修復した後、ルールを使用して、今後同様のアラートがどのように配信されるかを制御できます。</block>
-  <block id="9d9e3ddcd0ba1071d2727b34998919fe" category="paragraph">通知ルールは、サービス、重要度、影響範囲など、お客様が定義した条件に基づいてアラートを照合し、選択したチャネルを通じて通知を配信します。Console のローカル展開には、表示および調整可能なデフォルトの通知ルールが含まれており、独自のカスタムルールを作成することもできます。メンテナンス期間などの計画されたイベント中に通知を一時的に抑制するために、ルールをミュートすることもできます。</block>
   <block id="ef9e7cefa30ba8567d3175e4dd97d705" category="inline-link-macro">通知配信の設定</block>
   <block id="ed25804203fe0cfacd7338fe370fab02" category="list-text">メールで通知を配信するには、組織管理者がコンソールのローカル展開環境でメールサーバーを設定する必要があります。外部システムに通知を送信するには、組織の管理者がWebhookを設定する必要があります。手順については、<block ref="672eea012e5868d936761017846dcdbf" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="6be1395fcc81300b6bceb20c8b98659a" category="list-text">コンソールのローカル展開通知センターはデフォルトで通知を表示するため、コンソール内通知に関する追加の設定は不要です。</block>
   <block id="aa0688cb1a2561ce4a0b9e33ec24c385" category="section-title">通知ルールを表示する</block>
   <block id="3fd13d8d5fe12b342d50496d8c1b14ea" category="paragraph">通知ルールページは、組織に適用されるすべてのルールを確認および管理するための中心的な場所です。各ルールにはその主要な属性が表示されるため、アラートの動作を迅速に評価し、調整することができます。</block>
   <block id="994fd7486592f0f379c8f7c736e9858a" category="list-text">左側のナビゲーションから、*Health &gt; Alerts* を選択します。</block>
-  <block id="232cdeb16b6b2880fb174bcdb7470db1" category="list-text">「通知設定」を選択します。</block>
   <block id="3ea34819819081b3d79348ba42359018" category="list-text">リストに記載されているルールを確認してください。各ルールには、その有効状態、名前、監視対象のサービスと重要度レベル、通知を受信する権限を持つ役割、有効な配信チャネル、最終更新日時、およびスケジュールされたミュート期間が表示されます。</block>
   <block id="386565a9df34302963e2a006eda691f7" category="list-text">特定のルールを見つけるには、フィルターと検索コントロールを使用して、アクティブ状態、サービス、重要度、役割、チャネル、またはミュート状態によって絞り込みます。</block>
   <block id="18fcc442133be306ba0fe4ee156658f9" category="section-title">通知ルールを作成する</block>
   <block id="91c2e6e70b23b2568543595701eead74" category="paragraph">通知ルールを作成して、通知をトリガーする条件と、その通知の配信方法を定義します。</block>
-  <block id="aa9b63f1bf13ee27e6302024b407c536" category="admonition">フリートに対して通知ルールを設定することはできません。特定のシステムに対してのみ設定できます。多数のシステムが存在する大規模な環境では、システムごとにルールを重複させるのではなく、重要度に基づいてより広範なルールを作成することを検討してください。たとえば、すべてのシステムを対象とする1つの Critical ルールを包括的なルールとして設定し、異なるルーティングや受信者が必要なシステムには、追加のターゲットルールを設定するといった方法です。</block>
   <block id="6a1b057cf8bcf8cfcb7fd2f2e5190889" category="paragraph-title">全システムにおける重大アラートの通知ルール例</block>
-  <block id="df54dc817bfa65461d11b98d1e80e8dd" category="paragraph">発生源がどのシステムであっても、重大なアラートを見逃さないようにしたいとします。ストレージ管理者向けに、すべての重大なアラートを Console Notification Center にルーティングする包括的なルールを作成できます。</block>
   <block id="4bbe632b2568b2274341aa0b83187f54" category="paragraph">この例では、以下の設定でルールを作成します。</block>
   <block id="61cf57ee3e9221a4a1af8b64894c7068" category="list-text">*サービス*：すべて</block>
-  <block id="96c8440cf70ffc5c99d3b6537771f675" category="list-text">*重大度*：Critical</block>
-  <block id="c0eb8fd624cbe8c25fc9c9407c7efea7" category="list-text">*IAMロール*：ストレージ管理者</block>
-  <block id="c59b712970cde5ff67eb6de5c8da29fa" category="list-text">*System*：（すべてのシステムに適用する場合は、この欄を空欄にしてください）</block>
-  <block id="60d59c713d87c9724aa352ce6a1b5b34" category="list-text">*配信方法*：Console Notification Center</block>
   <block id="24d167f15a64099d232cbac6cb917eaa" category="paragraph">このルールが適用されると、ストレージ管理者は、すべてのシステムにおける重大なアラートが発生するたびに、Console に通知を受け取ります。このルールは基準となるものであり、より具体的なルールを追加することで補完できます。</block>
   <block id="04a7d6a2d7e7d71268015fdcc29916b9" category="paragraph-title">ストレージ管理者の容量アラートを対象とした通知ルールの例</block>
   <block id="87d32c9b50b31ec68f42710a8b498763" category="paragraph">ストレージ管理者が特定の運用システムにおける重大な容量問題に即座に対応する必要があるものの、重要度の低いアラートが受信トレイに大量に届くのは避けたいとします。特定のシステムで重大な容量アラートが発生した場合にのみ、ストレージ管理者にメールを送信するターゲットルールを作成できます。</block>
-  <block id="8d5c68803a7483180c2f579d68754ca3" category="list-text">*サービス*：ONTAP管理</block>
-  <block id="d76c9afc46a2bb4ffe8c662d24c3edbe" category="list-text">*影響範囲*：容量</block>
-  <block id="50d993cad5510cc3b2bb8e1d14be3848" category="list-text">*システム*：&lt;system_name&gt;</block>
-  <block id="c809d6a68c232dcd6de973aa0339cb80" category="list-text">*配信方法*：メール</block>
   <block id="252e427d2b81f9a3381633ba3969aa27" category="paragraph">このルールが適用されている場合、Console のローカル展開では、容量に関する重大なアラートが発生した際に、指定されたシステムのすべてのストレージ管理者に電子メールが送信されます。警告や情報提供など、重要度の低いアラートはメールを生成しないため、チームは緊急の対応が必要な問題に集中できます。</block>
-  <block id="4c63fbe84255b1ec2a74b41ab272605d" category="list-text">「通知設定」を選択し、次に「ルールの追加」を選択します。</block>
   <block id="250976a2b8b2604800b3ad0e6e3ef5f3" category="list-text">ルールが一致する条件を定義します。</block>
   <block id="de50f3dcf9e49c743a0a88531b406dab" category="list-text">*ルール名*：簡潔で分かりやすい名前を入力してください。この項目は必須です。</block>
   <block id="00d401a946554da9480911973c7c00c1" category="list-text">*ルールの説明*：必要に応じて、ルールの目的に関する追加情報を入力してください。</block>
   <block id="3b715376b628913b6afe9e9e38110dfb" category="list-text">*サービス*：ルールが適用される ONTAP またはプラットフォームサービスを1つ以上選択してください。</block>
   <block id="59748e8bb2446fd93cbff6d3aafaea68" category="list-text">*役割*：ルールがトリガーされたときに通知を受け取るためにユーザーが持つ必要があるアクセス役割を選択します。</block>
   <block id="1c176ff939cc688d8fcbfca4a11a6d45" category="list-text">*重要度レベル*：ルールが監視する重要度レベル（Critical、Warning、Error、Information など）を選択します。</block>
-  <block id="077f073ee19af6e75c93d302db769b91" category="list-text">*影響範囲*：容量やパフォーマンスなど、一致させる運用領域を選択します。</block>
-  <block id="beb055f49bc5e9306f77d5676880c887" category="list-text">*アラート名*：ルールをトリガーする特定のアラートの種類を選択します。</block>
-  <block id="f7689ae17ad0ec5b65160f8cab6da1a8" category="list-text">*システム*：ルールを適用するシステムコンテキストを選択します。</block>
   <block id="99194c98d427b169878eeb0ceba35480" category="list-text">通知の配信チャネルを選択します：</block>
-  <block id="5112c21de19690f21dfd0064336fe8de" category="list-text">*メール*：選択した役割を持つユーザーにアラートメールを送信します。設定済みのメールサーバーが必要です。</block>
-  <block id="b1e0543a1c0bcd7043c7a36363478e54" category="list-text">*Webhook*：アラートデータを外部システムに送信します。設定済みのWebhook連携を選択する必要があります。</block>
-  <block id="08eea354ae8007e70c04ae40c4189cae" category="list-text">*Console Notification Center*：選択されたロールを持つユーザーに対するリアルタイムアラートを表示します。</block>
   <block id="86762968ec8f9332f58d8c0a6a2aa88f" category="list-text">必要に応じて、メンテナンス期間などの計画された期間中にこのルールからの通知を抑制するには、*通知をミュート*スケジュールを設定し、ミュート期間を繰り返す場合は繰り返しを選択してください。ルールごとに複数のミュート期間を追加できるため、週ごとのパッチ適用などの定期的なメンテナンスサイクルに便利です。</block>
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">「作成」を選択します。</block>
   <block id="097f6ad8650956a694d1f6618a1835bc" category="section-title">通知ルールを有効または無効にする</block>
@@ -2408,7 +2381,6 @@
   <block id="38f6a4f788dc0bd7558156d75efe8105" category="paragraph">NetApp Console のローカルデプロイメントでアラートを監視・調査し、ストレージの健全性を維持して障害を最小限に抑えます。</block>
   <block id="521327c34bbf46075820c1d409196127" category="paragraph">組織全体または特定のフリート全体のアクティブなアラートを表示し、深刻度と影響範囲に基づいて優先順位を付け、根本原因を調査することで、問題がエスカレートする前に解決できます。アラートに推奨されるアクションや「Fix It」オプションが含まれている場合、調査から直接修復作業に移行できます。</block>
   <block id="e7738982e1706c423ed1dc4d154a847c" category="paragraph-title">必須アクセスロール</block>
-  <block id="cbfb02cc13518d81307068ccf3ad42c2" category="paragraph">Federation admin と Federation viewer を除くすべてのロール。Federation admin または Federation viewer ロールを持つユーザーは、アラートを表示できません。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
   <block id="8925988857ff65e89454a4eb593456c2" category="paragraph">ONTAP アラートの場合、アラートページから直接 System Manager や Workload Analyzer などのツールにアクセスして、問題の調査と解決を行うことができます。</block>
   <block id="375606b0ccfefde5bee17bc22b7d863d" category="paragraph">外部への報告のために、アラートリストをCSVファイルにエクスポートしてオフラインで分析することができます。</block>
   <block id="fc55a582a8dba8c098b8ae6afe46eb47" category="inline-link-macro">アラート通知の設定方法について説明します</block>
@@ -2426,7 +2398,6 @@
   <block id="8ba926ef4f90ffefbd189d250c5b3d19" category="list-text">表示する必要のあるアラートに応じてダッシュボードをフィルタリングします。フィルタリング対象には以下が含まれます：</block>
   <block id="3f4983c4d6a52d72256e16993979c96e" category="list-text">深刻度（重大、警告、または情報）</block>
   <block id="cef4a8d30c1b18c6e2bed3dedd59f542" category="list-text">影響領域別にグループ化されたクリティカルアラート</block>
-  <block id="6efcfe6a265e05264d40d3dda6f3a76e" category="list-text">影響範囲（セキュリティ、保護、可用性、パフォーマンス、容量、または構成）</block>
   <block id="856fb1b715c481e17f07d981ccc7ebf4" category="section-title">すべてのアラートを表示</block>
   <block id="69eb2dcfcf0f3a463a90960e81522f1e" category="paragraph">選択したスコープのアクティブなアラートの全リストを表示するには、「アラート」タブを使用します。リストは現在の組織またはフリートのスコープを反映して更新され、名前や説明で特定のアラートを検索できます。</block>
   <block id="b86d6a92a51eed6dfd9938fac60df907" category="list-text">選択したスコープの有効なアラートの全リストを表示するには、*アラート*タブを選択してください。</block>
@@ -2438,7 +2409,6 @@
   <block id="65f78453bc07f64ca861c0ecfe39b780" category="list-text">*Systems health* タブを選択すると、選択した範囲内のシステムに関連付けられているアラートの概要が表示されます。</block>
   <block id="42e73fcad32a3ab24bb2fab9280da0d9" category="list-text">該当システムの行にある「アラートを表示」を選択すると、そのシステムに関連付けられているアクティブなアラートの全リストが表示されます。</block>
   <block id="0dc68aa31a49ba83f70b63f2b13bd416" category="section-title">アラートを調査する</block>
-  <block id="34419c92550cbb45bc553b2679b6cf50" category="paragraph">アラートを調査することで、何がアラートを引き起こしたのか、誰が通知を受け取ったのかを確認できます。</block>
   <block id="b00e88e4dda7b3a7db43247892b70bdf" category="paragraph">ONTAP アラートを調査する際、アラートを生成したシステムの System Manager インターフェースに直接アクセスして、詳細情報を確認したり、必要な措置を講じたりすることもできます。</block>
   <block id="23c5bc9e250e82c9b5bf441030d5bdd6" category="list-text">どちらのタブでも、調査したいアラートの名前を選択すると、その詳細が表示されます。</block>
   <block id="9f64c529078a13eebc43993d1ac578d4" category="inline-image-macro">アラートの詳細を表示</block>
@@ -2612,10 +2582,6 @@
   <block id="5b7fa871f0c8458f8606108c4cfd4e0f" category="list-text">既存の設定をクリアするには、*フィールドをクリア*を選択してください。</block>
   <block id="a3013708d2cf8c341a84dca962344504" category="list-text">メールサーバーの新しい接続情報を入力してください。</block>
   <block id="21023e438743ec26a85fc29888772fe0" category="list-text">テストが成功したら、*保存*を選択して新しい設定を保存します。</block>
-  <block id="102683a93268c2aad1e3d9ec49c6f6ce" category="section-title">メールサーバーの設定を削除する</block>
-  <block id="4ce419a04c17b42f5c371b2953946ebf" category="paragraph">コンソールローカル展開でメールを送信する必要がなくなった場合は、メールサーバーの設定を削除できます。</block>
-  <block id="d36c245423608ab3299af01950915d86" category="list-text">「設定」を選択して、システム設定ページを開きます。</block>
-  <block id="b41468ddb6280e56c1f532bdaa2a21c4" category="list-text">「保存」を選択すると、クリアした設定が保存され、Console のローカル展開からメールサーバーの設定が削除されます。</block>
   <block id="6a254a34bb4844c3f68630aa0250b116" category="section-title">ウェブフックを設定する</block>
   <block id="f19efafccb40e70e49d027a90324485e" category="paragraph">コンソールのローカルデプロイメントから他のツールやサービスに通知を送信するように、Webhookを設定します。複数のWebhookを設定でき、それぞれ異なるエンドポイントを指すように設定できます。例えば、SIEMと、オンコールページングサービス用などです。</block>
   <block id="40654a9753bb71b1c30d40fe1fcb0377" category="paragraph">Webhookを作成すると、ストレージ管理者ロールを持つユーザーは、それを特定のアラートルールに割り当てることができます。例えば、重要なアラートはメールで送信しつつ、すべてのアラートをWebhook経由でサードパーティの監視ツールに送信するといったことが可能です。</block>
@@ -3215,7 +3181,6 @@
   <block id="336e4351e57a856f458961abc5062751" category="list-text">プロバイダーの種類の決定：OpenAI または OpenAI 互換。<block ref="78f935c14127e9543a594b2e8112c798" category="inline-link-macro-rx"></block></block>
   <block id="d8bd49d8fe4a0de7a2b03c1aec99e88b" category="list-text">選択したプロバイダ パスに対応する有効な API キー。</block>
   <block id="12415726cf97af159e3e05710842f040" category="list-text">プロバイダパスのエンドポイント URL。</block>
-  <block id="0a3c869dbd390ca2cdefafd338d2cf3d" category="list-text">LLM プロバイダ アカウントのユーザー名またはシングル サインオン（SSO）ID（必要な場合）。</block>
   <block id="cfe024af8356a3decd0f09b47eff88fa" category="list-text">コンソールのローカル展開から選択したエンドポイントへのネットワーク アクセス。</block>
   <block id="1f3d7608a574b42ba681dcef64704661" category="list-text">許可するアシスタント アクションのストレージ クラスとロールベースのアクセス制御。</block>
   <block id="6d4074b2f4345e60985cf590c19c3368" category="section-title">LLMをNetApp Consoleのローカル展開に接続する</block>
@@ -3235,9 +3200,6 @@
   <block id="1de83f5da1c16cfca8ca9ae1534dcf3b" category="paragraph"><block ref="263da31548d1ff54f99ec1ad656a62e4" category="inline-link-macro-rx"></block>.</block>
   <block id="4e0ef856d01b17ebeacb44ab6e813a5b" category="section-title">LLM統合が正しく機能することを確認します。</block>
   <block id="649811a3ff05f0c93f06c2fdaa3bbeed" category="paragraph">設定を保存したら、アシスタントの利用可否と動作を確認してください。</block>
-  <block id="d7f8652c7bc65256b550f9446fb404f0" category="list-text">*コンソールアシスタント* ボタンが NetApp Console ローカルデプロイメントダッシュボードに表示されていることを確認してください。</block>
-  <block id="32755bc8ea4985295f55809c96237bd0" category="list-text">アシスタントを*読み取り専用*モードで開き、基本的なクエリを実行します。</block>
-  <block id="6a0aa36fa7b572549e4bf529b93925a4" category="list-text">アシスタントを *Read/write* モードで開き、ストレージを変更する操作を実行する前にユーザーの確認が必要であることを確認してください。</block>
   <block id="b9218edb7fcba77407a69cc8446ba839" category="list-text">アクションワークフローを必要とするユーザーが、必要なロールベースのアクセス制御を持っていることを確認してください。</block>
   <block id="3bc0e23bd46bad08da1876b2cc4430a7" category="inline-link-macro">NetApp Console アシスタントを使用する</block>
   <block id="7d69bfcb234231881e32fc0c2d9f1364" category="paragraph">検証が完了すると、ユーザーはダッシュボードからコンソールアシスタントを開き、タスクを平易な言葉で説明できるようになります。使用例とエンドユーザワークフローについては、<block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block>を参照してください。</block>
@@ -3755,4 +3717,35 @@
   <block id="7886cf4f03a683503e8235a0eef59e73" category="list-text">*Anthropic*はAnthropicのClaudeモデル用です。</block>
   <block id="dc666edc3ed6edcb6babcae67d26fcd2" category="list-text">Console ローカル展開ソフトウェアを<block ref="5574d9b8352359225831a51c7e6c17ee" category="inline-link-macro-rx"></block>からダウンロードしてください。</block>
   <block id="ad8f5be1c708f8e891508a0a9c643e0a" category="sidebar">NetAppトラストセンター</block>
+  <block id="86fe53164e7d48e6addafc1fcdf26111" category="paragraph">コンソールのローカル展開は、ONTAPクラスターとバックアップおよびリカバリ操作からのアラートを単一のビューに統合します。アラートページには、ダッシュボード、アラート一覧、および組織内のすべてのシステムにわたるアラートを表示するビューが含まれています。各アラートは、影響を受けるシステム、その深刻度、および影響範囲を示します。</block>
+  <block id="fe055be6fd6957c00b782e6ba2e57773" category="list-text">*深刻度*は緊急度を示し、最も高いものから低いものの順に、Critical、Warning、Informational となります。</block>
+  <block id="60e4151f41d4a03ae921c4866360316f" category="list-text">*影響範囲*は、影響を受けるドメイン（可用性、容量、構成、パフォーマンス、保護、セキュリティ）を示します。</block>
+  <block id="4f4677e32164d37927668f239193f729" category="list-text">*ONTAPアラート*は、Console ローカル展開によって検出されたオンプレミスクラスター上のONTAPイベント管理システム（EMS）、およびONTAPから収集された監視メトリクスから発信されます。<block ref="9e05df594689e3a41c64bf5428dd8f1b" category="inline-link-macro-rx"></block></block>
+  <block id="b9ce699225d62badaa143b23f2a286ac" category="section-title">通知ルール</block>
+  <block id="a9dd2aada57993b6f95023192190ead8" category="list-text">これは組織内のすべてのシステムに適用されます。</block>
+  <block id="a7ba1daf0536691400747397351ab72f" category="inline-link-macro">通知ルールの作成と管理</block>
+  <block id="4bdf746b4e7f6e6dfeb75b163f3de933" category="list-text"><block ref="4bdf746b4e7f6e6dfeb75b163f3de933" category="inline-link-macro-rx"></block></block>
+  <block id="6449f494e438a56acab5430a8fa9d46f" category="paragraph">通知ルールは、サービス、重要度、影響範囲など、お客様が定義した条件に基づいてアラートを照合し、選択したチャネルを通じて通知を配信します。コンソールのローカル展開には、表示および調整可能なデフォルトの通知ルールが含まれており、独自のカスタムルールを作成することもできます。メンテナンス期間などの計画されたイベント中に通知を一時的に抑制するために、ルールをミュートすることもできます。</block>
+  <block id="e35f5087596b0e7233f53786114a613a" category="admonition">通知ルールは、組織内のすべてのシステムに適用されます。</block>
+  <block id="192722772d82aacac1ca6123672325c6" category="paragraph">発生源がどのシステムであっても、重大なアラートを見逃さないようにしたいとします。ストレージ管理者向けのコンソールUI通知にすべての重大なアラートをルーティングする広範なルールを作成できます。</block>
+  <block id="d7ccc5bae6b4903d6c255b3b045a4e55" category="list-text">*重大度レベル*：Critical</block>
+  <block id="423dffa169e3740d81b0a59fd14bc925" category="list-text">*役割*：ストレージ管理者</block>
+  <block id="3ee7a18f4aab3d155275f688c812b12b" category="list-text">*配信チャネル*：コンソール UI 通知</block>
+  <block id="7c20f1cc356d3fb78cba60fb83153974" category="list-text">*サービス*：ONTAP管理</block>
+  <block id="830f3e0189ace7d0a984dfbb36e2fdc7" category="list-text">*影響分野*：キャパシティ</block>
+  <block id="1be5a6074654d08ae3538b278b8a8485" category="list-text">*配信チャネル*：メール</block>
+  <block id="c922d0c540b57d391bd538d480dfc9cd" category="list-text">「通知ルール」を選択し、次に「ルールの追加」を選択します。</block>
+  <block id="a988d3b5adb4dd67097b18a868770bb4" category="list-text">*影響領域*：容量やパフォーマンスなど、一致する運用領域を選択してください。</block>
+  <block id="867364563b61efd0618777d3d71d7f8f" category="list-text">*アラート*：ポリシーに従ってすべてのアラートが通知されることを示します。</block>
+  <block id="576412b3f5d3de4868980e97973e7d8b" category="list-text">*システム*：組織内のすべてのシステムで報告されたアラートは、ポリシーに従って通知されることを示します。</block>
+  <block id="ee71ff4f683cea1809ca49786f486a63" category="list-text">*メール通知*：選択した役割を持つユーザーにアラートメールを送信します。設定済みのメールサーバーが必要です。</block>
+  <block id="9d127813c946fea889954dd0fde53b15" category="list-text">*Webhook連携*：アラートデータを外部システムに送信します。設定済みのWebhook連携を選択する必要があります。</block>
+  <block id="3896fb60fecaecbb0615fc54dd14d98a" category="list-text">*コンソールUI通知*：選択されたロールを持つユーザーにリアルタイム通知を表示します。</block>
+  <block id="c12f8f1d006dc546dc07a83b341eb41d" category="paragraph">すべての役割。アラートは、閲覧権限のあるリソースに対してのみ表示されます。利用可能なリソースの一覧に該当のリソースが表示されない場合、そのリソースのアラートを表示する権限がありません。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
+  <block id="038da7e0743ee2312ac64e6eca9d2b12" category="list-text">影響範囲（可用性、容量、構成、パフォーマンス、保護、またはセキュリティ）</block>
+  <block id="15dabf59f40706e7567510f6c6998de1" category="list-text">設定のずれによって発生したアラートのみを表示するドリフトアラート</block>
+  <block id="6c630ee602118044ab23bd89b0b79149" category="paragraph">アラートを調査することで、何がアラートを引き起こしたのかを確認できます。</block>
+  <block id="30ed16d592d987bc97f9c257fb0d026c" category="list-text">必要に応じて、LLMプロバイダーアカウントのユーザー名またはID。</block>
+  <block id="e90cfbea605d047e2c768be5cc0d5d90" category="list-text">*コンソールアシスタント*を*読み取り専用*モードで開き、基本的なクエリを実行します。</block>
+  <block id="ddbbb4fd6daa8474cc88e6beb3919a85" category="list-text">*コンソールアシスタント*を*読み取り/書き込み*モードで開き、ストレージを変更する操作を実行する前にユーザーの確認が必要であることを確認してください。</block>
 </blocks>
