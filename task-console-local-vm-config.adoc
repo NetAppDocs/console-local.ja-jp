@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-console-local-vm-config.html 
-keywords: Console local VM, vcenter, esxi, increase cpu, increase ram, vm maintenance, Console local maintenance, Console local operating system, Console local host 
-summary: コンソールのローカル展開をデプロイした後でも、既存のvCenterまたはESXiホストに変更を加えることができます。例えば、コンソールのローカル展開をホストするVMインスタンスのCPUやRAMを増やすことができます。 
+keywords: Console local VM, vcenter, esxi, vm maintenance, Console local maintenance, Console local operating system, Console local host 
+summary: コンソールのローカル展開をデプロイした後でも、既存のvCenterまたはESXiホストに変更を加えることができます。 
 ---
 = NetApp Consoleのローカルデプロイ用のvCenterまたはESXiホストのメンテナンス
 :hardbreaks:
@@ -14,11 +14,10 @@ summary: コンソールのローカル展開をデプロイした後でも、�
 
 
 [role="lead"]
-NetApp Console ローカルデプロイメントでは、コンソールローカルデプロイメントをデプロイした後でも、既存の vCenter または ESXi ホストに変更を加えることができます。たとえば、コンソールローカルデプロイメントをホストする VMインスタンスの CPU や RAM を増やすことができます。
+NetApp Console ローカルデプロイメントでは、コンソールローカルデプロイメントをデプロイした後でも、既存の vCenter または ESXi ホストに変更を加えることができます。
 
 VMウェブコンソールを使用して、以下のメンテナンス作業を実行します。
 
-* ディスクサイズを増やす
 * コンソールのローカル展開を再起動します
 * 静的ルートを更新する
 * 検索ドメインを更新する
@@ -55,37 +54,6 @@ vSphereクライアントからメンテナンスコンソールにアクセス�
 . VMインスタンス作成時に指定したユーザー名とパスワードを使用して、VMインスタンスにログインします。ユーザー名は `maint`で、パスワードはVMインスタンス作成時に指定したものです。
 . 入力 `1`して `System Configuration`メニューを表示します。
 .  `1`を入力してメンテナンスユーザーのパスワードを変更し、画面の指示に従ってください。
-
-
-
-
-[[increase-the-cpu-or-ram-of-the-vm-instance]]
-=== VMインスタンスのCPUまたはRAMを増やす
-
-コンソールのローカル展開をホストする VMインスタンスの CPU または RAM を増やすことができます。
-
-VCenter または ESXi ホストで VM インスタンスの設定を編集し、メンテナンスコンソールを使用して変更を適用します。
-
-.vSphereクライアントでの手順
-. vSphereクライアントを開き、vCenterにログインしてください。
-. Console のローカル展開をホストする VM インスタンスを選択します。
-. VMインスタンスを右クリックして、*設定の編集*を選択します。
-. /opt または /var パーティションに使用されているハードドライブの容量を増やしてください。
-+
-.. /opt に使用されるハードドライブの容量を増やすには、「ハードディスク 2」を選択します。
-.. /var に使用されるハードドライブの容量を増やすには、「ハードディスク 3」を選択します。
-
-
-. 変更を保存します。
-
-
-.メンテナンスコンソールでの手順
-. vSphereクライアントを開き、vCenterにログインしてください。
-. Console のローカル展開をホストする VMインスタンスを選択します。
-. 「Launch Web Console」を選択します。
-. VMインスタンス作成時に指定したユーザー名とパスワードを使用して、VMインスタンスにログインします。ユーザー名は `maint`で、パスワードはVMインスタンス作成時に指定したものです。
-. 入力 `1 to view the `System Configuration`メニュー。
-. 入力 `2`して、画面の指示に従ってください。コンソールは新しい設定をスキャンし、パーティションのサイズを拡大します。
 
 
 

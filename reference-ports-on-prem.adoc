@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference-ports-on-prem.html 
-keywords: networking, network requirements, ports, on-premises, TCP, HTTP, HTTPS, firewall, connectivity requirements, Console agent, agent connectivity, netapp console local 
-summary: コンソールエージェントは、オンプレミスの Linux ホストに手動でインストールした場合、_inbound_ ポートを使用します。計画立案の際には、これらのポートを参照してください。 
+keywords: networking, network requirements, ports, on-premises, TCP, UDP, firewall, connectivity requirements, Console agent, agent connectivity, netapp console local, inbound ports, OVA 
+summary: NetApp Console のローカル展開用 OVA は、独自の内部ファイアウォールを管理します。お客様の環境で VM に対して外部ファイアウォールポリシーが適用されている場合は、管理ホストから以下の受信ポートにアクセスできることを確認してください。 
 ---
-= NetApp ConsoleのローカルデプロイにおけるオンプレミスConsoleエージェント用のポート
+= NetApp Console ローカル展開の受信ポート
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,39 @@ summary: コンソールエージェントは、オンプレミスの Linux ホ�
 
 
 [role="lead"]
-NetApp Console のローカル展開では、コンソールエージェントはオンプレミスの Linux ホストに手動でインストールされた場合、_inbound_ ポートを使用します。計画立案の際には、これらのポートを参考にしてください。
-
-これらの受信ルールは、すべての NetApp Console 展開モードに適用されます。
+NetApp Console のローカル展開用 OVA は、独自の内部ファイアウォールを管理します。お客様の環境で VM に対して外部ファイアウォールポリシーが適用されている場合は、管理ホストから以下の受信ポートにアクセスできることを確認してください。
 
 [cols="10,10,80"]
 |===
-| Protocol | ポート | 目的 
+| ポート | Protocol | 目的 
 
 
-| HTTP | 80  a| 
-* クライアントのWebブラウザからローカルユーザーインターフェースへのHTTPアクセスを提供します。
-* Cloud Volumes ONTAP アップグレードプロセス中に使用されます
+| 22 | TCP | SSHを使用してリモートメンテナンスおよび診断シェルにアクセス 
 
 
+| 123 | UDP | 時刻同期のためのNTP 
 
 
-| HTTPS | 443 | クライアントのウェブブラウザからローカルユーザーインターフェースへのHTTPSアクセスを提供します。 
+| 2379 | TCP | RKE2コントロールプレーンのetcdクライアントトラフィック用etcdクライアントAPI 
+
+
+| 2380 | TCP | etcdメンバー間レプリケーション用のetcdピアポート 
+
+
+| 6443 | TCP | kubectlおよびRKE2 APIへのアクセス用Kubernetes APIサーバー 
+
+
+| 8472 | UDP | RKE2ノード間のポッド間トラフィックのためのCanal/Flannel VXLANオーバーレイ 
+
+
+| 9091 | TCP | CNIの健全性と指標に関するCalico Felixの指標エンドポイント 
+
+
+| 9100 | TCP | ホストメトリクスのスクレイピングのためのPrometheus node_exporter 
+
+
+| 9345 | TCP | RKE2スーパーバイザーおよびサーバー登録エンドポイント 
+
+
+| 10250 | TCP | kubelet の metrics-server および kube-apiserver 用 Kubelet API 
 |===
