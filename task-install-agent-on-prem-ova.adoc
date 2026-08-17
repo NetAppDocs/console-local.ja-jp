@@ -48,7 +48,6 @@ NetApp Console ローカル展開をインストールする前に、ホスト�
 
 
 [[set-up-network-access-for-the-netapp-console-local-deployment]]
-[[network-access-agent]]
 === NetApp Console ローカル展開のネットワーク アクセスを設定する
 
 NetApp Consoleのローカル展開では、サービス間通信に固定アドレス空間が使用されます。内部ネットワークには、IPアドレス範囲10.42.0.0/16と10.43.0.0/16が使用されます。Console のローカル展開を展開する前に、これらのIPアドレス範囲が、Console のローカル展開で使用可能なVLAN上の他のVM、DHCPスコープ、DNSレコード、またはロードバランサーのVIPプールに割り当てられていないことを確認してください。

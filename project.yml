@@ -197,8 +197,6 @@ sidebar:
         url: "/reference-svm-compliance-categories.html"
     - title: ナレッジとサポート
       entries:
-      - title: サポートに登録
-        url: "/task-support-registration.html"
       - title: ヘルプを表示
         url: "/task-get-help.html"
   - title: 法律上の表示
