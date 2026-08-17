@@ -23,7 +23,7 @@ NetApp Console のローカル展開では、お客様独自のインフラス�
 [[deploy-and-operate-console-in-your-own-infrastructure]]
 == 独自のインフラストラクチャに Console をデプロイして運用する
 
-NetApp Console ローカルデプロイメントは、お客様自身のインフラストラクチャ内で実行されるため、お客様のチームがデプロイメント、接続性、および日常的な運用を管理できます。Console エージェントをデプロイし、Console 仮想マシンを維持管理し、監視および管理トラフィックに必要なネットワークパスを管理します。これにより、企業管理者は運用境界を完全に制御しながら、管理データを環境内に保持できます。
+NetApp Console ローカルデプロイメントは、お客様自身のインフラストラクチャ内で実行されるため、お客様のチームがデプロイメント、接続性、および日常的な運用を管理できます。これにより、企業管理者は運用境界を完全に制御しながら、管理データを環境内に保持できます。
 
 * link:task-install-agent-on-prem-ova.html["vCenterでOVAを使用してNetApp Consoleのローカルデプロイをインストールします"].
 * link:task-console-local-vm-config.html["NetApp Consoleのローカルデプロイ用のvCenterまたはESXiホストのメンテナンス"].

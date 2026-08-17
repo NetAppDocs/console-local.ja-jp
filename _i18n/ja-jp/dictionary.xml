@@ -1082,7 +1082,6 @@
   <block id="dbe73508391080b9a6912d86cd12081b" category="paragraph">NetApp Console のローカル展開では、お客様独自のインフラストラクチャで NetApp Console の自律コントロールプレーンをホストして実行できます。</block>
   <block id="beedafd761122a9080cda6f61cac7b4b" category="paragraph">統合ストレージ管理、ポリシー適用、フリート規模の自動化、AI支援による運用を実現します。データ、メタデータ、管理トラフィックは、お客様の環境外には一切送信されません。</block>
   <block id="67e0c8d8a0aad1277b006016dd82f25c" category="section-title">独自のインフラストラクチャに Console をデプロイして運用する</block>
-  <block id="10aa80cd468ec0811813d44ef98bca90" category="paragraph">NetApp Console ローカルデプロイメントは、お客様自身のインフラストラクチャ内で実行されるため、お客様のチームがデプロイメント、接続性、および日常的な運用を管理できます。Console エージェントをデプロイし、Console 仮想マシンを維持管理し、監視および管理トラフィックに必要なネットワークパスを管理します。これにより、企業管理者は運用境界を完全に制御しながら、管理データを環境内に保持できます。</block>
   <block id="00a758ee2cda4e4890c0ee5cfce54b04" category="inline-link-macro">vCenterでOVAを使用してNetApp Consoleのローカルデプロイをインストールします</block>
   <block id="3e3c94e96f9dd9a6b52f7e3bd29e96cd" category="list-text"><block ref="d8fb061273f01bc1c630b76c017340f0" category="inline-link-macro-rx"></block>.</block>
   <block id="dd67cc32b95952e9b3fce404242dfee2" category="inline-link-macro">NetApp Consoleのローカルデプロイ用のvCenterまたはESXiホストのメンテナンス</block>
@@ -1932,13 +1931,10 @@
   <block id="ad720d685bc721c408c448c0fe562369" category="summary">NetApp Console ローカル展開における既知の制限事項のリファレンス。</block>
   <block id="7ffe052f293422713268a6bb9df1fc9f" category="doc">NetApp Console ローカル展開における既知の制限事項</block>
   <block id="1eba71d64e6c5e410e558530711e835b" category="paragraph">今回のリリースでサポートされていない、または今回のリリースでは正常に機能しないプラットフォーム、デバイス、機能が記載されています。これらの制限事項をよく確認してください。</block>
-  <block id="dceccbe9e562b7202ac801a976ca4d73" category="paragraph">これらの制限は、NetApp Consoleと管理のセットアップに固有のものです：エージェント、サービスとしてのソフトウェア（SaaS）プラットフォームなど。</block>
   <block id="360330c9adc975e1008000d1df74a468" category="section-title">コンソールVMの制限</block>
   <block id="682a2eb88d49c213f5029c53633e10c9" category="section-title">10.42.0.0/16および10.43.0.0/16の範囲のIPアドレスとの競合の可能性</block>
   <block id="3b9690f89f4029f3b099f8b7c371b951" category="section-title">共有Linuxホストはサポートされていません</block>
-  <block id="55334f6c7481482659eaa1b0aef1601a" category="paragraph">このエージェントは、他のアプリケーションと共有されている仮想マシンではサポートされていません。その仮想マシンはエージェントソフトウェア専用にする必要があります。</block>
   <block id="5ef1446cf0ab868961d473d928c394d6" category="section-title">サードパーティのエージェントと拡張機能</block>
-  <block id="08ea771e22fb933fc1428178b36eb902" category="paragraph">サードパーティ製のエージェントやVM拡張機能は、エージェントVMではサポートされていません。</block>
   <block id="3d8cb3230f2a32ea6afadc9475030feb" category="summary">NetApp Console ローカル展開で監視される ONTAP アラートのリファレンス（影響カテゴリ別に整理）。</block>
   <block id="a9a22f62e500b57a916841885d3320a2" category="doc">ONTAP アラートリファレンス（NetApp Console ローカル展開）</block>
   <block id="a3831fb324d31cc99ef99e375686386a" category="paragraph">このリファレンスでは、NetApp Console のローカル展開が監視できる ONTAP アラートを、影響度カテゴリ別に整理して一覧表示しています。</block>
@@ -3094,7 +3090,6 @@
   <block id="5783f062ee67d1e08bcb603d908bec19" category="list-text">*このスコープでのメンバーアクセスを削除する*：このフォルダーまたはフリートで直接ロールが定義されているメンバーの場合、ロールを削除してこのスコープでのアクセスを取り消します。これは、そのメンバーを組織から除名したり、他のスコープでのロールに影響を与えたりするものではありません。</block>
   <block id="1f68cc23ffd79d8b92a25e3163e1bcff" category="paragraph"><block ref="2b3106c38646014daf77549827b80860" category="inline-link-macro-rx"></block>.</block>
   <block id="24347b3ddf5a25cc9c27e54ae285ade1" category="list-text">「適用」を選択します。</block>
-  <block id="54ead9f62e4ad67dbab07d7ac18a67c2" category="summary">VMWareをご使用のお客様は、OVAを使用してVCenterにConsoleエージェントをインストールできます。OVAのダウンロードまたはURLは、NetApp Consoleのローカルデプロイから入手できます。</block>
   <block id="732484ec48b3de6a355c4a8d10a6491f" category="paragraph">OVAを使用して、vCenterにNetApp Consoleのローカルデプロイメントをインストールします。OVAのダウンロードまたはURLは、NetApp Support Siteから入手できます。</block>
   <block id="bfa61bc8df2f0d4cb1dd6df73376608c" category="section-title">NetApp Consoleのローカル デプロイのインストール準備</block>
   <block id="4e00644af1cd7d7ae6f52544a8dc1472" category="paragraph">インストール前に、VM ホストが要件を満たしていること、および NetApp Console のローカル展開がインターネットおよび対象ネットワークにアクセスできることを確認してください。NetApp Backup and Recovery などの NetApp データサービスを使用するには、NetApp Console のローカル展開がお客様に代わって操作を実行できるよう、クラウド プロバイダの認証情報を作成してください。</block>
@@ -3750,4 +3745,7 @@
   <block id="924c6a9c613412a0e4058026aa89a86a" category="cell">kubelet の metrics-server および kube-apiserver 用 Kubelet API</block>
   <block id="50a807a194603f6075b05395337e3064" category="summary">コンソールのローカル展開をデプロイした後でも、既存のvCenterまたはESXiホストに変更を加えることができます。</block>
   <block id="e137fee1052a69e09aea64b66a681285" category="paragraph">NetApp Console ローカルデプロイメントでは、コンソールローカルデプロイメントをデプロイした後でも、既存の vCenter または ESXi ホストに変更を加えることができます。</block>
+  <block id="c3bdc6c19998b310e22df96fbe31d526" category="paragraph">NetApp Console ローカルデプロイメントは、お客様自身のインフラストラクチャ内で実行されるため、お客様のチームがデプロイメント、接続性、および日常的な運用を管理できます。これにより、企業管理者は運用境界を完全に制御しながら、管理データを環境内に保持できます。</block>
+  <block id="8797fdac4224deac7f57143811175742" category="paragraph">NetApp Console のローカル展開は、他のアプリケーションと共有されている VM ではサポートされていません。VM は NetApp Console のローカル展開専用である必要があります。</block>
+  <block id="9d22f7f3fcf091469f2515885be2bfb9" category="paragraph">サードパーティのエージェントまたは VM 拡張機能は、NetApp Console のローカルデプロイメント VM ではサポートされていません。</block>
 </blocks>

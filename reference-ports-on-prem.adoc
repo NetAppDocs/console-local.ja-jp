@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-ports-on-prem.html 
-keywords: networking, network requirements, ports, on-premises, TCP, UDP, firewall, connectivity requirements, Console agent, agent connectivity, netapp console local, inbound ports, OVA 
+keywords: networking, network requirements, ports, on-premises, TCP, UDP, firewall, connectivity requirements, Console local, Console local connectivity, netapp console local, inbound ports, OVA 
 summary: NetApp Console のローカル展開用 OVA は、独自の内部ファイアウォールを管理します。お客様の環境で VM に対して外部ファイアウォールポリシーが適用されている場合は、管理ホストから以下の受信ポートにアクセスできることを確認してください。 
 ---
 = NetApp Console ローカル展開の受信ポート

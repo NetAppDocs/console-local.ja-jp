@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-install-agent-on-prem-ova.html 
-keywords: install agent, on-premises agent installation, vCenter, ESXi, VMware, OVA, deploy Console local deployment, agent deployment, netapp console local 
-summary: VMWareをご使用のお客様は、OVAを使用してVCenterにConsoleエージェントをインストールできます。OVAのダウンロードまたはURLは、NetApp Consoleのローカルデプロイから入手できます。 
+keywords: install , on-premises installation, vCenter, ESXi, VMware, OVA, deploy Console local deployment,  deployment, netapp console local 
+summary: OVAを使用して、vCenterにNetApp Consoleのローカルデプロイメントをインストールします。OVAのダウンロードまたはURLは、NetApp Support Siteから入手できます。 
 ---
 = vCenterでOVAを使用してNetApp Consoleのローカルデプロイをインストールします
 :hardbreaks:
