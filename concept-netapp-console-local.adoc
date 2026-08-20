@@ -18,6 +18,8 @@ NetApp Console のローカル展開では、お客様独自のインフラス�
 
 統合ストレージ管理、ポリシー適用、フリート規模の自動化、AI支援による運用を実現します。データ、メタデータ、管理トラフィックは、お客様の環境外には一切送信されません。
 
+link:console-differences.html["NetApp Console ローカル展開とNetApp Console SaaS およびプライベートモードの違いについて説明します"]。
+
 
 
 [[deploy-and-operate-console-in-your-own-infrastructure]]

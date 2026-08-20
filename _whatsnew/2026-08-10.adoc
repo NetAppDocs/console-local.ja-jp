@@ -8,3 +8,5 @@
 === NetApp Consoleローカル デプロイのご紹介
 
 https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["NetApp Console ローカル展開について学ぶ"]。
+
+https://docs.netapp.com/us-en/console-local/console-differences.html["NetApp Console ローカル展開とNetApp Console SaaS およびプライベートモードの違いについて説明します"]。
