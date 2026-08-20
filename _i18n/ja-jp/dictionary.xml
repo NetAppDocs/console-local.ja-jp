@@ -3057,8 +3057,6 @@
   <block id="bb1e1ef266584a5a332dfd21a0ceff90" category="list-text">明示的なプロキシを選択した場合は、プロキシ サーバのホスト名またはIPアドレスとポート番号、およびユーザー名とパスワードを入力してください。</block>
   <block id="777fde86c6354cd539ec78cfac87b390" category="list-text">透過型プロキシを選択した場合は、該当する証明書をアップロードしてください。</block>
   <block id="f6b06d7af2e17b031527e55078cf6bda" category="list-text">*仮想マシンの構成*</block>
-  <block id="536601d5f2a0ce3000ead0f9e4f4cfc2" category="list-text">*設定チェックをスキップ*：このチェックボックスはデフォルトではオフになっています。つまり、NetApp Console のローカル展開では、ネットワーク アクセスを検証するための構成チェックが実行されます。</block>
-  <block id="04157edfd56e309364a7442b42b155a9" category="list-text">NetApp では、このボックスのチェックを外したままにしておくことをお勧めします。そうすることで、インストール時に NetApp Console ローカル展開の構成チェックが実行されます。構成チェックは、NetApp Console のローカル展開が必要なエンドポイントへのネットワーク アクセスを持っているかどうかを検証します。接続の問題によりデプロイが失敗した場合は、NetApp Console ローカル展開ホストから検証レポートとログにアクセスできます。場合によっては、NetApp Console のローカル展開がネットワーク アクセスを持っていることが確実であれば、チェックをスキップすることもできます。</block>
   <block id="4dbd3c987fc3c99f4068f93b9ddf0271" category="list-text">*メンテナンスパスワード*：<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block>ユーザーのパスワードを設定します。このユーザーは NetApp Console ローカルデプロイメントメンテナンスコンソールへのアクセスを許可されています。</block>
   <block id="cb059a17daa0db402273fce83326bc2b" category="list-text">*NTP サーバ*：時刻同期に使用する NTP サーバを 1 つ以上指定します。</block>
   <block id="fea958d8a6639552d2e73dadaab0eb59" category="list-text">*ホスト名*：この仮想マシンのホスト名を設定します。検索ドメインを含めないでください。たとえば、FQDN が console10.searchdomain.company.com の場合は、console10 と入力してください。</block>
@@ -3626,4 +3624,13 @@
   <block id="d2102c65ff11954ccbf42346bfdd3f4f" category="list-text">サポートカードで *作成* を選択して、ログと構成データのバンドルを作成します。</block>
   <block id="6d6556399a0b8fc0d6acf274ab50bd15" category="list-text">バンドルが作成されたら、*ダウンロード*を選択してください。ZIPファイルをダウンロードするよう求められます。</block>
   <block id="c5303cf1b99e0c56f64b84d5b1fa0e9a" category="paragraph">システムは一度に1つのバンドルしか保持しません。新しいサポートバンドルを作成すると、以前のものが置き換えられます。</block>
+  <block id="5a416b505eeb414e2a13458a4f94ecbf" category="admonition">アラートは、NetApp Console のローカル展開において、発生してから7日間保持されます。</block>
+  <block id="ddd48b069384a5d886b18fc4008bcb18" category="admonition">コンソールUIの通知は24時間保持されます。</block>
+  <block id="3732468e73bd908d56c8b63b5774bb20" category="section-title">IDとアクセスの制限</block>
+  <block id="deec4ff19974f12ed781cb9a59064214" category="cell">領域</block>
+  <block id="f3d9abb903127694db460aa9c7f4d7be" category="cell">制限</block>
+  <block id="16492f4d2028d9a0f96c4e1590b65f2c" category="cell">ローカルユーザーのオンボーディングとアカウント復旧</block>
+  <block id="66ae36e07e30e4c89165201182d037be" category="cell">ローカルユーザーを招待したり、ローカルユーザーのパスワードリセット機能を使用したりするには、事前にSMTPメールサーバーを設定する必要があります。</block>
+  <block id="d433d6de6ccf389e02982430306a440f" category="cell">ローカルユーザーとActive Directoryユーザー間で、重複するメールアドレスはサポートされていません。例えば、最初にローカル組織の管理者が後からActive Directoryユーザーとして自身を追加する場合、別のメールアドレスを使用する必要があります。</block>
+  <block id="3be37f60cf59fb4438b6120b07ffd2e9" category="admonition">ローカルユーザー招待リンクは1回限り有効で、7日後に期限切れとなります。ユーザーが設定を完了する前にリンクの有効期限が切れた場合は、ユーザーを削除して再度追加し、新しい招待リンクを送信してください。</block>
 </blocks>

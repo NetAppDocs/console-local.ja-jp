@@ -94,6 +94,9 @@ link:reference-iam-predefined-roles.html["アクセスロールについて"].
 
 
 
+NOTE: ローカルユーザー招待リンクは1回限り有効で、7日後に期限切れとなります。ユーザーが設定を完了する前にリンクの有効期限が切れた場合は、ユーザーを削除して再度追加し、新しい招待リンクを送信してください。
+
+
 
 [[add-a-service-account]]
 [[service-account]]

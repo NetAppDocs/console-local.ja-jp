@@ -36,6 +36,9 @@ NetApp Console ローカル展開で通知ルールを設定して、どのア�
 
 
 
+NOTE: コンソールUIの通知は24時間保持されます。
+
+
 
 [[view-notification-rules]]
 == 通知ルールを表示する
