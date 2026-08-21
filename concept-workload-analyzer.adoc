@@ -16,6 +16,8 @@ summary: ワークロードアナライザーが、ボリュームレベルの�
 [role="lead"]
 NetApp Console ローカル展開のワークロードアナライザーを使用して、単一ボリュームの経時的な動作を表示します。ボリューム自体、アラート、またはインベントリから、パフォーマンスの低下、容量の傾向、およびリソースの競合の問題を調査できます。
 
+自然言語の質問と、許可されたリソース全体にわたる概要分析を行うには、Console アシスタントを使用します。link:reference-console-assistant-operations.html["サポートされているコンソールアシスタントの操作について説明します。"]
+
 
 
 [[how-workload-analyzer-identifies-root-causes]]

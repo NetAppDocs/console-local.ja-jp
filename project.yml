@@ -39,7 +39,7 @@ sidebar:
     entries:
     - title: NetApp Consoleのセットアップのクイックスタート
       url: "/task-quick-start-console-setup.html"
-    - title: NetApp Consoleのインストール
+    - title: NetApp Consoleのローカル展開のインストール
       entries:
       - title: NetApp Consoleのインストール
         url: "/task-install-agent-on-prem-ova.html"
