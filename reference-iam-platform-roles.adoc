@@ -60,6 +60,12 @@ XYZ Corporation の Console ローカル展開における *Organization admin* 
 
 
 | 監査ページと通知を表示する | はい | はい 
+
+
+| LLM統合を設定し、Console アシスタントを有効にする | はい | × 
+
+
+| 通知配信とメールサーバーの設定を構成する | はい | × 
 |===
 
 

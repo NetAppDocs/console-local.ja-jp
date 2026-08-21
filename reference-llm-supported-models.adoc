@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-llm-supported-models.html 
-keywords: LLM, supported models, OpenAI, OpenAI-compatible, model selection, netapp console 
+keywords: LLM, supported models, OpenAI, OpenAI-compatible, Anthropic, model selection, netapp console 
 summary: NetApp Console のローカル展開で使用できる LLM プロバイダーの種類とモデルを確認してください。 
 ---
 = サポートされているLLMプロバイダーとモデル（NetApp Console ローカル展開）
@@ -33,7 +33,7 @@ NOTE: LLMをコンソールアシスタントに接続してAI機能を有効に
 * *Anthropic* — 直接的な Anthropic 統合のためのモデルを提供します。
 
 
-表示されるモデルは、エンドポイントの設定、プロキシまたはゲートウェイの動作、および組織のポリシーによって異なる場合があります。プロバイダーの種類は、接続先のエンドポイントと、そのエンドポイントが公開するモデルによって異なり、トランスポートプロトコルによって異なるわけではありません。
+表示されるモデルは、エンドポイントの構成、プロキシまたはゲートウェイの動作、リリースサポート、および組織のポリシーによって異なる場合があります。プロバイダーの種類は、接続先のエンドポイントと、そのエンドポイントが公開するモデルによって異なり、トランスポートプロトコルによって異なるわけではありません。
 
 
 

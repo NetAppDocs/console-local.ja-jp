@@ -53,7 +53,7 @@ Health:: 健全性状態、劣化または重大なオブジェクトの数、�
 アラート:: 重大なアラートの件数、深刻度別のアラート、影響範囲別のアラート、最近のアラート、および時間の経過に伴うアラートの傾向。
 
 
-定義済みのカードと指標の完全なカタログについては、link:reference-dashboard-card-templates.html["NetApp Console ローカル展開におけるカスタムダッシュボードカードとメトリクスについて"]を参照してください。
+link:reference-dashboard-card-templates.html["NetApp Console ローカル展開におけるカスタムダッシュボードカードとメトリクスのカタログを確認する"]。
 
 
 

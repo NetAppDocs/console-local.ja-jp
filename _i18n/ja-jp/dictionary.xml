@@ -694,7 +694,6 @@
   <block id="df583ae7ba964fd4806b55904da81813" category="list-text">アラート</block>
   <block id="4c086d3715a8b22b3c143d19166de38e" category="list-text">重大なアラートの件数、深刻度別のアラート、影響範囲別のアラート、最近のアラート、および時間の経過に伴うアラートの傾向。</block>
   <block id="b42fdc31e61410be0c86a5b9f19f19ca" category="inline-link-macro">NetApp Console ローカル展開におけるカスタムダッシュボードカードとメトリクスについて</block>
-  <block id="38d88cefcc7a0718a9c0bcce1717fce6" category="paragraph">定義済みのカードと指標の完全なカタログについては、<block ref="3c1edbc90178caabd44cba55bcbaa0a8" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="b6af2b8fdca63591236d48930018b8db" category="section-title">リソースタイプ</block>
   <block id="bfd5a6ae9cda3045e7221edca5e40d50" category="paragraph">カードのスコープは、ONTAP ストレージ階層の任意のレベル（フリート、クラスタ、システム（ノード）、SVM、ボリューム、LUN、およびローカルティア（アグリゲート））に設定できます。利用可能なリソースの種類は、選択したカードテンプレートによって異なります。</block>
   <block id="f74a30443ec29f100214ac2ade776efa" category="section-title">プランのダッシュボードビュー</block>
@@ -890,13 +889,10 @@
   <block id="d0be151a63fab72d6333774c4ad643bb" category="inline-link">NetApp Console IAM の API について</block>
   <block id="d7726716920c51dac9e8d3b944fb1d9c" category="list-text"><block ref="d7726716920c51dac9e8d3b944fb1d9c" category="inline-link-rx"></block></block>
   <block id="aaa31fb12388ee6f380920310c04b753" category="doc">NetApp Console ローカル展開における LLM 統合について</block>
-  <block id="345b50b0707634d277d7a44851e59fe4" category="paragraph">NetApp Console のローカル展開は、AI支援によるストレージ管理のために、大規模言語モデル（LLM）に接続します。セットアップ後、ユーザーは自然言語を使用してストレージをプロビジョニングしたり、アラートを調査したり、ストレージに関するガイダンスを取得したりできます。</block>
   <block id="4f9d5100edf765a8f2ae1c53a1a257cc" category="paragraph">AI支援による管理機能により、ユーザーは平易な言葉でリクエストを記述でき、Console のローカル展開でお客様のストレージポリシーが適用されます。</block>
   <block id="60fbe3f23efb906d26a4c4bbd9ca4833" category="paragraph">コンソールローカル展開では、LLMリクエストは設定したエンドポイントにのみ送信されます。</block>
   <block id="cab4ccf93d529848163ed08f0ada7f06" category="section-title">AIを活用したストレージ管理でできること</block>
-  <block id="3f38bedfc27f189a284145765b9a449b" category="paragraph">LLM統合を有効にすると、Console ローカル展開はConsole アシスタントを通じて次の3つの機能を提供します。</block>
   <block id="cf8a6bb8b76d2d0b249ebb7a5adc9be3" category="list-text">*ストレージプロビジョニング* ワークロード要件を平易な言葉で説明してください。Console のローカル展開機能は、ストレージクラスに基づいてプロビジョニングプランを推奨し、実行します。</block>
-  <block id="28f3b1780ea624d65d217245143767c1" category="list-text">*アラートへの対応* Console のローカルデプロイメントにアクティブなアラートの調査を依頼します。問題を分析し、割り当てられた権限に基づいてアクションを提案または実行します。</block>
   <block id="39602a23041c5f7b663f3da5d0e00558" category="list-text">*検索とガイダンス* ストレージ環境またはONTAP管理について質問できます。NetApp Console のローカルデプロイメントは、ドキュメントと現在のフリートの状態から状況に応じた回答を返します。</block>
   <block id="5f7253fc639860a02e10fa7f2828ed5c" category="section-title">Console アシスタントの読み取り専用または読み取り / 書き込みアクセスを選択する</block>
   <block id="bbe76109c7fbe5aecb4f4a81f82d5417" category="paragraph">ユーザーは、望む結果に基づいてアシスタントのアクセスモードを選択します：</block>
@@ -913,20 +909,13 @@
   <block id="fee6af50bc6105fefb846f7e518fb7cf" category="list-text">エンタープライズゲートウェイやプロキシサービスなどの互換性のあるエンドポイントに対応した *OpenAI-compatible* 。</block>
   <block id="7de1d980a668ed0c9d00649c3750c5d1" category="paragraph">モデルの可用性は、設定するエンドポイントによって異なります。Console のローカルデプロイメントで、リストからモデルを選択してください。</block>
   <block id="64c716e8b3c375cb10518555f2cc559d" category="inline-link-macro">NetApp Console ローカル展開でサポートされている LLM プロバイダーとモデルについて説明します</block>
-  <block id="42e3047ea36dd2b663d0f3f5d7b20152" category="paragraph">サポートされているモデルの詳細については、<block ref="1a3a7e8df14b08dab1953f3a058a454f" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="422101339203679b06feb11e89eaddee" category="section-title">LLMリクエストの送信先を理解する</block>
-  <block id="9558d54e54b350a8e1a8d840174a01d2" category="paragraph">データの流れは、選択したエンドポイントパスによって異なります。</block>
-  <block id="1b9758ab620ca9cdf6403026ad8296a9" category="list-text">OpenAIエンドポイントを設定すると、コンソールのローカルデプロイメントはプロンプトとコンテキストをOpenAIエンドポイントに送信します。</block>
-  <block id="12d8fe4fe548c2403000b35372fb4f89" category="list-text">OpenAI互換エンドポイントを設定すると、Console のローカルデプロイメントは、組織が設定した互換エンドポイントにプロンプトとコンテキストを送信します。</block>
   <block id="26973ca0129cd9b839210e7a88910363" category="section-title">LLM認証情報を保護し、管理者アクセスを制御する</block>
   <block id="2772caebca7670bd33b60c225f1e6e00" category="paragraph">これらの制御機能を使用して統合を保護します：</block>
   <block id="69f9166e1bc0ee68a717caa86c61c0ed" category="list-text">APIキーは特権認証情報として扱い、組織のポリシーに従って定期的に更新してください。</block>
   <block id="f6e53988ba18fbea16b697bbb45138b4" category="list-text">プロバイダー側の使用状況とアラートを確認し、予期しないアクティビティを検出します。</block>
   <block id="a522d99644d6d85ac7382eaf2e2d4c05" category="section-title">LLMを接続する</block>
   <block id="97c3ffcb37aa0f2c1a487457b78e22d2" category="inline-link-macro">LLMを接続してNetApp Consoleアシスタントを有効にする</block>
-  <block id="1d391b5ecd383efab633bc06537f6377" category="paragraph">これらの決定を下したら、<block ref="0c62c57f6bc2623f5886c16a048a7f64" category="inline-link-macro-rx"></block>に進みます。</block>
   <block id="8116430033c6b5f8f6545eebccfd8429" category="inline-link-macro">LLM統合のトラブルシューティング</block>
-  <block id="602d4acd38bae620a7cc9e4fb8acc871" category="paragraph">接続または実行時チェックが失敗した場合は、<block ref="0a33e06ad623a7ea3644eaec2b7d3695" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="38c8b5197ae6f48260ff2edca54448f4" category="summary">NetApp Console ローカルデプロイメントにおけるストレージの管理（ストレージクラス、ポリシー、プロビジョニング方法など）について説明します。</block>
   <block id="3b495f6b085b370d0fc9fbecd94193a2" category="doc">NetApp Console ローカル展開におけるストレージ管理ワークフローの概要</block>
   <block id="9f0d8205383391e4bcee4e39b5a47105" category="paragraph">NetApp Console ローカル展開では、netApp Console （ローカル）が一貫性のある再利用可能な標準規格を使用して、大規模な ONTAP ストレージの管理を支援します。ボリュームや LUN ごとに個別の決定を行う代わりに、承認された動作を一度定義すれば、手動でプロビジョニングする場合でも、自動配置を使用する場合でも、AI 支援による計画および承認ワークフローを使用する場合でも、フリート全体に適用できます。</block>
@@ -971,7 +960,6 @@
   <block id="fbda47b9907c4910495133059586edf7" category="list-text">*ガバナンスと管理* - チームが大きくなるにつれて、誰が何を管理できるかについて明確な境界線が必要になります。フリート管理は、組織構造とアクセス制御を通じてこれらの境界を設定し、ストレージに関する決定が統制され、監査可能であることを保証します。</block>
   <block id="d4d4881ce496e1c9ced87e9ddc5c24de" category="section-title">フリートによるリソースの整理方法</block>
   <block id="ed36d27fd3d784f75bc4e95f9c5d9bab" category="paragraph">組織のリソース階層は、フォルダーとフリートで構成されています。</block>
-  <block id="96fb720c859e15c5611f5bb8e74bcb92" category="paragraph">階層構造とアクセスモデルの詳細については、<block ref="d07384ef73e7914a88e8fd2435c2eb27" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="93188c76880b80093e9bb0b625dda8c9" category="list-text">*組織* - お客様の会社を表す最上位レベル。</block>
   <block id="f62a689acdcb6a2cee436effe083f024" category="list-text">「フォルダー」：関連するフリートを整理するのに役立ちます。たとえば、リージョンやビジネスユニットごとにフォルダーを作成し、各フォルダー内にフリートを作成できます。フォルダーには、他のフォルダーやフリートを含めることができます。フォルダーレベルでロールを割り当てると、メンバーはそのフォルダー内のすべてのフリートに対してそのロールを継承します。</block>
   <block id="568367fa2b5f52767293ebbd0abe589a" category="list-text">*フリート* - 管理しているストレージシステムをグループ化します。ストレージシステムをフリートに関連付け、メンバーをフリートに割り当てることでアクセス権を付与します。</block>
@@ -1002,9 +990,6 @@
   <block id="8070eb0b00a3637e1cc617ccae39a765" category="list-text">*AI支援（エージェント型）プロビジョニング* - 必要なものを自然言語で説明します。Console のローカル展開では、RBAC とストレージクラスによって制約されたプランが提案され、お客様が確認して承認した後にのみプロビジョニングが実行されます。</block>
   <block id="3163b3d4dc92f42d04ad4c79906dcdc3" category="section-title">次のステップ</block>
   <block id="4687a271cd6bee287b9ef74078e0d610" category="inline-link-macro">NetApp Console ローカル展開におけるストレージクラスとポリシーについて</block>
-  <block id="ceab724e78618b5f1158c38dc82aeadd" category="list-text">ストレージ規格を理解するには、<block ref="091e8c8fe9f2d7d00a71788386fcbe28" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="09b4fb9c519c7b32e176f5b13226fc0a" category="inline-link-macro">フォルダとフリートを管理する</block>
-  <block id="dff51bcbaaa971512ca0f18440810108" category="list-text">フリートの作成と管理については、<block ref="e60e2f54a818b7abd8e7f20686567eb6" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="8fab4a7bf5aa87ccfa487603d06afe37" category="inline-link-macro">ストレージを手動でプロビジョニングする</block>
   <block id="db2b7390ec9b3e4fc8c8630658ede1c4" category="list-text"><block ref="db2b7390ec9b3e4fc8c8630658ede1c4" category="inline-link-macro-rx"></block></block>
   <block id="b2616964d51b081a64cd32c5987bb43d" category="inline-link-macro">ストレージを自動的にプロビジョニングします</block>
@@ -1281,11 +1266,7 @@
   <block id="4c24782166765ed0ecf73dc338eaee4b" category="list-text">*ドリフトを修復してコンプライアンスを回復する* - ドリフトまたはパフォーマンスの非コンプライアンスが検出された場合、ガイド付き手順に従って問題を手動で修正したり、Console のローカル展開で一般的なドリフト状態を自動的に解決したり、設定を変更する必要がある場合はワークロードをストレージ クラスから切り離したりできます。</block>
   <block id="792a20076f5be715e2bc7691d34eb87f" category="section-title">ストレージクラスがフリートとどのように連携するか</block>
   <block id="fd32177227b2e1a8f54a4a0e61faff04" category="paragraph">ストレージクラスはフリートに関連付けられています。ストレージクラスをフリートに関連付けると、そのクラスはフリート内のすべてのプロビジョニングで使用できるようになります。これにより、フリート内でプロビジョニングされるすべてのワークロードが同じ標準に従うことが保証され、フリートは関連するクラスター全体で一貫したストレージ動作を適用するための主要な手段となります。</block>
-  <block id="845057ca05c9dd57e612009f918546d2" category="paragraph">フリートの整理方法の詳細については、<block ref="db9b96303a8e941f40944ec886cf0ba1" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="282bf41f7883989b4cfb23e79bcf8587" category="list-text">フリート編成を理解するには、<block ref="db9b96303a8e941f40944ec886cf0ba1" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="d583d8c6f74d877962807ff61ff1f0ad" category="inline-link-macro">ストレージクラスとポリシーを管理する</block>
-  <block id="b3578b2947412769eaa0d865f7566d63" category="list-text">ポリシーとストレージ クラスを作成するには、<block ref="130e257000a6cd23784d6444ddff3ea4" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="c099b69ff5969d5fa0df3d96a690d645" category="list-text">ドリフトの分析と修正については、<block ref="2945052ecb7e00bcbe7209543ea78a15" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="68acd361711f151c44997846746f2774" category="summary">ストレージフリートは、NetApp Console ローカル展開で一緒に管理するストレージシステムをグループ化します。関連するフリートをグループ化するには、フォルダを使用します。必要なスコープで、ポリシーの適用、アクセス権限の付与、および正常性の監視を行うことができます。</block>
   <block id="2ab6f9761744c4c00754544731fa746c" category="section-title">車両群が重要な理由</block>
   <block id="c7abac757cf7ea7b2744ef118c1de04c" category="paragraph">ストレージ環境が拡大するにつれて、個々のクラスターを個別に管理することは非現実的になります。フリートを使用すると、関連するストレージシステムを構造的にグループ化して、それらを一つの単位として操作できるようになります。ポリシーやアクセス制御をクラスターごとに設定する代わりに、フリートレベルで一度だけ適用します。これにより、反復的な管理作業が削減され、フリート内のすべてのクラスターが同じ基準で運用されることが保証されます。</block>
@@ -1437,11 +1418,9 @@
   <block id="251b3f0f2d74ad68082fdfbe4e030798" category="section-title">AI支援管理</block>
   <block id="9144aed32c3947c3f6c915dc667afa48" category="paragraph-title">NetApp Console のローカル展開では、AI支援管理のためにどのLLMプロバイダーがサポートされていますか？</block>
   <block id="bde5aef56c75d1b40669feeeaa6d189e" category="inline-link-macro">LLM統合について</block>
-  <block id="ba0dbc4b8aaac2e9b705bbdcf93005aa" category="paragraph">サポートされているプロバイダータイプ（OpenAIまたはOpenAI互換）のサブスクリプションまたはサービスアクセス権をご自身でご用意ください。次に、設定時に有効なAPIキーを入力します。また、クラスタアクセス権限を持つコンソールのデプロイ、構成済みエンドポイントへのアウトバウンドネットワーク接続、組織管理者ロール、およびプロビジョニングをガイドするストレージクラスも必要です。<block ref="470eda43e450182c243ef76ccd1f9255" category="inline-link-macro-rx"></block>。</block>
   <block id="ce9dbbbce76848eef723ebc6c26618fd" category="paragraph-title">LLM 統合を有効にすると、ストレージ データやクエリがサードパーティ サービスに送信されますか？</block>
   <block id="cf9f2412b65fd4c0739ede3eadcd4bc7" category="paragraph">コンソールは、設定したLLMエンドポイントにのみプロンプトと関連コンテキストを送信します。そのエンドポイントがサードパーティのクラウド サービスである場合、データはHTTPS経由でそのサービスに送信されます。そのエンドポイントがOpenAI互換の内部サービスである場合、その統合に関するデータは内部経路上に留まります。AIによるすべての操作はお客様のRBACを尊重し、機密性の高い操作にはお客様の承認が必要です。<block ref="470eda43e450182c243ef76ccd1f9255" category="inline-link-macro-rx"></block>。</block>
   <block id="c8bfe037e2674cf290bd34c015885d33" category="paragraph-title">Console アシスタントでできることと、ストレージへの変更を制御する方法について</block>
-  <block id="aa95c154e986d1901c90d69d45d2f85e" category="paragraph">LLMを接続すると、コンソールアシスタントを使用して、ストレージのプロビジョニング、アラートの調査、自然言語による回答の取得が可能になります。ユーザーはアクセスモードを選択します。*読み取り専用*モードでは、アシスタントは変更を加えることなく回答とガイダンスを提供しますが、*読み取り/書き込み*モードでは、ストレージインフラストラクチャに対して操作を行うことができますが、変更を行う前にユーザーが確認できるように詳細を表示します。<block ref="0c62c57f6bc2623f5886c16a048a7f64" category="inline-link-macro-rx"></block>。</block>
   <block id="e70a0f55fac9d337b8fc9f4a5eed76ea" category="section-title">データ保護と監査</block>
   <block id="a2acd4e5b8eeb2c4eb2049373cc4a3d6" category="paragraph-title">NetApp Console のローカル展開で利用できるデータ保護機能にはどのようなものがありますか？</block>
   <block id="67a4b4d0a88d7fc6b0ef85b232ef7613" category="inline-link-macro">データサービスについて学ぶ</block>
@@ -1920,7 +1899,6 @@
   <block id="758cbeb7242c0d95a1ba25a826bf7466" category="list-text">*OpenAI* — OpenAIと直接統合するためのモデルを提供します。</block>
   <block id="f8882d796dcd55911551ffa65e9934af" category="list-text">*OpenAI互換* — 組織の互換エンドポイントが公開するモデルを提供します。</block>
   <block id="8c705cedce8873cec4385d32a46d41f7" category="list-text">*Anthropic* — 直接的な Anthropic 統合のためのモデルを提供します。</block>
-  <block id="51fdad81afa838750840be2f600de9f8" category="paragraph">表示されるモデルは、エンドポイントの設定、プロキシまたはゲートウェイの動作、および組織のポリシーによって異なる場合があります。プロバイダーの種類は、接続先のエンドポイントと、そのエンドポイントが公開するモデルによって異なり、トランスポートプロトコルによって異なるわけではありません。</block>
   <block id="08a146c5c0cb45bfe3682f78567b0421" category="section-title">サポートされているOpenAIモデル</block>
   <block id="5b6c99e4c6c823fdc627954b67266130" category="list-text">GPT-5.4</block>
   <block id="de392d99e073d932039aa08f1f59041b" category="list-text">GPT-5.5</block>
@@ -2311,7 +2289,6 @@
   <block id="ab92140b4fca6a428c4d9dd6177333dc" category="paragraph">スーパー管理者、組織管理者、ストレージ管理者、運用サポートアナリスト、または NetApp Backup and Recovery の管理者ロールのいずれか。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
   <block id="181c0a0c09dfe0f8ba7b3346903c6def" category="paragraph">通知ルールを使用することで、適切なアラートを環境に合ったチャネルを通じて適切な担当者にルーティングし、お客様に関係のないアラートによるノイズを削減できます。通知ルールはアラートページを補完するものです。アラートワークフローでアラートを調査または修復した後、ルールを使用して、今後同様のアラートがどのように配信されるかを制御できます。</block>
   <block id="ef9e7cefa30ba8567d3175e4dd97d705" category="inline-link-macro">通知配信の設定</block>
-  <block id="ed25804203fe0cfacd7338fe370fab02" category="list-text">メールで通知を配信するには、組織管理者がコンソールのローカル展開環境でメールサーバーを設定する必要があります。外部システムに通知を送信するには、組織の管理者がWebhookを設定する必要があります。手順については、<block ref="672eea012e5868d936761017846dcdbf" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="6be1395fcc81300b6bceb20c8b98659a" category="list-text">コンソールのローカル展開通知センターはデフォルトで通知を表示するため、コンソール内通知に関する追加の設定は不要です。</block>
   <block id="aa0688cb1a2561ce4a0b9e33ec24c385" category="section-title">通知ルールを表示する</block>
   <block id="3fd13d8d5fe12b342d50496d8c1b14ea" category="paragraph">通知ルールページは、組織に適用されるすべてのルールを確認および管理するための中心的な場所です。各ルールにはその主要な属性が表示されるため、アラートの動作を迅速に評価し、調整することができます。</block>
@@ -2516,21 +2493,17 @@
   <block id="5393c2b8908e1f48ca31ccf7d8bb057c" category="section-title">監査ページから監査ログをダウンロードする</block>
   <block id="95e9b23238ddd8479992115173ab7048" category="paragraph">監査ページから監査ログをCSVファイルとしてダウンロードできます。これにより、組織内でユーザーが行った操作の記録を保持することができます。ダウンロードされたCSVファイルには、監査ページのフィルターや表示列に関係なく、すべての監査ログ列が含まれます。</block>
   <block id="a485c1defdaf491b2f5cf7219289d8cc" category="list-text">「監査」ページで、表の右上隅にあるダウンロードアイコンを選択します。</block>
-  <block id="ce92a41c26b3eebfca3ce82d2ed7d946" category="summary">コンソールアシスタントを使用して、ストレージをプロビジョニングし、アラートを調査し、NetApp Console ローカル展開で自然言語による回答を取得します。</block>
   <block id="61698078caca443ab3276eaf6da68c26" category="doc">NetApp Console のローカル展開で NetApp Console アシスタントを使用する</block>
   <block id="59142dd8097fc5d816523b76490538ee" category="paragraph">NetApp Console のローカル展開で NetApp Console アシスタントを使用して、ストレージを管理したり、自然言語で回答を取得したりできます。必要なことを平易な言葉で説明すると、NetApp Console のローカル展開がストレージポリシーとロールベースアクセスの範囲内でそれを実行します。</block>
   <block id="cebceed3e52d61da104d709d7fd52f64" category="paragraph">アシスタントの操作は、割り当てられたロールベースのアクセス権によって制限されます。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
   <block id="79a8d49114f4c57f8615836d0fbd9a6e" category="section-title">コンソールアシスタントでできることを確認する</block>
-  <block id="44f46c68c044ca6bc826f2070cb8b0fb" category="paragraph">コンソールアシスタントは、NetApp Console ローカル展開への自然言語インターフェースです。質問をしたり、タスクを説明したりすると、回答または提案されたアクションが返されます。このアシスタントは以下の機能を提供します：</block>
   <block id="eb164d1b95f721517463fac94e0c232b" category="list-text">*ストレージのプロビジョニング* ワークロードを平易な言葉で説明します。アシスタントはストレージクラスと配置場所を推奨し、詳細を確認後、ボリュームまたはLUNを作成します。例えば、特定の容量を持つCIFSボリュームを作成するように指示します。アシスタントは、クラスターとストレージ仮想マシン（SVM）を識別し、必要なパラメーターを入力し、ストレージをプロビジョニングします。</block>
   <block id="80ec6f74b9c11afc0493a49dc2ed5880" category="list-text">*検索してガイダンスを取得* ストレージ環境に関する質問をしたり、コンソールのローカル展開機能を見つけたり、NetApp ドキュメントおよび現在のフリート状態からコンテキストに応じた回答を取得したりできます。</block>
   <block id="8f85ab1426c6a97b7f27ff0a64189e0d" category="list-text">*アラートの調査* アシスタントにアクティブなアラートを調査するように依頼します。問題点を分析し、解決策を提案するか、お客様の確認を得た上で修復措置を実行します。</block>
   <block id="4d4201f172588de834e98c686fa4e70d" category="paragraph">アシスタントは、コンソールのローカル展開で管理者が設定したLLMエンドポイントにのみリクエストを送信します。ストレージ変更アクションを実行する前に確認を要求し、すべてのアクションはお客様のアカウントに割り当てられたロールベースのアクセス制御に従います。</block>
   <block id="1646e83ecacdbfca35b7035c36d17902" category="section-title">コンソールアシスタントが使用できることを確認してください。</block>
-  <block id="447ba774f83dff318547a6ed4188be4e" category="list-text">組織管理者またはスーパー管理者は、大規模言語モデル（LLM）をコンソールのローカル展開に接続することにより、コンソールアシスタントを有効にする必要があります。ダッシュボードに「コンソールアシスタント」ボタンが表示されない場合は、管理者に有効化を依頼してください。詳細については、<block ref="0c62c57f6bc2623f5886c16a048a7f64" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="dea2a7e837aa4048051b43f95def7b7b" category="list-text">アシスタントに実行させたい操作に必要なロールベースのアクセス制御が設定されていることを確認してください。</block>
   <block id="5716899e4d4f84a6f0338e39a6dbae95" category="section-title">コンソールアシスタントに質問するか、アクションをリクエストしてください。</block>
-  <block id="acf4008535e52c8a7a0c01bf71aed735" category="paragraph">コンソールアシスタントを開き、アクセスモードを選択して、リクエスト内容を説明するプロンプトを入力します。</block>
   <block id="a01a8afdc9473eb09e91ee338b83c764" category="list-text">NetApp Console のローカル展開ダッシュボードで、「コンソールアシスタント」ボタンを選択します。</block>
   <block id="0d4e49e4c9814c6a19f7ea22506c8390" category="list-text">アクセスモードを選択してください：</block>
   <block id="baa7f738c248456fd2ade1cf90ab4eaa" category="list-text">変更を加えることなく質問やガイダンスを受けるには、*閲覧専用* を選択してください。</block>
@@ -2958,7 +2931,6 @@
   <block id="d9613d9880d0f8ba12fda6a2e9d388b1" category="paragraph">_フォルダーまたはフリート管理者_のロールを持っている場合、このページには組織内のすべてのメンバーが表示されます。ただし、アクセス権限の表示と管理は、お客様が管理するフォルダーとフリートに限られます。<block ref="8ccbb3041729be4bc278ed61135bfa9c" category="inline-link-macro-rx"></block>。</block>
   <block id="644ed7e725ca7a7a2108f353f403ae81" category="section-title">メンバーのアクセス権の割り当てまたは変更</block>
   <block id="6b6981b3ecd57254f87269c9a7bb333a" category="paragraph">メンバーのアクセス権限は、担当業務が変更された際にいつでも調整できます。例えば、チームメイトが別のリージョンのバックアップ業務を担当する場合、既存のストレージロールには手を加えずに、そのリージョンのフリートにバックアップおよびリカバリの管理者ロールを追加します。</block>
-  <block id="f955499f62dbb4edbf385d3a7a960528" category="paragraph">新しいメンバーを追加して最初のロールを割り当てる必要がある場合は、<block ref="91ad8701e2dee484ad75d90050d10ec4" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="c323dfe4bfabb938f780b4b7d546c9b0" category="section-title">既存のメンバーにアクセスロールを追加する</block>
   <block id="dd1ad82c7de8ea1d9224b58fdb2b344a" category="paragraph">メンバーの責任範囲が拡大した場合は、組織、フォルダ、またはフリートレベルで、そのメンバーに追加のロールを付与してください。例えば、Storage adminに組織レベルでBackup and recovery adminロールを付与することで、既存のストレージ権限を失うことなく、すべてのフリートにわたるバックアップおよびリカバリタスクを管理できるようになります。</block>
   <block id="9faffc990c3127454a9cf05bef90bbef" category="paragraph">組織、フォルダ、またはフリートに対して、メンバーにアクセスロールを割り当てることができます。</block>
@@ -3069,49 +3041,33 @@
   <block id="310f705969896b4d59368edab71d1d87" category="list-text">「完了の準備」ウィンドウで詳細を確認し、「完了」を選択します。</block>
   <block id="e10d92d1786b3cdd3dbeba70b55cf973" category="paragraph">vSphere タスクバーには、NetApp Console のローカル展開が配備される際の進行状況が表示されます。</block>
   <block id="54453e0b33b1c136b904d49d40e5584f" category="list-text">VMの電源をオンにします。</block>
-  <block id="56c613fb0424d7f13733ef150e334c26" category="summary">OpenAIまたはOpenAI互換エンドポイントを接続して、NetApp Console ローカル展開でコンソール アシスタントとAI支援管理を有効にします。</block>
   <block id="2ac259cc9722764f511c25ee28b40616" category="doc">LLMを接続し、NetApp Consoleのローカル展開でNetApp Consoleアシスタントを有効にする</block>
-  <block id="bfb7707f64c08883a1d0f2aaa8204091" category="paragraph">大規模言語モデル （LLM） を NetApp Console のローカル展開に接続して、Console アシスタントと AI 支援型ストレージ管理を有効にします。</block>
   <block id="17abc48cf3411ff16b4582375b97de22" category="paragraph">設定後、ユーザーはダッシュボードから Console アシスタントを開き、アクセス モードを選択します。</block>
   <block id="45dcb8347c7045ac1ea1ed3f1fd6f1d3" category="list-text">*読み取り専用*モードでは、アシスタントは変更を加えることなく質問に答え、ガイダンスを提供します。</block>
   <block id="3bd3a3686b7176c32e3b12727e98ec87" category="list-text">*読み取り/書き込み*モードでは、アシスタントはストレージ インフラストラクチャに対して操作を実行できます。変更を行う前に、確認と検証のための詳細情報が表示されます。ボリューム作成などの非同期操作の場合、ユーザーがアシスタントから確認できるジョブが作成されます。</block>
   <block id="185163aa217fa2fc072c5f14236ca72a" category="paragraph">LLMを接続するには、プロバイダーパスを選択し、エンドポイントの詳細とAPIキーを入力してから、*管理 &gt; AIツール*でモデルを選択します。アシスタントのアクションは、ストレージポリシーとロールベースのアクセス制御の範囲内に留まります。</block>
   <block id="5fc0a856a394f8c04ef5ff5374c766d3" category="section-title">LLMに接続する前に必要なものを確認してください</block>
-  <block id="7cf0713cb6862c8d869de102444bc058" category="paragraph">LLMを接続する前に、以下の情報を準備してください：</block>
-  <block id="4bdc2b0afb2016e71f49debc29862e0f" category="inline-link-macro">プロバイダの選択肢について説明します。</block>
-  <block id="336e4351e57a856f458961abc5062751" category="list-text">プロバイダーの種類の決定：OpenAI または OpenAI 互換。<block ref="78f935c14127e9543a594b2e8112c798" category="inline-link-macro-rx"></block></block>
   <block id="d8bd49d8fe4a0de7a2b03c1aec99e88b" category="list-text">選択したプロバイダ パスに対応する有効な API キー。</block>
   <block id="12415726cf97af159e3e05710842f040" category="list-text">プロバイダパスのエンドポイント URL。</block>
   <block id="cfe024af8356a3decd0f09b47eff88fa" category="list-text">コンソールのローカル展開から選択したエンドポイントへのネットワーク アクセス。</block>
-  <block id="1f3d7608a574b42ba681dcef64704661" category="list-text">許可するアシスタント アクションのストレージ クラスとロールベースのアクセス制御。</block>
   <block id="6d4074b2f4345e60985cf590c19c3368" category="section-title">LLMをNetApp Consoleのローカル展開に接続する</block>
-  <block id="1ad8081ba1205278968b9c4aee3e50af" category="paragraph">LLMをConsoleのローカルデプロイメントに接続するために、プロバイダ設定、APIキー、およびモデルを入力してください。</block>
   <block id="f88a0cbb78fae5f3111d6d10db7c5597" category="list-text">NetApp Console のローカル展開にログインします。</block>
   <block id="e63bd278e9f3067278f0c1de02ea51d1" category="list-text">*Administration（管理）&gt; AI Tools* を選択します。</block>
   <block id="fce40004669eef7e64c789d1aba006e4" category="list-text">メニューを選択し、次に「編集」を選択します。</block>
   <block id="7f15a21cfa00dfd7d41b88b3e1451357" category="list-text">「プロバイダタイプ」で、プロバイダタイプを選択してください。</block>
   <block id="cf72c8170aef768cae71f4e2a449acaf" category="list-text">プロバイダーエンドポイントの入力を求められた場合は、選択したプロバイダーパスのエンドポイントURLを入力してください。</block>
-  <block id="0bb644c5b092ae6dc29b1cb8f4f06967" category="list-text">プロキシまたはゲートウェイのURLと認証情報を入力してください。</block>
   <block id="d78f26f4373007724d98776e20cd9322" category="list-text">*ユーザー名*フィールドに、プロバイダのパスで必要な場合は、ユーザー名またはSSO IDを入力してください。</block>
   <block id="b2914c614292093e506dbf4a10fd671c" category="list-text">*APIキー*フィールドに、選択したプロバイダーパスから取得したAPIキーを貼り付けてください。</block>
   <block id="73d0a6de3953116536b1666d0db7c78a" category="list-text">リストからモデルを選択してください。</block>
   <block id="f646c307a4396cd41f6593ce84be57d7" category="list-text">設定内容を確認し、*保存*を選択してください。</block>
-  <block id="5648efa514fe8196ba399910bb0eb531" category="paragraph">保存またはテストが失敗した場合は、プロバイダーの種類、エンドポイントURL、APIキー、および選択したモデルを確認してから、もう一度試してください。</block>
-  <block id="9cf8774c3baeb070428c648054d7d24a" category="inline-link-macro">LLM統合に関するトラブルシューティング</block>
-  <block id="1de83f5da1c16cfca8ca9ae1534dcf3b" category="paragraph"><block ref="263da31548d1ff54f99ec1ad656a62e4" category="inline-link-macro-rx"></block>.</block>
   <block id="4e0ef856d01b17ebeacb44ab6e813a5b" category="section-title">LLM統合が正しく機能することを確認します。</block>
-  <block id="649811a3ff05f0c93f06c2fdaa3bbeed" category="paragraph">設定を保存したら、アシスタントの利用可否と動作を確認してください。</block>
   <block id="b9218edb7fcba77407a69cc8446ba839" category="list-text">アクションワークフローを必要とするユーザーが、必要なロールベースのアクセス制御を持っていることを確認してください。</block>
   <block id="3bc0e23bd46bad08da1876b2cc4430a7" category="inline-link-macro">NetApp Console アシスタントを使用する</block>
-  <block id="7d69bfcb234231881e32fc0c2d9f1364" category="paragraph">検証が完了すると、ユーザーはダッシュボードからコンソールアシスタントを開き、タスクを平易な言葉で説明できるようになります。使用例とエンドユーザワークフローについては、<block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="fc9577b448da71bbbc03dcdb4d914f81" category="section-title">認証情報を保護し、LLMの使用状況を監視する</block>
   <block id="37b26df9f5774fb277ce6408503c5677" category="list-text">可能な限り、Console のローカル展開統合には専用の API キーを使用してください。</block>
   <block id="95856ec02ad5b7d7cee102aa9ad5af55" category="list-text">組織のポリシーに従ってAPIキーをローテーションしてください。</block>
-  <block id="190a2694407d226555de2087b9d1904c" category="list-text">AIツールの設定を編集できるユーザーを、必要な管理者ロールのみに制限します。</block>
-  <block id="1c8d15d10f068c63827f873ef7cad063" category="list-text">プロバイダー側のAPI使用状況とアラートを監視して、異常なアクティビティやコストの急増を追跡します。</block>
   <block id="0a4e1261dd22ab21fdd948f324d9de9b" category="summary">セットアップ、アシスタントの可用性、ランタイム エラー、およびクレデンシャルに関する問題の迅速なトリアージ フローを使用して、NetApp Consoleのローカル展開におけるLLM統合のトラブルシューティングを行います。</block>
   <block id="ddfbe43817a433ffd54b8a30a5ea7e8e" category="doc">NetApp ConsoleローカルデプロイにおけるLLM統合のトラブルシューティング</block>
-  <block id="feac9faca2350b85c19776bf4902e7a0" category="paragraph">NetApp Console のローカル展開における一般的な LLM 統合の問題を診断および解決するには、このクイックトリアージフローを使用してください。</block>
   <block id="df329b70beb5e90d896034f48ef8cbc2" category="paragraph">セットアップが完了していない場合は、<block ref="0c62c57f6bc2623f5886c16a048a7f64" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="a02d415ac796cf16dae4cab7c8ba8370" category="section-title">LLM統合の問題を迅速にトリアージする</block>
   <block id="c9541189aa749534605523e54cb1faec" category="list-text">*管理* ＞ *AI Tools* でAI Toolsの設定を確認してください。</block>
@@ -3130,8 +3086,6 @@
   <block id="d14bb5fad558ea5cad8e313bb415d379" category="cell">プロバイダーの種類、エンドポイントURL、APIキーの形式、選択されたモデル、およびアウトバウンドアクセス</block>
   <block id="db55f13382d52e64285ac9a3f031d1b8" category="cell">検証に失敗した値を修正して、再度保存してください。</block>
   <block id="75c661dabf312b48c1e945bfecc84b33" category="cell">「Console assistant」ボタンがありません</block>
-  <block id="4075b5acdb4d5a8eff5467d981ede6aa" category="cell">統合状態が不健全、組織の不一致、またはRBACの不一致</block>
-  <block id="e6685677e50c25ce6bb330b8b728b88c" category="cell">AI ツールの保存、統合ステータス、現在の組織、および想定されるアクセスロールが正常に完了しました</block>
   <block id="d4338e4524c2f2b8cc99a7ab334e1d3c" category="cell">セッションを更新し、既知の正常な管理者アカウントで確認してください。</block>
   <block id="1b977b36b6a765d48f91ef10be75e2ee" category="cell">アシスタントは起動するが、リクエストが失敗する</block>
   <block id="f3d32e9d5050f0fb014bf917d41b98d8" category="cell">プロバイダーまたはランタイムパスの問題</block>
@@ -3177,23 +3131,18 @@
   <block id="d999f1f9870b33a6f990ea80c528cd45" category="list-text">ユーザーのMFA設定を削除するか、無効にするかを選択します。</block>
   <block id="85aa860fee126cdca80b809c375778ce" category="paragraph">監査ログを確認して、誰がMFAアクセスを変更したか、いつ変更したか、そしてその操作が成功したかどうかを確認してください。<block ref="d77547ef27346a5e3d858216dfd41684" category="inline-link-macro-rx"></block>。</block>
   <block id="a657b530c9804722859fcb4792bf4466" category="section-title">サービスアカウントの認証情報を再作成する</block>
-  <block id="3a09c67515f2086631474e15f73de6c7" category="paragraph">サービスアカウントのクレデンシャルを紛失した場合や更新する必要がある場合は、新しいクレデンシャルを作成できます。</block>
   <block id="cbb983c8b2240366fdf2e6a4ca41bee0" category="paragraph">新しい認証情報を作成すると、古い認証情報は削除されます。古い認証情報は使用できません。</block>
   <block id="2a8af9814216612acb3d97c9c2e363bf" category="list-text">メンバーテーブルで、サービスアカウントに移動し、<block ref="c838adf4502bfb790ed3df711c4a4613" category="inline-image-macro-rx" type="image"></block>を選択して、「シークレットの再作成」を選択します。</block>
   <block id="8de213850e1e3dc79a14014382d25163" category="list-text">「再作成」を選択します。</block>
   <block id="842b78e990c1bcb6ecd6f6d3502a80e1" category="paragraph">コンソールのローカルデプロイメントでは、クライアントシークレットは一度だけ表示されます。必ずコピーまたはダウンロードして、安全な場所に保管してください。</block>
-  <block id="f1edd9f95e01d5e077a85e747833fbd2" category="summary">AI駆動型エージェントプロビジョニングを使用して、NetApp Console ローカル展開でストレージリクエストを自律的に処理します。</block>
   <block id="9cc2452429913b270189381056266c1f" category="doc">AI支援（エージェント）ワークフローを使用して NetApp Console ローカル展開でストレージをプロビジョニングする</block>
-  <block id="3dc6f8478de12a2130120c0861a97514" category="paragraph">NetApp Console のローカル展開では、対話形式でストレージをリクエストし、提案されたプランを確認して変更を承認する場合に、AI支援（エージェント）プロビジョニングを使用します。このアプローチは、ストレージクラスと RBAC に合わせたプロビジョニングを維持しながら、UI 操作を減らしてリクエストを高速化したい場合に役立ちます。</block>
   <block id="abbcf954598f470ff036de76ef87bb49" category="paragraph">スーパー管理者、組織管理者、フォルダまたはフリート管理者、またはストレージ管理者。AIによるアクションは、UIベースのアクションと同じロールベースのアクセス制限を受けます。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
   <block id="7e77d8c212cb920bf80baefd3e4f84bd" category="paragraph">エージェントプロビジョニングには、LLM統合が構成され、NetApp Console のローカル展開環境で利用可能になっている必要があります。</block>
   <block id="0e37a98340ea1efd343ffc16528dfd6b" category="list-text">LLM統合が構成され、NetApp Console のローカル展開で有効になっていることを確認してください。</block>
   <block id="b602c2b6042c9852669a4070bad055b9" category="list-text">ターゲットフリートに検出済みのストレージシステムが含まれていることを確認してください。</block>
   <block id="8a797101f27fb91dbfde08d5dafe5a58" category="list-text">ストレージクラスが設定され、フリートに関連付けられていることを確認してください。そうすることで、アシスタントがクラスに合わせたプランを提案できるようになります。</block>
-  <block id="1c5aa0a55ec38e7a2896da2387989eaa" category="list-title">手順（後日再検討予定）</block>
   <block id="0bac4d651b89773695617a95d16eb82b" category="list-text">NetApp Console アシスタントを開きます。</block>
   <block id="96856aab291d4ec635cda593158436db" category="list-text">必要な内容を平易な言葉で説明してください（例：プロトコル、サイズ、環境、パフォーマンスの目的、該当する場合は対象フリートなど）。</block>
-  <block id="ad82849b62ed2d6137578f79d12eb9fd" category="list-text">提案された計画をレビューします。レビュー項目には以下が含まれます：選択された機器群と対象システムの配置（該当する場合）、選択または推奨されるストレージクラス、適用される主要な設定（容量動作、保護スケジュール、セキュリティ要件、および表示されている場合はQoS関連の意図）</block>
   <block id="9a68116ebd01ecfb132f0548f9dec65e" category="list-text">計画を確認または調整します。プランで予期しないクラスや配置が選択された場合は、希望するクラス、フリート、または制約を指定してプランを再生成してください。</block>
   <block id="417fabd69538dfc4f67bdfbe3d03a4d3" category="list-text">ワークロードをプロビジョニングするための実行を承認します。</block>
   <block id="d84e668c89e4c7cd302b38780154ffac" category="list-text">ストレージインベントリで作成されたリソースを確認し、継続的なドリフト監視のために、意図したストレージクラスに関連付けられていることを確認してください。</block>
@@ -3542,7 +3491,6 @@
   <block id="5ceffe99385ecce35b5a538a16ca57cb" category="paragraph"><block ref="dc7c11e9da585b9fa1e35ca44da95ccc" category="inline-link-rx"></block>。</block>
   <block id="f64bf1d04df251b82d06554b478f9ae4" category="paragraph"><block ref="f64bf1d04df251b82d06554b478f9ae4" category="inline-link-macro-rx"></block></block>
   <block id="955bb7127a670884e7aac906d810238a" category="sidebar">コンソールローカルデプロイメントAPIリファレンス</block>
-  <block id="c88543bdef944177133ea29faedf50df" category="summary">NetApp Console のローカル展開が、プロバイダーやセキュリティに関する決定事項を含む OpenAI および OpenAI 互換モデルとどのように統合されるかについて説明します。</block>
   <block id="7886cf4f03a683503e8235a0eef59e73" category="list-text">*Anthropic*はAnthropicのClaudeモデル用です。</block>
   <block id="dc666edc3ed6edcb6babcae67d26fcd2" category="list-text">Console ローカル展開ソフトウェアを<block ref="5574d9b8352359225831a51c7e6c17ee" category="inline-link-macro-rx"></block>からダウンロードしてください。</block>
   <block id="ad8f5be1c708f8e891508a0a9c643e0a" category="sidebar">NetAppトラストセンター</block>
@@ -3636,4 +3584,105 @@
   <block id="d2a0f46558d1ad15a1efcaa26aef1b39" category="inline-link">NetApp Console ローカル展開とNetApp Console SaaS およびプライベートモードの違いについて説明します</block>
   <block id="fc43c258a671e0d243e8a95a48956300" category="paragraph"><block ref="a79ef635b40614d2cd5c555de517dd6f" category="inline-link-rx"></block>。</block>
   <block id="4688d87a2acbed67ab6380ef3dbee717" category="paragraph"><block ref="dff1bfa50abe498b973310763c6748f5" category="inline-link-macro-rx"></block>。</block>
+  <block id="308fca2a4a1364a6f322b2c118b7b61f" category="inline-link-macro">NetApp Console ローカル展開におけるカスタムダッシュボードカードとメトリクスのカタログを確認する</block>
+  <block id="a0f815fa331e417e035c94057c02da63" category="paragraph"><block ref="9cb01a50e3be9e51b4836d3b61b3a330" category="inline-link-macro-rx"></block>。</block>
+  <block id="12818197bdccc6b71577f79083f87ab9" category="summary">NetApp Console のローカル展開が LLM プロバイダーと統合して、AI を活用したストレージ管理、分析、および運用をサポートする方法について説明します。</block>
+  <block id="a2dfb8028327c74e6dcd4f59c80cf8cc" category="paragraph">NetApp Console のローカル展開は、AI支援によるストレージ管理のために、大規模言語モデル（LLM）に接続します。セットアップ後、ユーザーは自然言語を使用して、ストレージに関するガイダンス、分析、プロビジョニング、およびサポートされている操作を行うことができます。</block>
+  <block id="86bd9186f70e386755999e81499ded00" category="paragraph">LLM統合を有効にすると、Console ローカル展開はConsole アシスタントを通じて以下の機能を提供します。</block>
+  <block id="3bbe97361de9c8c53c88bf2d9e8c64a0" category="list-text">*メトリクスと分析* 現在のフリートの状態におけるストレージ容量、パフォーマンス、およびその他のサポートされているメトリクスについて質問できます。この機能は読み取り専用です。</block>
+  <block id="9471394d83a3e1cfd009afa44b8ab232" category="list-text">*アラートへの対応* Console のローカルデプロイメントにアクティブなアラートの調査を依頼します。問題を分析し、割り当てられた権限に基づいてサポートされているアクションを提案または実行します。</block>
+  <block id="f6f41613e5a60a7ef8f9fea0817e5740" category="list-text">*ONTAP管理* 登録済みのONTAPシステムに対してサポートされている管理操作を表示または実行するようアシスタントに依頼します。書き込み操作にはレビューと確認が必要です。</block>
+  <block id="59772d058082216c0ad36e64556c225e" category="list-text">アシスタントは、フリート、システム、ストレージリソースにアクセスする際に、サインインしているユーザーのスコープを使用します。</block>
+  <block id="70215a79da775b85263f210fed046e9d" category="paragraph"><block ref="1a3a7e8df14b08dab1953f3a058a454f" category="inline-link-macro-rx"></block>。</block>
+  <block id="d49c8ce9358d0437778308c33e11e8d7" category="inline-link-macro">LLMを接続してNetApp Consoleアシスタントを有効にする</block>
+  <block id="9c8c3b21e2f65283b0264a06ae25ccf1" category="paragraph">これらの決定を下した後、<block ref="37482822d9b3368bafb48a4cd1e69aa0" category="inline-link-macro-rx"></block>。</block>
+  <block id="14cbab43b1b73784473641a579f441cb" category="inline-link-macro">フォルダーとフリートの詳細については、NetApp Console ローカル展開を参照してください</block>
+  <block id="71034945100a7032d7ff28ceab11c41f" category="paragraph"><block ref="054c3e5ebcb94ba42a77f67aedc0b310" category="inline-link-macro-rx"></block>。</block>
+  <block id="e859dfab2ec3d57d35cb6286952461c1" category="list-text"><block ref="091e8c8fe9f2d7d00a71788386fcbe28" category="inline-link-macro-rx"></block>。</block>
+  <block id="c68352f63feed607f9a921b49938ad4e" category="inline-link-macro">フリートの作成と管理方法について説明します</block>
+  <block id="c5efe13a3738df4f6befae61c1cf5629" category="list-text"><block ref="07ac86035f9108c61da780967a52fd7f" category="inline-link-macro-rx"></block>。</block>
+  <block id="f541b58efff953bd8e3be0b471693869" category="inline-link-macro">サポートされているコンソールアシスタント操作を参照してください</block>
+  <block id="dd8c951af3ad634c9f93a524a7b628c3" category="list-text"><block ref="dd8c951af3ad634c9f93a524a7b628c3" category="inline-link-macro-rx"></block></block>
+  <block id="c9fcbea76605871581a2e35dfbd4699c" category="paragraph"><block ref="db9b96303a8e941f40944ec886cf0ba1" category="inline-link-macro-rx"></block>。</block>
+  <block id="82b67b1eab84a35e6b425089eb157147" category="list-text"><block ref="130e257000a6cd23784d6444ddff3ea4" category="inline-link-macro-rx"></block>。</block>
+  <block id="95847954aedcd8c7811c2a4901112ea6" category="inline-link-macro">ストレージクラスのドリフトを修復する方法</block>
+  <block id="8433ac145fee5e5f64990cdc0f364c59" category="list-text"><block ref="8433ac145fee5e5f64990cdc0f364c59" category="inline-link-macro-rx"></block></block>
+  <block id="061a8b04d0511678aa72605c1685e930" category="paragraph">リリースおよびエンドポイントでサポートされているプロバイダータイプ（OpenAI、OpenAI互換、またはAnthropic）に対応するサブスクリプションまたはサービスアクセスを、ご自身でご用意ください。次に、設定時に有効なAPIキーを入力します。統合を構成するには、設定されたエンドポイントへのアウトバウンドネットワーク接続と、組織管理者またはスーパー管理者の権限も必要です。<block ref="470eda43e450182c243ef76ccd1f9255" category="inline-link-macro-rx"></block>。</block>
+  <block id="d9d9b26883256b91beb0f1ec9f2d43db" category="paragraph">LLMを接続すると、NetApp Consoleアシスタントによって、ユーザーはガイダンスを取得したり、サポートされているメトリックを分析したり、ストレージをプロビジョニングしたり、アラートを調査したり、自然言語を使用してサポートされているONTAP操作をリクエストしたりできるようになります。*読み取り専用*モードでは、アシスタントは変更を行いません。*読み取り/書き込み*モードでは、実行前に確認と承認のために、ストレージを変更する提案された操作が表示されます。<block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block>。</block>
+  <block id="047cef47f85ce2fa43f24e2f56ac9991" category="paragraph-title">コンソールアシスタントはどのような操作をサポートしていますか？</block>
+  <block id="d5eefe905dd1017aff3fae90092217c2" category="paragraph">コンソールアシスタントは、会話型ガイダンス、サポートされている読み取り専用のメトリクス分析、ストレージ プロビジョニング、アラート調査、および選択された ONTAP 管理操作をサポートしています。利用可能な操作は、リリース、設定されたエンドポイント、およびお客様のロールとリソーススコープによって異なります。<block ref="dd8c951af3ad634c9f93a524a7b628c3" category="inline-link-macro-rx"></block>。</block>
+  <block id="2c212b08e4736776d7319ed0a5f0035b" category="paragraph-title">コンソールアシスタントが非同期操作を実行するとどうなりますか？</block>
+  <block id="01d252d292ef2fa1ec4e87035d62b0ff" category="paragraph">すぐに完了しないサポートされている操作については、アシスタントがジョブを作成し、リクエストについて問い合わせた際に現在のステータスを返すことができます。<block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block>。</block>
+  <block id="0ac7c7f441c2811eca6f1a53e0cc4415" category="summary">NetApp Console のローカル展開において、Console アシスタントがサポートする顧客向け操作カテゴリを確認してください。</block>
+  <block id="85bf6002699be71eba50e47fb9bfd4c1" category="doc">NetApp Consoleのローカル デプロイでサポートされているConsoleアシスタントの操作</block>
+  <block id="563f4fbc7c399302e702b396b6962087" category="paragraph">コンソールアシスタントは、自然言語による質問と、選択されたストレージ操作をサポートします。利用可能な操作は、リリース、設定されているLLMエンドポイント、およびお客様に割り当てられた権限によって異なります。</block>
+  <block id="e595004f51bd799a728be4e3b594fcd0" category="paragraph">インフラストラクチャの変更を伴わない質問や分析には、コンソールアシスタントを *読み取り専用* モードで使用してください。ストレージまたは ONTAP システムを変更する可能性のあるサポートされている操作には、*読み取り/書き込み* モードを使用します。アシスタントは提案された変更内容を表示し、書き込み操作を実行する前に確認を求めます。</block>
+  <block id="0c3b317be5b2bb916652eceef25c2446" category="section-title">会話型ガイダンスと検索</block>
+  <block id="2c377b791aed117e43f0a6c81044bce4" category="paragraph">NetApp Console のローカル展開、ストレージ環境、またはサポートされている ONTAP 管理ワークフローについて質問してください。アシスタントは、設定済みの LLM エンドポイントと利用可能なドキュメントおよびフリートコンテキストを組み合わせて、回答を返すか、追加のコンテキストを要求します。</block>
+  <block id="55490a2d250ada7c70e503e7b86bb3da" category="section-title">指標と分析</block>
+  <block id="bb8be897830de5647e5d1894f9ebe3a9" category="paragraph">許可された範囲内のリソースについて、サポートされているストレージ容量、パフォーマンス、その他の指標に関する読み取り専用の質問をしてください。質問に関連する場合は、リソース、指標、および期間を含めてください。</block>
+  <block id="56836aa8c36f40ecb89a0e4c2367d066" category="paragraph">アシスタントは分析結果を返し、*読み取り専用*モードではストレージを変更しません。</block>
+  <block id="6ba6ceafe8bda6d338b883b2b39f45f1" category="section-title">ストレージのプロビジョニング</block>
+  <block id="3ffedc67f75e0f4d147056a9bf25f066" category="paragraph">ワークロードとそのストレージ要件を自然言語で記述してください。アシスタントは、ストレージクラスと配置場所を推奨し、不足している詳細情報を特定し、レビュー用のプロビジョニング プランを提示できます。</block>
+  <block id="100bc2e2a20e7ce958593a0d05afc0c6" category="inline-link-macro">AIを活用したワークフローでストレージ プロビジョニングを行う方法をご確認ください。</block>
+  <block id="cbdbb49c3c83f87c7341673121c514f1" category="paragraph">プランを承認すると、アシスタントは、お客様のロールベースの権限とストレージクラスポリシーに基づいて、サポートされているボリュームまたはLUN操作をプロビジョニングします。<block ref="1b5b8c5997353b7aabbb30633f8a4653" category="inline-link-macro-rx"></block>。</block>
+  <block id="ec34af6bd148135244cacb1e26e16b97" category="section-title">アラートの調査と修復</block>
+  <block id="45867710357b5b0f50631031775b1817" category="paragraph">アシスタントに、サポートされているアクティブなアラートの調査を依頼してください。アラートを分析し、是正措置を提案する場合があります。サポートされている修復処理がストレージを変更する場合、アシスタントは確認のためにその操作を提示し、実行前に確認を求めます。</block>
+  <block id="040360382f7205dbe8c14babe21f1f10" category="section-title">ONTAPの管理</block>
+  <block id="79ce2be78836813592ebf411e031cded" category="paragraph">登録済みの ONTAP システムに対して、サポートされている管理操作を自然言語でリクエストしてください。対象となるクラスター、SVM、またはリソースがわかっている場合は、それを特定してください。そうすることで、アシスタントが適切なコンテキストを使用できます。</block>
+  <block id="cedb71b26ba4e3df138c7912c7840e34" category="paragraph">アシスタントは、読み取り専用リクエストと書き込み操作を区別します。書き込み操作を確定する前に、対象と提案された変更内容を確認してください。利用可能な操作セットは、Console のローカル展開リリースと、お客様のアカウントに割り当てられている権限によって異なります。</block>
+  <block id="58dd82c11548cddba3b3f34021d1584c" category="section-title">権限と範囲</block>
+  <block id="e9ac0af69146f2419ab6d771536a605c" category="paragraph">アシスタントは、サインインしているユーザーの権限とリソーススコープを使用します。</block>
+  <block id="b84f73e57fbeeeec34e2bb90579be4ce" category="list-text">お客様のロールによって、表示または変更できるリソースと操作が決まります。</block>
+  <block id="37a5812a05e19af3ee627e60c15c7db6" category="list-text">組織、フォルダ、およびフリートの範囲によって、アシスタントが利用できるシステムとワークロードが制限されます。</block>
+  <block id="df84d67f514675b861778c76b8a6a614" category="list-text">ストレージクラスポリシーは、AI支援によるプロビジョニングを制約します。</block>
+  <block id="d567ccd2ac57ad2a43fa88120c847309" category="list-text">アシスタントは、コンソールのローカル展開アクセス制御をバイパスしません。</block>
+  <block id="109a8ebaf5d17fd52cd0cedbd294848c" category="inline-link-macro">NetApp Console ローカル展開アクセスロールについて</block>
+  <block id="ba6f7f76a855b2fc7d63c83f41c23e52" category="paragraph"><block ref="4560386b07ef22f3583d98e6a67e39c0" category="inline-link-macro-rx"></block>。</block>
+  <block id="4546d7c5f1604db2d9865ec0658ee574" category="section-title">非同期操作</block>
+  <block id="610ff444091a8d5a8e4d08c8e34ed1b7" category="paragraph">サポートされている書き込み操作の中には、すぐに完了しないものがあります。これらの操作では、アシスタントがジョブを作成します。完了状況を監視するには、アシスタントにリクエストのステータスを確認してください。</block>
+  <block id="ab74dc1a527eb39bc2a75230306dc5a0" category="list-text"><block ref="ab74dc1a527eb39bc2a75230306dc5a0" category="inline-link-macro-rx"></block></block>
+  <block id="c8bbfbc1e29e08fb75792570f8da2288" category="list-text"><block ref="c8bbfbc1e29e08fb75792570f8da2288" category="inline-link-macro-rx"></block></block>
+  <block id="7770f03f53e256d55b44faa7b5b1c1a3" category="list-text"><block ref="7770f03f53e256d55b44faa7b5b1c1a3" category="inline-link-macro-rx"></block></block>
+  <block id="1d0c70d69fe69f6422869da4c9f85df8" category="cell">LLM統合を設定し、Console アシスタントを有効にする</block>
+  <block id="f3e5aa0c754758ae8ba5235340e18232" category="cell">通知配信とメールサーバーの設定を構成する</block>
+  <block id="cc208136ed66d8be6e30eed429e8198d" category="paragraph">表示されるモデルは、エンドポイントの構成、プロキシまたはゲートウェイの動作、リリースサポート、および組織のポリシーによって異なる場合があります。プロバイダーの種類は、接続先のエンドポイントと、そのエンドポイントが公開するモデルによって異なり、トランスポートプロトコルによって異なるわけではありません。</block>
+  <block id="8c6ec3d71610da2323f8a0d4bf1cc952" category="inline-link-macro">Webhookの設定方法について説明します</block>
+  <block id="c5ed2fa54f60fceea32401d4d28620a2" category="list-text">メールで通知を配信するには、組織管理者がコンソールのローカル展開環境でメールサーバーを設定する必要があります。外部システムに通知を送信するには、組織の管理者がWebhookを設定する必要があります。<block ref="f3c52c8e646f7bab6c54f37065734593" category="inline-link-macro-rx"></block>。</block>
+  <block id="d6364709e85199698077ea2221b6cc5a" category="summary">NetApp Console ローカル展開におけるストレージのガイダンス、分析、プロビジョニング、およびサポートされている操作について、Console アシスタントを使用してください。</block>
+  <block id="53e18ee08d24e9c17895d47a3dd34166" category="paragraph">対話型のインターフェースを通じてストレージの状態とサポートされている操作を特定することで、ガイダンスや介入が必要なタイミングを判断できます。質問をしたり、タスクを説明したりすると、回答、分析結果、または提案されたアクションが返されます。このアシスタントは以下の機能を提供します：</block>
+  <block id="8ddb49feff7961c071eec6cb71ef40e4" category="list-text">*メトリクスの分析* 許可された範囲内のリソースについて、サポートされている容量、パフォーマンス、ストレージのメトリクスについてお問い合わせください。アシスタントは、利用可能なフリート状態に基づいて読み取り専用の分析結果を返します。</block>
+  <block id="1e452dcff511c7097712e60cfaf5c28e" category="list-text">*ONTAP システムの管理* サポートされている ONTAP 管理操作を自然言語でリクエストします。アシスタントは、不足しているシステムまたは SVM コンテキストを特定し、提案された操作を提示し、書き込み操作の前に確認を求めます。</block>
+  <block id="dc8736e0412bd3d1386d928dc57c00a6" category="inline-link-macro">LLMを接続してNetApp Consoleアシスタントを有効にする方法をご確認ください</block>
+  <block id="351bf1cee2d203043d7c8694e72832a7" category="list-text">組織管理者またはスーパー管理者は、大規模言語モデル（LLM）をコンソールのローカル展開に接続することにより、コンソールアシスタントを有効にする必要があります。ダッシュボードに「コンソールアシスタント」ボタンが表示されない場合は、管理者に有効化を依頼してください。<block ref="184a90bf2acb5b061c7dc2b4dcb64467" category="inline-link-macro-rx"></block>。</block>
+  <block id="58501690578abc96980f69a9f3694b55" category="paragraph">サポート対象のストレージに関する作業は、対話形式で依頼することで、提案された変更がインフラストラクチャに影響を与える前に評価できます。</block>
+  <block id="a0f4a83e648fb4aed450e560789131f0" category="section-title">指標と分析にはアシスタントを使用します</block>
+  <block id="fab19ba8fb5bfe09d2af357771050725" category="paragraph">理解したいリソース、範囲、指標、期間を特定する読み取り専用の質問をしてください。アシスタントはサポートされている指標の分析結果を返し、お客様のストレージは変更しません。</block>
+  <block id="1d054bfa483e4be3faf418d083bdd3ef" category="section-title">アシスタントを使用した ONTAP 管理</block>
+  <block id="9f6c8c6993979cb1877a9e86b9a8d0ce" category="paragraph">サポートされているONTAP操作を、審査済みのアシスタント提案を通じて管理することで、インフラの変更が計画的かつ許可制で行われるようにします。</block>
+  <block id="d5fc4106714e4828d2904733226a81fc" category="inline-link-macro">サポートされているコンソールアシスタント操作について</block>
+  <block id="7becbfb07bf54d9cf645b2f81e7a6590" category="paragraph"><block ref="4d7a86fccb2254d6cedae676f2157eab" category="inline-link-macro-rx"></block>。</block>
+  <block id="1c0b13974e165ed22019e869049df6d4" category="inline-link-macro">メンバーの追加方法とロールの割り当て方法について説明します</block>
+  <block id="db830c34683e05539af2a3f56d942d2f" category="paragraph"><block ref="2a51355ed5754464f193ef2e666c601e" category="inline-link-macro-rx"></block>。</block>
+  <block id="06f4b3c533aaacbe7f5b54e11890ed43" category="summary">サポートされている LLM エンドポイントを接続して、NetApp Console のローカル展開でコンソール アシスタントと AI 支援管理を有効にします。</block>
+  <block id="c85a5bee169bf00565c85292d26490c9" category="paragraph">サポートされている LLM エンドポイントを接続して、管理された自然言語ストレージガイダンスと操作を NetApp Console ローカル展開ユーザーが利用できるようにします。</block>
+  <block id="d8d4c492ef9ce07470fd7c71a7074375" category="paragraph">コンソールアシスタントが組織で設定されたガバナンス境界内で動作できるように、プロバイダーの認証情報とエンドポイントへのアクセス権限を準備してください。</block>
+  <block id="755c1d5c75ebb1af53c8d9be3e7bd559" category="list-text">プロバイダーの種類は、リリースとエンドポイントによってサポートされているOpenAI、OpenAI互換、またはAnthropicから選択できます。</block>
+  <block id="433b02ac268c7f9d577bf9be57b5c3eb" category="paragraph">エンドポイントの認証情報に対する管理者制御を維持しながら、検証済みのプロバイダー構成を通じてアシスタント機能を有効にします。</block>
+  <block id="26033ba1ab8ce1319bdb0de963d1cdcc" category="paragraph">設定を保存する前に、プロバイダーの種類、エンドポイントのURL、APIキー、および選択したモデルを確認してください。</block>
+  <block id="eddb36c1b2e3f9e786d7cccf7782664c" category="paragraph">アシスタントの可用性と承認動作を確認し、ユーザーが設定済みの統合機能をガバナンスされた操作に利用できるようにします。</block>
+  <block id="3f9a5821f38ce494dd45cf9edfdf74d3" category="inline-link-macro">NetApp Console アシスタントの使用方法について学ぶ</block>
+  <block id="634f9e5260713299abe36310597702d1" category="paragraph">検証が完了すると、ユーザーはダッシュボードからコンソールアシスタントを開き、タスクを平易な言葉で説明できるようになります。<block ref="8dfd03d5e9a3a9ef76c8379ee37ac6ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="bb5810dadd5175496182052d2de15fea" category="paragraph">LLM認証情報を保護し、プロバイダーの活動を監視することで、統合の不正使用を減らし、組織のガバナンスを支援します。</block>
+  <block id="977dccb231b4b0190cc19909bd5e2b81" category="list-text">組織のガバナンス要件に従って、プロバイダー側のAPIの使用状況とアラートを監視します。</block>
+  <block id="89de26853ae08e2e1eca92041c9aee61" category="paragraph">NetApp Console のローカル展開における LLM 統合の障害を診断し、Console アシスタントへのアクセスとストレージガイダンスおよび操作に対する信頼性の高い応答を復元します。</block>
+  <block id="e16bb502112ccf0ba7e2576aa84b360e" category="cell">異常な統合ステータス</block>
+  <block id="5d51fa5a0136c09330f9c7a707995cbb" category="cell">AIツールの保存成功、統合ステータス、および想定されるアクセスロール</block>
+  <block id="aa1f45d9a4e867bc07e3b720f5437cae" category="paragraph">セキュリティ要件が変更された場合は、サービスアカウントの認証情報をローテーションし、以前のシークレットを無効にして、制御されたAPIアクセスを維持します。</block>
+  <block id="dd0d49763648b2ed5bab7cf76b57126d" category="summary">AI支援プロビジョニングを使用してストレージを要求し、提案されたプランを確認し、NetApp Console ローカル展開で変更を承認します。</block>
+  <block id="663af2f8dbfa6e16165ed0a44aeb0b6d" category="paragraph">NetApp Console のローカル展開において、承認されたストレージクラスの意図とロールベースの制御を管理対象フリート全体にわたって維持しながら、会話形式でストレージを要求できます。</block>
+  <block id="aa61f4e9d254d9e185de69ff3b105179" category="paragraph">アシスタントが承認されたプロビジョニング境界内でプランを生成できるように、フリート、システム、ストレージクラス、およびLLMアクセスを準備します。</block>
+  <block id="25c218c5bf35c2c497390dbd2a954660" category="list-text">提案されたプランを確認してください。これには、該当する場合、選択されたフリートとターゲットシステムの配置が含まれます。選択または推奨されるストレージクラス。容量動作、保護スケジュール、セキュリティ要件、QoS関連のインテントなど、適用される主要な設定（表示されている場合）。</block>
+  <block id="2d3db212529548d7afc49cfc5cb8bcf1" category="sidebar">サポートされているコンソールアシスタント操作</block>
+  <block id="f6aca2dcfee051b254bbcb878dc70d09" category="sidebar">ライセンス</block>
 </blocks>

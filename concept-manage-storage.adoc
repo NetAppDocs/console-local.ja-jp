@@ -37,8 +37,6 @@ NetApp Consoleのローカル展開におけるフリート管理とは、スト
 
 組織のリソース階層は、フォルダーとフリートで構成されています。
 
-階層構造とアクセスモデルの詳細については、link:concept-folders-fleets-overview.html["NetApp Console ローカル展開におけるフォルダーとフリートについて"]を参照してください。
-
 * *組織* - お客様の会社を表す最上位レベル。
 * 「フォルダー」：関連するフリートを整理するのに役立ちます。たとえば、リージョンやビジネスユニットごとにフォルダーを作成し、各フォルダー内にフリートを作成できます。フォルダーには、他のフォルダーやフリートを含めることができます。フォルダーレベルでロールを割り当てると、メンバーはそのフォルダー内のすべてのフリートに対してそのロールを継承します。
 * *フリート* - 管理しているストレージシステムをグループ化します。ストレージシステムをフリートに関連付け、メンバーをフリートに割り当てることでアクセス権を付与します。
@@ -46,6 +44,8 @@ NetApp Consoleのローカル展開におけるフリート管理とは、スト
 
 
 NOTE: フォルダは組織管理ツールであり、組織管理者、フォルダ管理者、フリート管理者などのIAM権限を持たないメンバーには表示されません。メンバーはフォルダではなく、フリートにアクセスします。
+
+link:concept-folders-fleets-overview.html["フォルダーとフリートの詳細については、NetApp Console ローカル展開を参照してください"]。
 
 
 
@@ -108,9 +108,10 @@ TIP: フォルダを使用して、さらに整理のレベルを追加します
 [[where-to-go-next]]
 == 次のステップ
 
-* ストレージ規格を理解するには、link:concept-storage-classes.html["NetApp Console ローカル展開におけるストレージクラスとポリシーについて"]を参照してください。
-* フリートの作成と管理については、link:task-iam-manage-folders-fleets.html["フォルダとフリートを管理する"]を参照してください。
+* link:concept-storage-classes.html["NetApp Console ローカル展開におけるストレージクラスとポリシーについて"]。
+* link:task-iam-manage-folders-fleets.html["フリートの作成と管理方法について説明します"]。
 * link:task-provisioning-manual.html["ストレージを手動でプロビジョニングする"]
 * link:task-provisioning-automated.html["ストレージを自動的にプロビジョニングします"]
 * link:task-provisioning-agentic.html["AI支援によるストレージの提供"]
+* link:reference-console-assistant-operations.html["サポートされているコンソールアシスタント操作を参照してください"]
 

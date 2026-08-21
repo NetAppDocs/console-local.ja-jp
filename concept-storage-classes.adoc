@@ -101,17 +101,18 @@ summary: NetApp Console のローカル展開におけるストレージクラ�
 
 ストレージクラスはフリートに関連付けられています。ストレージクラスをフリートに関連付けると、そのクラスはフリート内のすべてのプロビジョニングで使用できるようになります。これにより、フリート内でプロビジョニングされるすべてのワークロードが同じ標準に従うことが保証され、フリートは関連するクラスター全体で一貫したストレージ動作を適用するための主要な手段となります。
 
-フリートの整理方法の詳細については、link:concept-manage-storage.html["NetApp Console ローカルデプロイにおけるフリート管理について説明します"]を参照してください。
+link:concept-manage-storage.html["NetApp Console ローカルデプロイにおけるフリート管理について説明します"]。
 
 
 
 [[where-to-go-next]]
 == 次のステップ
 
-* フリート編成を理解するには、link:concept-manage-storage.html["NetApp Console ローカルデプロイにおけるフリート管理について説明します"]を参照してください。
-* ポリシーとストレージ クラスを作成するには、link:task-storage-class-manage.html["ストレージクラスとポリシーを管理する"]を参照してください。
+* link:concept-manage-storage.html["NetApp Console ローカルデプロイにおけるフリート管理について説明します"]。
+* link:task-storage-class-manage.html["ストレージクラスとポリシーを管理する"]。
 * link:task-provisioning-manual.html["ストレージを手動でプロビジョニングする"]
 * link:task-provisioning-automated.html["ストレージを自動的にプロビジョニングします"]
 * link:task-provisioning-agentic.html["AI支援によるストレージの提供"]
-* ドリフトの分析と修正については、link:task-storage-class-drift-remediate.html["ストレージクラスのずれを修正する"]を参照してください。
+* link:reference-console-assistant-operations.html["サポートされているコンソールアシスタント操作を参照してください"]
+* link:task-storage-class-drift-remediate.html["ストレージクラスのドリフトを修復する方法"]
 
