@@ -2468,27 +2468,19 @@
   <block id="a9000c4acfd5c08b7b8d7de29052aac5" category="list-text">需要が増加している中でアナライザーが容量またはスナップショットの急激な増加を示している場合は、容量とスナップショットの指標を確認して、その増加がボリュームにどのような影響を与える可能性があるかを把握してください。</block>
   <block id="42a91a5617368256a8de8b25fe27c329" category="paragraph"><block ref="f7c67828ff7f607ca1bc8919fb69ebbf" category="inline-link-macro-rx"></block>.<block ref="9e153fbb74c19e5f630133420be99e05" category="inline-link-macro-rx"></block>.</block>
   <block id="f75243783aae9e7bfb7abafe2d6d3b8c" category="summary">監査ページから、ユーザーアクティビティ（UIとAPIの両方から開始されたもの）を監査できます。また、コンソールが実行している操作のステータスを監視して、対処が必要な問題がないかを確認できます。監査ページからステータスを確認したり、監査ログをお客様独自のsyslogサーバに送信するように設定したりできます。</block>
-  <block id="58c54c7b590a741efbd405c94ded9c1b" category="paragraph">監査ページから UI と API の両方から開始されたユーザーアクティビティを監査でき、NetApp Console のローカル展開における操作のステータスとそれを開始したユーザーを監視できます。</block>
   <block id="8f032c748fc26fa9d1200f8efa6a0d8c" category="paragraph-title">必須の役割</block>
   <block id="e0eda6c794ad821fdacf3da5db44cb48" category="paragraph">スーパー管理者、組織管理者、フォルダおよびフリート管理者、運用サポートアナリスト、スーパービューアー、組織ビューアー、またはフォルダおよびフリートビューアー。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
-  <block id="897a81a7274c262992e7cc7f6867adf4" category="paragraph">コンソールのローカル展開で監査アクティビティを表示したり、監査ログのCSVをダウンロードしたり、Webhookを使用して監査ログをお客様独自のsyslogサーバーに送信するように設定したりできます。</block>
   <block id="da8be55f3871d0a372174a9f477823f0" category="section-title">監査ページからユーザーアクティビティを監査する</block>
-  <block id="9db935187270e9463d3c97a81c631027" category="paragraph">監査ページを使用して、誰がどのような操作を行ったか、またはその操作のステータスを確認できます。</block>
-  <block id="f5176b3b2c78c79f2d8d2a9fce59ec07" category="paragraph">監査ページには、組織内でユーザーが行った操作が表示されます。例えば、誰が組織にメンバーを追加したか、フリートが正常に削除されたかを確認できるほか、組織内でユーザーが行ったその他のストレージ管理操作も確認できます。</block>
   <block id="b724b6f0e9bd6d4851344d51f2cb40fc" category="paragraph">監査ログには、以下のサービスのアクティビティが表示されます：</block>
   <block id="df9f3a2c2e961fb8338278c76b2e448a" category="list-text">テナント管理：ユーザーの追加、フリートの作成、リソースの関連付けなど、組織の管理に関連する操作。</block>
   <block id="4185957ddf7d1b5e3043c21f93f9b6d3" category="list-text">ストレージ管理：ストレージリソースの管理に関連する操作。</block>
   <block id="740519dc6dd7c95dc5a661caaddd08a0" category="list-text">フェデレーション：フェデレーションの管理に関連する操作。例えば、フェデレーションの作成、フェデレーション組織の追加または削除など。</block>
   <block id="aa46e79c9c39c9b3aa215604efa5eb2c" category="list-text">*「管理」&gt;「監査」*を選択してください。</block>
-  <block id="e8bcacc75837d7d116d27b0912ef8827" category="list-text">表の上にあるフィルターを使用して、表に表示されるアクションを変更できます。</block>
-  <block id="3031af9277fd81e368c5bfe8edccd8e5" category="paragraph">例えば、*サービス* フィルターを使用して特定のサービスに関連するアクションを表示したり、*ユーザー* フィルターを使用して特定のユーザーアカウントに関連するアクションを表示したりできます。</block>
   <block id="a2d62fc9ff55ca3578bca22a03bfeb4e" category="section-title">IDとアクセス管理アクションの監査ログをフィルタリングする</block>
-  <block id="b47972fc47da176fee2b5945d1512385" category="paragraph">メンバーの追加、フリートの作成、リソースの削除など、組織の管理に関連する操作のみを表示するには、監査ログをTenancyサービスでフィルタリングします。</block>
   <block id="4bff463066dd752ee016143b8a1f56a6" category="list-text">フィルターを使用して結果を絞り込んでください。「サービス」を選択し、次に「テナント」を選択してください。</block>
   <block id="388dadc2c14bab87b8bcc62f6c76a95d" category="list-text">結果をさらに絞り込むには、他のフィルターを使用してください。</block>
   <block id="c9726ff4f70650c857eaf23bb51de567" category="paragraph">例えば、*ユーザー*フィルターを使用して、特定のユーザーアカウントによって実行されたIAMアクションを表示します。</block>
   <block id="5393c2b8908e1f48ca31ccf7d8bb057c" category="section-title">監査ページから監査ログをダウンロードする</block>
-  <block id="95e9b23238ddd8479992115173ab7048" category="paragraph">監査ページから監査ログをCSVファイルとしてダウンロードできます。これにより、組織内でユーザーが行った操作の記録を保持することができます。ダウンロードされたCSVファイルには、監査ページのフィルターや表示列に関係なく、すべての監査ログ列が含まれます。</block>
   <block id="a485c1defdaf491b2f5cf7219289d8cc" category="list-text">「監査」ページで、表の右上隅にあるダウンロードアイコンを選択します。</block>
   <block id="61698078caca443ab3276eaf6da68c26" category="doc">NetApp Console のローカル展開で NetApp Console アシスタントを使用する</block>
   <block id="59142dd8097fc5d816523b76490538ee" category="paragraph">NetApp Console のローカル展開で NetApp Console アシスタントを使用して、ストレージを管理したり、自然言語で回答を取得したりできます。必要なことを平易な言葉で説明すると、NetApp Console のローカル展開がストレージポリシーとロールベースアクセスの範囲内でそれを実行します。</block>
@@ -3715,4 +3707,13 @@
   <block id="beb0e01e7e36ff62ee977dd31ad8b0c7" category="list-text">アシスタントの応答に従ってください。リクエストの内容に応じて、アシスタントは情報を返したり、詳細情報を求めたり、アクションを実行する前に確認を求めたりする場合があります。</block>
   <block id="69200085693b2c07a9fd57550280affd" category="paragraph">ストレージ環境を変更することなく、許可された範囲内で容量とパフォーマンスの状況を調査してください。理解したいリソース、範囲、指標、期間を特定する読み取り専用の質問をしてください。アシスタントはサポートされている指標の分析結果を返し、ストレージは変更しません。</block>
   <block id="a320b4ddc74c3e0d5cf1e99a74a477c7" category="list-text">「Fix It」など、推奨される修復措置を選択してください。</block>
+  <block id="0357e7ee5d63c9b015d917447bd17e44" category="paragraph">コンプライアンスレビュー中に管理活動を文書化し、アクセス変更を確認して、NetApp Console ローカルデプロイメント全体のアクションの記録を保存します。</block>
+  <block id="a2f5eaf80bcdf173527dfc64a6a64416" category="paragraph">コンソールのローカルデプロイメントで監査アクティビティを表示し、監査ログのCSVファイルをダウンロードできます。</block>
+  <block id="12b45e42c264512a3833dccc0d3bcf22" category="paragraph">管理アクティビティを監視して、インシデントの解決時や運用上の説明責任の確認時に NetApp Console のローカル展開全体にわたる変更を追跡します。</block>
+  <block id="c82e61f9a450b60bf8f88d80b2002367" category="paragraph">監査ページには、組織内でユーザーが行った操作が表示されます。例えば、組織にメンバーを追加したユーザーを確認したり、ユーザーがフリートを削除したことを確認したり、組織内でユーザーが行ったその他のストレージ管理操作を表示したりできます。</block>
+  <block id="89c6b9f0a19ad66cc2a968e4012a1cd1" category="list-text">表の上にあるフィルターを使用して、監査アクティビティを期間、サービス、アクション、リソース、ユーザー、またはステータスで絞り込むことができます。</block>
+  <block id="a4fd3a9f5e77f8f43da93716404f70b5" category="paragraph">監査ログには、ユーザーの身元が特定できる場合に、その操作を実行したユーザーが表示されます。ユーザーの身元が特定できない場合、エントリには名前の代わりにユーザーの<block ref="1cd101a4da14a833018679c5f52a1b96" prefix=" " category="inline-code"></block>が表示されます。</block>
+  <block id="4e1a1e7b8efe108b690da878451d0a8b" category="paragraph">例えば、*サービス*フィルターを使用して特定のサービスに関連するアクションを表示したり、*ユーザー*フィルターを使用して特定のユーザーアカウントに関連するアクションを表示したりできます。</block>
+  <block id="ae8c879a42f4e5075028b4c740849cdf" category="paragraph">アクセス管理の変更内容をレビューし、組織のリソースを変更した人物を確認するとともに、正確なセキュリティ調査を支援します。</block>
+  <block id="1c0679d5195b4dd09500e158593c6031" category="paragraph">コンプライアンス審査や将来のインシデント調査を支援するため、組織のアクションに関する独立した記録を保存します。ダウンロードした CSV ファイルには、フィルターを適用したり表示列を変更したりした場合でも、すべての監査ログ列が含まれます。</block>
 </blocks>
