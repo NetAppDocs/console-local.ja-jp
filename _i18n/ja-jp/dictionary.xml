@@ -453,8 +453,6 @@
   <block id="c689fa25946d46da8f6a7efbcd7168ea" category="paragraph">エージェントは<block ref="68ab1268abb7e5f5688810968df97d6b" prefix=" " category="inline-code"></block>を使用して、<block ref="a23365e1ae67810a7446b65d3be9a5d0" prefix=" " category="inline-code"></block>ディレクトリとその内容をインストールします。</block>
   <block id="bb10ef2c23f410792fcbd03b913a73b2" category="list-text"><block ref="ca905eb4a00d34150573153a09e2e79b" prefix="" category="inline-code"></block>：40 GiBの空き容量が必要です</block>
   <block id="27ff1f9070d810259fd05323c4e31904" category="paragraph">コンソールエージェントにはこのスペースが<block ref="ca905eb4a00d34150573153a09e2e79b" prefix=" " category="inline-code"></block>必要です。これは、DockerやPodmanがこのディレクトリ内にコンテナを作成するように設計されているためです。具体的には、<block ref="af5045a6e72956f67984a97cd3e8b9da" prefix=" " category="inline-code"></block>ディレクトリにコンテナを作成します。この領域では、外部マウントやシンボリックリンクは機能しません。</block>
-  <block id="57d8ea3b46119392eb93bf8ac3897270" category="list-text">CPU：16コアまたは16 vCPU</block>
-  <block id="66359cf2dd3a32d550ed76b685e652e1" category="list-text">RAM：64 GB</block>
   <block id="680bf96524219dc64fa3e3d6074bf710" category="list-text">ディスク容量：596 GB（シックプロビジョニングを推奨）</block>
   <block id="6fc0cd97e3282b970c695d7dbeebf3f2" category="list-text">vSphere 7.0u3以降、仮想ハードウェアバージョン19以降</block>
   <block id="fea0f702d4271201382c08e403cebafd" category="admonition">コンソールエージェントは、UIDとGIDの範囲として19000から19200を予約します。この範囲は固定されており、変更できません。ホスト上で動作するサードパーティ製ソフトウェアがこの範囲内のUIDまたはGIDを使用している場合、エージェントのインストールは失敗します。NetAppでは、競合を避けるため、サードパーティ製ソフトウェアがインストールされていないホストを使用することをお勧めします。</block>
@@ -3512,7 +3510,6 @@
   <block id="30ed16d592d987bc97f9c257fb0d026c" category="list-text">必要に応じて、LLMプロバイダーアカウントのユーザー名またはID。</block>
   <block id="e90cfbea605d047e2c768be5cc0d5d90" category="list-text">*コンソールアシスタント*を*読み取り専用*モードで開き、基本的なクエリを実行します。</block>
   <block id="ddbbb4fd6daa8474cc88e6beb3919a85" category="list-text">*コンソールアシスタント*を*読み取り/書き込み*モードで開き、ストレージを変更する操作を実行する前にユーザーの確認が必要であることを確認してください。</block>
-  <block id="f9fe4a5426c609bf7ec63303066954e3" category="list-text">仮想マシンが起動すると、CPUとメモリは単に割り当てられるだけでなく、ESXiホスト上で予約されます。対象ホストには、少なくとも16個のCPUコアと64 GBの空き容量（予約されていないもの）が確保されていることを確認してください。ホスト上の既存のVM予約は、利用可能な容量を減少させます。</block>
   <block id="fb2aa2f24e94d02ba0aa39b5b1953b02" category="list-text">データストアは、最低限のディスク書き込み性能を満たす必要があります：fsync p99の書き込みレイテンシは20ms以下、4Kランダム書き込みIOPSは200以上です。レイテンシが50msを超えるか、IOPSが30を下回ると、デプロイメントが失敗します。</block>
   <block id="bc30837cb3bcee1ef470300a93faccd1" category="list-text">IPv6はサポートされていません。静的IPv4アドレスが必要です。</block>
   <block id="2938c9aef13e6b9e5ef64008f86cbed9" category="summary">NetApp Console のローカル展開用 OVA は、独自の内部ファイアウォールを管理します。お客様の環境で VM に対して外部ファイアウォールポリシーが適用されている場合は、管理ホストから以下の受信ポートにアクセスできることを確認してください。</block>
@@ -3716,4 +3713,7 @@
   <block id="4e1a1e7b8efe108b690da878451d0a8b" category="paragraph">例えば、*サービス*フィルターを使用して特定のサービスに関連するアクションを表示したり、*ユーザー*フィルターを使用して特定のユーザーアカウントに関連するアクションを表示したりできます。</block>
   <block id="ae8c879a42f4e5075028b4c740849cdf" category="paragraph">アクセス管理の変更内容をレビューし、組織のリソースを変更した人物を確認するとともに、正確なセキュリティ調査を支援します。</block>
   <block id="1c0679d5195b4dd09500e158593c6031" category="paragraph">コンプライアンス審査や将来のインシデント調査を支援するため、組織のアクションに関する独立した記録を保存します。ダウンロードした CSV ファイルには、フィルターを適用したり表示列を変更したりした場合でも、すべての監査ログ列が含まれます。</block>
+  <block id="4e2631c6a272a31e284ef25e345044a4" category="list-text">CPU：16コアまたは16仮想CPU（予約済み）</block>
+  <block id="1c79bf4bb50e04e0a86202e73216460a" category="list-text">RAM：64 GB（予約済み）</block>
+  <block id="43e1d149efe94e65609c12dcb5cab779" category="list-text">仮想マシンが起動すると、CPUとメモリは単に割り当てられるだけでなく、ESXiホスト上で予約されます。対象ホストには、少なくとも16個のCPUコアと、予約容量として64 GBの空きメモリがあることを確認してください。ホスト上の既存のVM予約は、利用可能な容量を減少させます。</block>
 </blocks>
