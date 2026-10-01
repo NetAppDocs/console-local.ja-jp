@@ -169,8 +169,8 @@ sidebar:
       url: "/concept-administer-netapp-console-local.html"
     - title: NetApp Console ローカル展開操作の監査
       url: "/task-audit-console-activity.html"
-    - title: ライセンス
-      url: https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html
+    - title: NetApp Console ローカル デプロイでのライセンスの管理
+      url: "/task-manage-licenses.html"
     - title: NetApp Consoleのメンテナンス
       entries:
       - title: NetApp Console VMのメンテナンス

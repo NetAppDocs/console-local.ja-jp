@@ -169,7 +169,7 @@ AWS EC2インスタンスタイプ:: 上記のCPUおよびRAM要件を満たす�
 IMDSv2使用時のPUT応答ホップ制限:: EC2インスタンスでIMDSv2が有効になっている場合（これは新しいEC2インスタンスのデフォルト設定です）、インスタンスのPUT応答ホップ制限を3に変更する必要があります。EC2インスタンスの制限を変更しないと、エージェントの設定時にUI初期化エラーが発生します。
 +
 --
-* link:task-require-imdsv2.html["Amazon EC2インスタンスでIMDSv2の使用を必須とする"]
+* https://docs.netapp.com/us-en/console-setup-admin/task-require-imdsv2.html["Amazon EC2インスタンスでIMDSv2の使用を必須とする"^]
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["AWSドキュメント：PUTレスポンスのホップ制限を変更する"^]
 
 

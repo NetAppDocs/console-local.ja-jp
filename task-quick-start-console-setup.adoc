@@ -50,6 +50,6 @@ NetApp Consoleのローカル デプロイをインストールした後、適�
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] NetApp Backup and Recoveryのセットアップ
 [role="quick-margin-list"]
 * link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html#use-a-netapp-backup-and-recovery-byol-license["NetApp Backup and Recovery のライセンスを取得する"^]。高度なバックアップおよびリカバリサービスへのアクセスが不要な場合は、この手順をスキップできます。
-* NetApp Console ローカル展開に NetApp Backup and Recovery ライセンスを追加します。link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["NetApp Consoleのローカル デプロイにライセンスを追加します"^]。
+* NetApp Console ローカル展開に NetApp Backup and Recovery ライセンスを追加します。link:task-manage-licenses.html["NetApp Console ローカル デプロイでのライセンスの管理"]。
 * link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["ユーザーに NetApp Backup and Recovery へのアクセス権を付与する"].
 
