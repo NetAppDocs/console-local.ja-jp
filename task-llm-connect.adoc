@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-llm-connect.html 
-keywords: LLM, AI, connect, large language model, console assistant, openai, openai-compatible, proxy, netapp console 
+keywords: LLM, AI, connect, large language model, console assistant, openai, openai-compatible proxy, netapp console 
 summary: サポートされている LLM エンドポイントを接続して、NetApp Console のローカル展開でコンソール アシスタントと AI 支援管理を有効にします。 
 ---
 = LLMを接続し、NetApp Consoleのローカル展開でNetApp Consoleアシスタントを有効にする
@@ -37,7 +37,7 @@ LLMを接続するには、プロバイダーパスを選択し、エンドポ�
 
 コンソールアシスタントが組織で設定されたガバナンス境界内で動作できるように、プロバイダーの認証情報とエンドポイントへのアクセス権限を準備してください。
 
-* プロバイダーの種類は、リリースとエンドポイントによってサポートされているOpenAI、OpenAI互換、またはAnthropicから選択できます。
+* プロバイダータイプの選択：OpenAI、OpenAI互換プロキシ、またはAnthropic
 * 選択したプロバイダ パスに対応する有効な API キー。
 * プロバイダパスのエンドポイント URL。
 * 必要に応じて、LLMプロバイダーアカウントのユーザー名またはID。
@@ -59,17 +59,16 @@ link:reference-llm-supported-models.html["NetApp Console ローカル展開で�
 . メニューを選択し、次に「編集」を選択します。
 . 「プロバイダタイプ」で、プロバイダタイプを選択してください。
 +
-link:concept-llm-integration.html["NetApp Console ローカル展開における LLM 統合について"].
-
-. プロバイダーエンドポイントの入力を求められた場合は、選択したプロバイダーパスのエンドポイントURLを入力してください。
-. *ユーザー名*フィールドに、プロバイダのパスで必要な場合は、ユーザー名またはSSO IDを入力してください。
-. *APIキー*フィールドに、選択したプロバイダーパスから取得したAPIキーを貼り付けてください。
-. リストからモデルを選択してください。
-. 設定内容を確認し、*保存*を選択してください。
-+
-設定を保存する前に、プロバイダーの種類、エンドポイントのURL、APIキー、および選択したモデルを確認してください。
+** *OpenAI*：OpenAIモデルへの直接アクセス。
+** エンタープライズゲートウェイまたはプロキシサービスを使用するには、*OpenAI互換プロキシ*を使用します。
+** *Anthropic*はAnthropicのClaudeモデル用です。
 
 
+
+
+link:concept-llm-integration.html["NetApp Console ローカル展開における LLM 統合について"]。.プロバイダーエンドポイントの入力を求められた場合は、選択したプロバイダーパスのエンドポイントURLを入力してください。.*ユーザー名*フィールドに、プロバイダのパスで必要な場合は、ユーザー名またはSSO IDを入力してください。.*APIキー*フィールドに、選択したプロバイダーパスから取得したAPIキーを貼り付けてください。.リストからモデルを選択してください。.設定内容を確認し、*保存*を選択してください。
+
++ 設定を保存する前に、プロバイダーの種類、エンドポイントURL、APIキー、および選択したモデルを確認してください。
 
 
 
